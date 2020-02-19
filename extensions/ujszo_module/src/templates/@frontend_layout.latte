@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="sk-SK" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+	<title>{ifset #title}{include title|striptags} | {/ifset}{$siteTitle} TEST</title>
+	<meta n:if="$siteDescription" name="description" content="{$siteDescription}">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <script type='text/javascript' src='{$basePath}/layouts/ujszo/js/jquery-1.11.2.js'></script>
+
+	<link rel="stylesheet" href="{$basePath}/layouts/ujszo/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{$basePath}/layouts/ujszo/css/layout.css">
+	<link rel="stylesheet" href="{$basePath}/layouts/ujszo/js/jquery-ui.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    html, body { font-family: 'Source Sans Pro'; }
+    </style>
+
+	<script src="{$basePath}/layouts/ujszo/js/bootstrap.min.js"></script>
+    <script src="{$basePath}/layouts/ujszo/js/netteForms.js"></script>
+
+
+	<style>
+	  input::before {
+	  	display:none;
+	  }
+	  .s-header .menu .primary a:hover { text-decoration:none }
+	  .logo a:hover { color:white }
+	  form ul.error {
+          background-color:#b00c28;
+          color:white;
+          padding:8px;
+          list-style:none;
+      }
+      #outside {
+          height: 1250px;
+          overflow: hidden;
+      }
+      @media (min-width: 400px) {
+          #outside {
+              height: 1200px;
+          }
+      }
+      @media (min-width: 641px) {
+          #outside {
+              height: 700px;
+          }
+      }
+      .subscriptionFooter
+      {
+          font-size:18px;
+          font-weight: bold;
+          text-align:center
+      }
+
+      .subscriptionFooter span {
+          font-size:22px;
+      }
+	</style>
+
+    {ifset $headerCode}{$headerCode|noescape}{/ifset}
+
+	{block head}{/block}
+</head>
+<body>
+
+	<script> document.documentElement.className+=' js' </script>
+
+	<div class="gk-page-wrap gk-page">
+
+		<div class="x" style="padding:20px;">
+
+			<style>
+			#header .active { font-weight:bold }
+			form ul.error {
+				color:white;
+				background-color:#b00c28;
+				padding:10px;
+			}
+
+			</style>
+
+			<div id="header" style="margin-bottom:20px;">
+				{if $user->isLoggedIn()}
+					{_system.logged} <b>{$user->getIdentity()->getData()['email']}</b>
+					<br><hr>
+
+					{control frontendMenu}
+
+					{if $user->getIdentity()->role === \Crm\UsersModule\Repository\UsersRepository::ROLE_ADMIN}
+					  | <a href="{link :Dashboard:Dashboard:}">ADMIN</a>
+					{/if}
+				{else}
+					{ifCurrent :Users:Sign:In}
+						&nbsp;
+					{else}
+						<a href="{link :Users:Sign:In}">{_system.sign_in}</a>
+					{/ifCurrent}
+				{/if}
+
+				<p class="text-right" style="float:right">
+				  <b><a class="" href="{link :Subscriptions:Subscriptions:New}">{_system.buy_subscription}</a></b>
+				</p>
+			</div>
+
+			<hr>
+
+			{control simpleWidget 'frontend.layout.top'}
+
+			{foreach $flashes as $flash}
+				{if $flash->type == 'info'}
+					<div class="alert alert-success">
+						<strong>{_system.message.success|noescape}</strong> {$flash->message|noescape}
+					</div>
+				{elseif $flash->type == 'error'}
+					<div class="alert alert-danger">
+						<strong>{_system.message.error|noescape}</strong> {$flash->message|noescape}
+					</div>
+				{else}
+					<div class="alert alert-warning">
+						<strong>{_system.message.warning|noescape}</strong> {$flash->message|noescape}
+					</div>
+				{/if}
+			{/foreach}
+
+			{include content}
+
+        </div>
+
+	</div>
+
+
+	{block scripts}{/block}
+</body>
+</html>

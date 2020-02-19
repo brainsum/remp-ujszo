@@ -16,6 +16,18 @@
 			"options": {
 				"symlink": true
 			}
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/brainsum/crm-payments-module"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/brainsum/crm-salesfunnel-module"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/brainsum/crm-subscriptions-module"
 		}
 	],
 	"require": {
@@ -27,14 +39,15 @@
 		"remp/crm-invoices-module": "~0.9",
 		"remp/crm-issues-module": "~0.9",
 		"remp/crm-onboarding-module": "~0.9",
-		"remp/crm-payments-module": "~0.9",
+		"remp/crm-payments-module": "dev-remp as 0.9.0",
 		"remp/crm-print-module": "~0.9",
 		"remp/crm-products-module": "~0.9",
-		"remp/crm-salesfunnel-module": "~0.9",
-		"remp/crm-segment-module": "~0.9",
+		"remp/crm-salesfunnel-module": "dev-remp as 0.9.0",
 		"remp/crm-scenarios-module": "~0.9",
-		"remp/crm-subscriptions-module": "~0.9",
+		"remp/crm-segment-module": "~0.9",
+		"remp/crm-subscriptions-module": "dev-remp as 0.9.0",
 		"remp/crm-upgrades-module": "~0.9",
-		"remp/crm-users-module": "~0.9"
+		"remp/crm-users-module": "~0.9",
+		"ujszo/ujszo_module": "@dev"
 	}
 }

@@ -1,0 +1,44 @@
+header.page-header{
+  background: #000056;
+  margin: 0;
+  padding: 1rem 0;
+  color: #fff;
+
+  .row > div{
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      margin: 0;
+      align-self: center;
+      padding: 2.8rem 2rem 1rem;
+    }
+  }
+}
+
+input[type=checkbox] {
+  margin-right: 1rem;
+}
+
+.btn-group-lg>.btn, .btn-lg{
+  border-radius: 0;
+}
+
+.btn-primary {
+  background-color: #fd014b;
+  color: #FFFFFF;
+  border-color: #fd014b;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    background-color: darken(#fd014b, 10%);
+    border-color: darken(#fd014b, 10%);
+  }
+
+  &:active,
+  &:active:focus {
+    background-color: darken(#fd014b, 20%);
+    border-color: darken(#fd014b, 20%);
+  }
+}

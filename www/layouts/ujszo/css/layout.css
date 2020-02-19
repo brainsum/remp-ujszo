@@ -1,0 +1,41 @@
+header.page-header {
+  background: #000056;
+  margin: 0;
+  padding: 1rem 0;
+  color: #fff;
+}
+header.page-header .row > div {
+  display: flex;
+  justify-content: space-between;
+}
+header.page-header .row > div h1 {
+  margin: 0;
+  align-self: center;
+  padding: 2.8rem 2rem 1rem;
+}
+
+input[type=checkbox] {
+  margin-right: 1rem;
+}
+
+.btn-group-lg > .btn, .btn-lg {
+  border-radius: 0;
+}
+
+.btn-primary {
+  background-color: #fd014b;
+  color: #FFFFFF;
+  border-color: #fd014b;
+  font-weight: bold;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #ca013c;
+  border-color: #ca013c;
+}
+.btn-primary:active, .btn-primary:active:focus {
+  background-color: #97012d;
+  border-color: #97012d;
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxheW91dC5zY3NzIiwibGF5b3V0LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1CQUFBO0VBQ0EsU0FBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0FDQ0Y7QURDRTtFQUNFLGFBQUE7RUFDQSw4QkFBQTtBQ0NKO0FEQ0k7RUFDRSxTQUFBO0VBQ0Esa0JBQUE7RUFDQSx5QkFBQTtBQ0NOOztBRElBO0VBQ0Usa0JBQUE7QUNERjs7QURJQTtFQUNFLGdCQUFBO0FDREY7O0FESUE7RUFDRSx5QkFBQTtFQUNBLGNBQUE7RUFDQSxxQkFBQTtFQUNBLGlCQUFBO0FDREY7QURHRTtFQUVFLHlCQUFBO0VBQ0EscUJBQUE7QUNGSjtBREtFO0VBRUUseUJBQUE7RUFDQSxxQkFBQTtBQ0pKIiwiZmlsZSI6ImxheW91dC5jc3MifQ== */
+
+/*# sourceMappingURL=layout.css.map */

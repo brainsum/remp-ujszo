@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94f814768b244b11584c54ddefbbe95e",
+    "content-hash": "e217d007d56242af2af2e76fb145a783",
     "packages": [
         {
             "name": "cakephp/cache",
@@ -4154,16 +4154,16 @@
         },
         {
             "name": "remp/crm-payments-module",
-            "version": "0.9.0",
+            "version": "dev-remp",
             "source": {
                 "type": "git",
-                "url": "https://github.com/remp2020/crm-payments-module.git",
-                "reference": "e8298f0792b98f0cc412414ae0db6da8f933dca3"
+                "url": "https://github.com/brainsum/crm-payments-module.git",
+                "reference": "7fceb8f1a8871d1f62483a251be33cb2fd896808"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/remp2020/crm-payments-module/zipball/e8298f0792b98f0cc412414ae0db6da8f933dca3",
-                "reference": "e8298f0792b98f0cc412414ae0db6da8f933dca3",
+                "url": "https://api.github.com/repos/brainsum/crm-payments-module/zipball/7fceb8f1a8871d1f62483a251be33cb2fd896808",
+                "reference": "7fceb8f1a8871d1f62483a251be33cb2fd896808",
                 "shasum": ""
             },
             "require": {
@@ -4187,13 +4187,15 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "CRM Payments Module",
             "homepage": "https://remp2020.com",
-            "time": "2020-02-18T13:03:14+00:00"
+            "support": {
+                "source": "https://github.com/brainsum/crm-payments-module/tree/remp"
+            },
+            "time": "2020-02-19T09:21:11+00:00"
         },
         {
             "name": "remp/crm-print-module",
@@ -4277,16 +4279,16 @@
         },
         {
             "name": "remp/crm-salesfunnel-module",
-            "version": "0.9.0",
+            "version": "dev-remp",
             "source": {
                 "type": "git",
-                "url": "https://github.com/remp2020/crm-salesfunnel-module.git",
-                "reference": "583ac7c2dae667270f0f8890a434794083cec7dd"
+                "url": "https://github.com/brainsum/crm-salesfunnel-module.git",
+                "reference": "a05c8d2b6430fc7f88f863296f14fef634a63e1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/remp2020/crm-salesfunnel-module/zipball/583ac7c2dae667270f0f8890a434794083cec7dd",
-                "reference": "583ac7c2dae667270f0f8890a434794083cec7dd",
+                "url": "https://api.github.com/repos/brainsum/crm-salesfunnel-module/zipball/a05c8d2b6430fc7f88f863296f14fef634a63e1a",
+                "reference": "a05c8d2b6430fc7f88f863296f14fef634a63e1a",
                 "shasum": ""
             },
             "require": {
@@ -4302,13 +4304,15 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "CRM SalesFunnel Module",
             "homepage": "https://remp2020.com",
-            "time": "2020-02-12T13:56:09+00:00"
+            "support": {
+                "source": "https://github.com/brainsum/crm-salesfunnel-module/tree/remp"
+            },
+            "time": "2020-02-19T11:48:57+00:00"
         },
         {
             "name": "remp/crm-scenarios-module",
@@ -4381,16 +4385,16 @@
         },
         {
             "name": "remp/crm-subscriptions-module",
-            "version": "0.9.0",
+            "version": "dev-remp",
             "source": {
                 "type": "git",
-                "url": "https://github.com/remp2020/crm-subscriptions-module.git",
-                "reference": "026dca6557cbb488e478208f99b35912f86dda63"
+                "url": "https://github.com/brainsum/crm-subscriptions-module.git",
+                "reference": "cacbcd8769fb2419bc1de21dee01c82002afd5b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/remp2020/crm-subscriptions-module/zipball/026dca6557cbb488e478208f99b35912f86dda63",
-                "reference": "026dca6557cbb488e478208f99b35912f86dda63",
+                "url": "https://api.github.com/repos/brainsum/crm-subscriptions-module/zipball/cacbcd8769fb2419bc1de21dee01c82002afd5b3",
+                "reference": "cacbcd8769fb2419bc1de21dee01c82002afd5b3",
                 "shasum": ""
             },
             "require": {
@@ -4406,13 +4410,15 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "CRM Subscriptions Module",
             "homepage": "https://remp2020.com",
-            "time": "2020-02-16T17:28:45+00:00"
+            "support": {
+                "source": "https://github.com/brainsum/crm-subscriptions-module/tree/remp"
+            },
+            "time": "2020-02-19T12:53:11+00:00"
         },
         {
             "name": "remp/crm-upgrades-module",
@@ -6082,6 +6088,36 @@
             "time": "2020-02-11T15:31:23+00:00"
         },
         {
+            "name": "ujszo/ujszo_module",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "extensions/ujszo_module",
+                "reference": "6e2404c8d9d79e32003c9d6c1fef6272d4991f43"
+            },
+            "require": {
+                "php": "^7.2",
+                "remp/crm-application-module": "~0.2 >=0.2.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Crm\\UjszoModule\\": "src/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Ujszo specific REMP module",
+            "homepage": "https://brainsum.com",
+            "transport-options": {
+                "symlink": true
+            }
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v3.6.0",
             "source": {
@@ -6140,9 +6176,33 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "0.9.0",
+            "alias_normalized": "0.9.0.0",
+            "version": "dev-remp",
+            "package": "remp/crm-payments-module"
+        },
+        {
+            "alias": "0.9.0",
+            "alias_normalized": "0.9.0.0",
+            "version": "dev-remp",
+            "package": "remp/crm-salesfunnel-module"
+        },
+        {
+            "alias": "0.9.0",
+            "alias_normalized": "0.9.0.0",
+            "version": "dev-remp",
+            "package": "remp/crm-subscriptions-module"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "remp/crm-payments-module": 20,
+        "remp/crm-salesfunnel-module": 20,
+        "remp/crm-subscriptions-module": 20,
+        "ujszo/ujszo_module": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

@@ -1,0 +1,36 @@
+{
+  "name": "ujszo_layout",
+  "version": "1.0.0",
+  "description": "Ujszo Design",
+  "license": "ISC",
+  "scripts": {
+    "start": "gulp",
+    "prod": "gulp prod",
+    "lint": "gulp lint",
+    "sassDev": "gulp sassDev",
+    "sassProd": "gulp sassProd",
+    "sassLint": "gulp sassLint"
+  },
+  "author": "",
+  "dependencies": {
+    "autoprefixer": "^9.7.4",
+    "browser-sync": "^2.26.7",
+    "fibers": "^4.0.2",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-npm-dist": "^1.0.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-split-media-queries": "^1.0.3",
+    "gulp-stylelint": "^13.0.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss-custom-properties": "^9.0.2",
+    "sass": "^1.25.0",
+    "stylelint": "^13.2.0",
+    "stylelint-config-scss": "^1.0.0-security",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.14.2"
+  }
+}

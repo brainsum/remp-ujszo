@@ -13,3 +13,6 @@ docker-compose.override.yml
 
 .DS_Store
 Thumbs.db
+
+www/layouts/*/node_modules
+www/layouts/*/vendors
