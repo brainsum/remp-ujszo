@@ -21,76 +21,21 @@
 	<script src="{$basePath}/layouts/ujszo/js/bootstrap.min.js"></script>
     <script src="{$basePath}/layouts/ujszo/js/netteForms.js"></script>
 
-
-	<style>
-	  input::before {
-	  	display:none;
-	  }
-	  .s-header .menu .primary a:hover { text-decoration:none }
-	  .logo a:hover { color:white }
-	  form ul.error {
-          background-color:#b00c28;
-          color:white;
-          padding:8px;
-          list-style:none;
-      }
-      #outside {
-          height: 1250px;
-          overflow: hidden;
-      }
-      @media (min-width: 400px) {
-          #outside {
-              height: 1200px;
-          }
-      }
-      @media (min-width: 641px) {
-          #outside {
-              height: 700px;
-          }
-      }
-      .subscriptionFooter
-      {
-          font-size:18px;
-          font-weight: bold;
-          text-align:center
-      }
-
-      .subscriptionFooter span {
-          font-size:22px;
-      }
-	</style>
-
     {ifset $headerCode}{$headerCode|noescape}{/ifset}
 
 	{block head}{/block}
 </head>
 <body>
-
 	<script> document.documentElement.className+=' js' </script>
-
-	<div class="gk-page-wrap gk-page">
-
-		<div class="x" style="padding:20px;">
-
-			<style>
-			#header .active { font-weight:bold }
-			form ul.error {
-				color:white;
-				background-color:#b00c28;
-				padding:10px;
-			}
-
-			</style>
-
-			<div id="header" style="margin-bottom:20px;">
+	<header class="page-header">
+		<div class="container">
+			<div class="row">
+				<img src="/layouts/ujszo/images/ujszo-logo--desktop.png" alt="ujszo-logo" title="Ujszo"/>
+				<br/>
 				{if $user->isLoggedIn()}
 					{_system.logged} <b>{$user->getIdentity()->getData()['email']}</b>
-					<br><hr>
-
-					{control frontendMenu}
-
 					{if $user->getIdentity()->role === \Crm\UsersModule\Repository\UsersRepository::ROLE_ADMIN}
-					  | <a href="{link :Dashboard:Dashboard:}">ADMIN</a>
+						<a href="{link :Dashboard:Dashboard:}">ADMIN</a>
 					{/if}
 				{else}
 					{ifCurrent :Users:Sign:In}
@@ -99,14 +44,18 @@
 						<a href="{link :Users:Sign:In}">{_system.sign_in}</a>
 					{/ifCurrent}
 				{/if}
-
-				<p class="text-right" style="float:right">
-				  <b><a class="" href="{link :Subscriptions:Subscriptions:New}">{_system.buy_subscription}</a></b>
-				</p>
 			</div>
+		</div>
+	</header>
 
-			<hr>
+	<div class="container">
+		<div class="row">
+				{if $user->isLoggedIn()}
+					{control frontendMenu}
+				{/if}
+		</div>
 
+		<div class="row">
 			{control simpleWidget 'frontend.layout.top'}
 
 			{foreach $flashes as $flash}
@@ -124,13 +73,12 @@
 					</div>
 				{/if}
 			{/foreach}
+		</div>
 
+		<div class="row">
 			{include content}
-
-        </div>
-
+		</div>
 	</div>
-
 
 	{block scripts}{/block}
 </body>

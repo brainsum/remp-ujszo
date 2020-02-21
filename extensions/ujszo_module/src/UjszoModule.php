@@ -39,11 +39,16 @@ class UjszoModule extends CrmModule
       \Crm\UsersModule\Events\UserChangePasswordEvent::class,
       $this->getInstance(\Crm\UjszoModule\Events\UserChangePasswordEventHandler::class)
     );
+
+    $emitter->addListener(
+      \Crm\UsersModule\Events\UserChangePasswordRequestEvent::class,
+      $this->getInstance(\Crm\UjszoModule\Events\UserChangePasswordRequestEventHandler::class)
+    );
   }
 
   public function registerLayouts(LayoutManager $layoutManager)
   {
-    $layoutManager->registerLayout('ujszo_frontend', realpath(__DIR__ . '/templates/@frontend_layout.latte'));
+    $layoutManager->registerLayout('ujszo', realpath(__DIR__ . '/templates/@ujszo_layout.latte'));
   }
 
 }
