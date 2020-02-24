@@ -51,4 +51,10 @@ class UjszoModule extends CrmModule
     $layoutManager->registerLayout('ujszo', realpath(__DIR__ . '/templates/@ujszo_layout.latte'));
   }
 
+  public function registerAuthenticators(\Crm\ApplicationModule\Authenticator\AuthenticatorManagerInterface $authenticatorManager)
+  {
+    $authenticatorManager->registerAuthenticator(
+      $this->getInstance(\Crm\UjszoModule\Authenticator\ContentAuthenticator::class)
+    );
+  }
 }
