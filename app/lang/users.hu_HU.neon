@@ -111,15 +111,15 @@ frontend:
 			required: "Áfa azonosító kötelező (amennyiben nincs, adjon meg 0-t)"
 		submit: Mentés
 	request_password:
-		title: Elfelejtette jelszavát?
-		info: "Amennyiben elfelejtette jelszavát, küdünk e-maiben egy linket ahol meg tudja változtatni."
+		title: Hiba a bejelentkezéssel
+		info: "Ha nem emlékszik a jelszavára, akkor külön linket küldünk az e-mail címre, amelyet felhasználhat a jelszó visszaállításához."
 		email:
 			label: 'E-mail cím:'
 			required: Kérjük adja meg e-mail címét
-			placeholder: regisztrációnál használt e-mail cím
-		submit: Email küldése
+			placeholder: "az Ön e-mail címe, amellyel regisztrált"
+		submit: Új jelszó igénylése
 		invalid_email: Hibás e-mail cím
-		success: Küldtünk egy e-mailt a további lépésekkel
+		success: Siker! Küldtünk Önnek e-mailt a következő lépésekről
 	reset_password:
 		title: Jelszó változtatás
 		info: Itt tudja megváltoztatni a jelszavát

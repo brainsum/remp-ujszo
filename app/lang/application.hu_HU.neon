@@ -1,0 +1,47 @@
+frontend:
+	layout:
+		warning: Figyelmeztetés!
+		danger: Hiba!
+		success: Siker!
+
+config:
+	category: Applikáció
+	currency:
+		name: 'Általános pénznem'
+		description: 'Minden fieztésnél használt általános pénznem ISO-4217 formátumban (pl. EUR)'
+	site_title:
+		name: 'Oldal neve'
+		description: 'Általános oldalnév - megjelenítve a böngésző címsorában (pl. Ujszo)'
+	site_description:
+		name: 'Oldal leírás'
+		description: 'Oldal meta adatoknál használt leírás (pl. Ujszo - hirportál)'
+	site_url:
+		name: 'Weboldal URL'
+		description: 'Alap URL ahol a weboldal elérhető (pl. https://ujszo.com)'
+	cms_url:
+		name: 'CMS URL'
+		description: 'Alapértelmezett CMS URL (pl. https://example.com)'
+	contact_email:
+		name: 'Kapcsolattartó email cím'
+		description: 'Kapcsolattartó email cím (pl. info@example.com)'
+	default_route:
+		name: 'Alapértelmezett útvonal'
+		description: 'Nette útvonal, / betöltésnél érvényes (pl. Subscriptions:Subscriptions:new)'
+	home_route:
+		name: 'Alapértelmezett oldal'
+		description: 'Nette útvonal, ahova a felhasználó érkezik bejelentkezés, jelszó csere, stb. után (pl. Application:Default:default)'
+	not_logged_in_route:
+		name: 'Nem bejelentkezett felhasználók számára megjelenő oldal'
+		description: 'Nette útvonal, ahova a nem bejelentkezett felhasználó érkezik csak bejelentkezett felhasználóknak elérhető oldal megtekintése esetén(pl. :Users:Sign:in)'
+	layout_name:
+		name: 'Oldal elrendezés'
+		description: 'Modulok által regisztrált elrendezés neve. Figyelem, helytelen érték megadása használhatatlanná teheti a weboldalt! (pl. ujszo)'
+	og_image:
+		name: 'Meta image for page with subscription'
+		description: 'Full URL to the image (pl. https://dennikn.sk/wp-content/uploads/2014/11/def.jpg)'
+	header_block:
+		name: 'Header kód'
+		description: 'Bármilyen opcionális kód (pl. Google Analytics) amit elhelyezne az oldal head szekciójába'
+	admin_logo:
+		name: Admin logó
+		description: 'HTML ami logót jelenít meg a head-ben (pl. <code>&lt;a href=&quot;/&quot;&gt;&lt;img height=&quot;50px&quot; style=&quot;float:left; padding: 0.3em; background: #e7e7e7;&quot; src=&quot;/layouts/admin/images/logo.svg&quot; alt=&quot;logo&quot;&gt;&lt;/a&gt;</code>)'
