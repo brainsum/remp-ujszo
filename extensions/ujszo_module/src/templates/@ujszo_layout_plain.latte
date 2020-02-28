@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sk-SK" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+	<title>{ifset #title}{include title|striptags} | {/ifset}{$siteTitle}</title>
+	<meta n:if="$siteDescription" name="description" content="{$siteDescription}">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <script type='text/javascript' src='{$basePath}/layouts/ujszo/js/jquery-1.11.2.js'></script>
+
+	<link rel="stylesheet" href="{$basePath}/layouts/ujszo/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{$basePath}/layouts/ujszo/css/layout.css">
+	<link rel="stylesheet" href="{$basePath}/layouts/ujszo/js/jquery-ui.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    html, body { font-family: 'Source Sans Pro'; }
+    </style>
+
+	<script src="{$basePath}/layouts/ujszo/js/bootstrap.min.js"></script>
+    <script src="{$basePath}/layouts/ujszo/js/netteForms.js"></script>
+
+    {ifset $headerCode}{$headerCode|noescape}{/ifset}
+
+	{block head}{/block}
+</head>
+<body>
+  <header class="page-header">
+		<div class="container">
+			<div class="row">
+        <div class="col-md-6 col-md-offset-3">
+				  <img src="/layouts/ujszo/images/ujszo-logo--desktop.png" alt="ujszo-logo" title="Ujszo"/>
+        </div>
+			</div>
+		</div>
+	</header>
+  <div class="container">
+		<div class="row">
+      {include content}
+    </div>
+  </div>
+</body>
+</html>

@@ -57,6 +57,10 @@ frontend:
 		foreign_country: "For delivery to foreign countries please contact as  <a href=\"mailto:%contactEmail%\">%contactEmail%</a>"
 		complete_registration: Vissza a cikkhez
 		complete_registration_info: "Ha minden információt kitöltött,<br>folytassa ahol abbahagyta."
+	success:
+		title: "Köszönjük, hogy regisztrált"
+		description: "A megadott e-mail címre küldtünk egy regisztrációt megerősítő levelet. Kérjük nyissa meg és járjon el a levélben megadott instrukciók szerint."
+		return: "Vissza a cikkre"
 	error_page:
 		title: Hiba
 		message: Fizetés sikertelen.
