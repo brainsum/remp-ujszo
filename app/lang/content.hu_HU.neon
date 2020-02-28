@@ -1,0 +1,4 @@
+frontend:
+  authenticator:
+    invalid_token: Hibás token
+    autologin_disabled: Automata bejelentkezés kikapcsolva admin felhasználóknak

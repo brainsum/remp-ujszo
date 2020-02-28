@@ -1,0 +1,4 @@
+frontend:
+	authenticator:
+		invalid_token: Invalid token
+		autologin_disabled: Autologin disabled for admin users
