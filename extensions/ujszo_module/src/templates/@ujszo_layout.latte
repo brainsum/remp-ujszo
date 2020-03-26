@@ -36,7 +36,6 @@
 					{_system.logged} <b>{$user->getIdentity()->getData()['email']}</b>
 					{if $user->getIdentity()->role === \Crm\UsersModule\Repository\UsersRepository::ROLE_ADMIN}
 						<a href="{link :Dashboard:Dashboard:}">ADMIN</a>
-            <a class="btn btn-primary pull-right" href="{link :Subscriptions:Subscriptions:New}">{_system.buy_subscription}</a>
 					{/if}
 				{else}
 					{ifCurrent :Users:Sign:In}
@@ -45,6 +44,7 @@
 						<a href="{link :Users:Sign:In}">{_system.sign_in}</a>
 					{/ifCurrent}
 				{/if}
+        <a class="btn btn-primary pull-right" href="{link :Subscriptions:Subscriptions:New}">{_system.buy_subscription}</a>
 			</div>
 		</div>
 	</header>
