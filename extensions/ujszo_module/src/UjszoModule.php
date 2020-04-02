@@ -58,4 +58,10 @@ class UjszoModule extends CrmModule
       $this->getInstance(\Crm\UjszoModule\Authenticator\ContentAuthenticator::class)
     );
   }
+
+  public function registerCommands(CommandsContainerInterface $commandsContainer)
+  {
+    $commandsContainer->registerCommand($this->getInstance(\Crm\UjszoModule\Commands\EndingSubscriptionsCommand::class));
+  }
+
 }
