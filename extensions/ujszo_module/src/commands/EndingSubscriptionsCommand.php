@@ -58,7 +58,6 @@ class EndingSubscriptionsCommand extends Command
         continue;
       }
 
-      $emailTemplateCode = $nonRecurrentEmail;
       $params = [
         'subscription' => $subscription->toArray(),
         'subscription_type' => $subscription->subscription_type->toArray(),
@@ -70,7 +69,6 @@ class EndingSubscriptionsCommand extends Command
       }
 
       if ($subscription->is_recurrent && !$this->recurrentPaymentsRepository->isStoppedBySubscription($subscription)) {
-        $emailTemplateCode = $recurrentEmail;
         $payment = $this->paymentsRepository->subscriptionPayment($subscription);
         if ($payment) {
           $recurrentPayment = $this->recurrentPaymentsRepository->recurrent($payment);
