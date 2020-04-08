@@ -75,7 +75,8 @@ class EndingSubscriptionsCommand extends Command
           $params['recurrent_payment'] = $recurrentPayment->toArray();
         }
       } elseif ($this->subscriptionsRepository->hasSubscriptionEndAfter($subscription->user->id, $subscription->end_time)) {
-        continue;
+        // TODO: Ignore free subscription
+        // continue;
       }
 
       $result = false;

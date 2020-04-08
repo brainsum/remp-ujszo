@@ -10,6 +10,8 @@ use Crm\UsersModule\Auth\UserAuthenticator;
 use League\Event\AbstractListener;
 use League\Event\EventInterface;
 use Nette\Security\User;
+use GuzzleHttp\Client as HttpClient;
+use Tracy\Debugger;
 
 class UserChangePasswordRequestEventHandler extends AbstractListener
 {
@@ -28,7 +30,7 @@ class UserChangePasswordRequestEventHandler extends AbstractListener
 
         $token = $event->getToken();
 
-        $client = new \GuzzleHttp\Client();
+        $client = new HttpClient();
         $mailer_host = getenv('MAILER_ADDR');
         $sso_token = getenv('SSO_TOKEN');
 
@@ -42,13 +44,17 @@ class UserChangePasswordRequestEventHandler extends AbstractListener
             ]
         ];
 
-        $res = $client->post($url, [
-            'headers' => [
-                'Content-Type' => 'application/json',
-                'Authorization'=> 'Bearer ' . $sso_token,
-            ],
-            'body' => json_encode($body)
-        ]);
+        try {
+          $res = $client->post($url, [
+              'headers' => [
+                  'Content-Type' => 'application/json',
+                  'Authorization'=> 'Bearer ' . $sso_token,
+              ],
+              'body' => json_encode($body)
+          ]);
+        } catch (Exception $e) {
+          Debugger::log($e);
+        }
     }
 
 }

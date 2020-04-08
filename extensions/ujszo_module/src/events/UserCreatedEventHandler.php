@@ -9,6 +9,8 @@ use Crm\UsersModule\Repository\PasswordResetTokensRepository;
 use League\Event\AbstractListener;
 use League\Event\EventInterface;
 use Nette\Security\User;
+use GuzzleHttp\Client as HttpClient;
+use Tracy\Debugger;
 
 class UserCreatedEventHandler extends AbstractListener
 {
@@ -36,7 +38,7 @@ class UserCreatedEventHandler extends AbstractListener
 
           $passwordResetToken = $this->passwordResetTokensRepository->add($user);
 
-          $client = new \GuzzleHttp\Client();
+          $client = new HttpClient();
           $mailer_host = getenv('MAILER_ADDR');
           $sso_token = getenv('SSO_TOKEN');
 
@@ -50,13 +52,17 @@ class UserCreatedEventHandler extends AbstractListener
             ]
           ];
 
-          $res = $client->post($url, [
-            'headers' => [
-              'Content-Type' => 'application/json',
-              'Authorization'=> 'Bearer ' . $sso_token,
-            ],
-            'body' => json_encode($body)
-          ]);
+          try {
+            $res = $client->post($url, [
+              'headers' => [
+                'Content-Type' => 'application/json',
+                'Authorization'=> 'Bearer ' . $sso_token,
+              ],
+              'body' => json_encode($body)
+            ]);
+          } catch (Exception $e) {
+            Debugger::log($e);
+          }
         }
 
     }
