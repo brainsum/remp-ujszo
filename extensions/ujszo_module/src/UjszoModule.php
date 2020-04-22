@@ -10,10 +10,14 @@ use Crm\ApplicationModule\Seeders\CalendarSeeder;
 use Crm\ApplicationModule\Seeders\ConfigsSeeder;
 use Crm\ApplicationModule\Seeders\CountriesSeeder;
 use Crm\ApplicationModule\Seeders\SnippetsSeeder;
+use Crm\ApplicationModule\SeederManager;
 use Crm\ApplicationModule\CrmModule;
 use Crm\ApplicationModule\LayoutManager;
+use Crm\UjszoModule\Seeders\PaymentGatewaysSeeder;
 use League\Event\Emitter;
 use Nette\DI\Container;
+use Nette\Application\Routers\Route;
+use Nette\Application\Routers\RouteList;
 
 class UjszoModule extends CrmModule
 {
@@ -64,4 +68,9 @@ class UjszoModule extends CrmModule
     $commandsContainer->registerCommand($this->getInstance(\Crm\UjszoModule\Commands\EndingSubscriptionsCommand::class));
   }
 
+
+  public function registerSeeders(SeederManager $seederManager)
+  {
+    $seederManager->addSeeder($this->getInstance(PaymentGatewaysSeeder::class));
+  }
 }

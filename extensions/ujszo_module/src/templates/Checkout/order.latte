@@ -1,0 +1,49 @@
+{block #headstart}{/block}
+
+{block #content}
+
+<script  src="https://www.paypal.com/sdk/js?client-id={$client_id}&locale=hu_HU&currency=EUR"></script>
+<script>
+  var paymentId = {$payment_id};
+  var orderIdUrl = {$order_id_url};
+  var returnUrl = {$return_url};
+  var errorUrl = {$error_url};
+
+  paypal.Buttons({
+    createOrder: function() {
+      return fetch(orderIdUrl, {
+        method: 'post',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          'payment_id' : paymentId
+        })
+      }).then(function(res) {
+        return res.json();
+      }).then(function(data) {
+        return data.orderId; // Use the same key name for order ID on the client and server
+      });
+    },
+    onApprove: function(data, actions) {
+      // This function captures the funds from the transaction.
+      return actions.order.capture().then(function(details) {
+        // This function shows a transaction success message to your buyer.
+        window.location.replace(returnUrl);
+      });
+    },
+    onCancel: function (data, actions) {
+    },
+    onError: function (err) {
+      window.location.replace(errorUrl);
+    }
+  }).render('#pp-buttons');</script>
+
+<div class="clearfix">
+  <div class="payment">
+    <div class="checkout_wrapper">
+      <div id="pp-buttons"></div>
+    </div>
+  </div>
+</div>

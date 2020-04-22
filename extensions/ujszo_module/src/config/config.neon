@@ -5,6 +5,8 @@ services:
 	- Crm\UjszoModule\Events\UserChangePasswordRequestEventHandler
 	- Crm\UjszoModule\Authenticator\ContentAuthenticator
 	- Crm\UjszoModule\Commands\EndingSubscriptionsCommand
+	- Crm\UjszoModule\Seeders\PaymentGatewaysSeeder
+	- Crm\UjszoModule\Gateways\Paypal
 	moduleManager:
 		setup:
 			- addModule(Crm\UjszoModule\UjszoModule())

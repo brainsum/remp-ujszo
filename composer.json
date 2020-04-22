@@ -31,6 +31,7 @@
 		}
 	],
 	"require": {
+		"paypal/paypal-checkout-sdk": "1.0.1",
 		"remp/crm-admin-module": "~0.9",
 		"remp/crm-api-module": "~0.9",
 		"remp/crm-application-module": "~0.9",
