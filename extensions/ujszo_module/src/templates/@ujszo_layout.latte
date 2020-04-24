@@ -82,10 +82,11 @@
 	</div>
 
   {if $user->isLoggedIn()}
-    <div class="hidden">
+    {include 'iframes.latte'}
+    {* <div class="hidden">
       <iframe src="http://ujszo.local:8800/remp/set_cookie?token={$_COOKIE['n_token']}"></iframe>
       <iframe src="http://d8.local:8200/remp/set_cookie?token={$_COOKIE['n_token']}"></iframe>
-    </div>
+    </div> *}
   {/if}
 
 	{block scripts}{/block}

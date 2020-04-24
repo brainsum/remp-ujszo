@@ -1,7 +1,8 @@
 {block iframes}
   <div class="hidden">
-    {* {foreach $sites as $src}
-      <iframe src="{$src}/remp/set_cookie?token={$_COOKIE['n_token']}"></iframe>
-    {/foreach} *}
+    {php $sites = explode(',',getenv('COOKIE_DOMAINS'))}
+    {foreach $sites as $src}
+      <iframe src="{$src|trim:'/'}/remp/set_cookie?token={$_COOKIE['n_token']}"></iframe>
+    {/foreach}
   </div>
 {/block}
