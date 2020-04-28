@@ -111,18 +111,18 @@ frontend:
 			required: "Áfa azonosító kötelező (amennyiben nincs, adjon meg 0-t)"
 		submit: Mentés
 	request_password:
-		title: Hiba a bejelentkezéssel
-		info: "Ha nem emlékszik a jelszavára, akkor külön linket küldünk az e-mail címre, amelyet felhasználhat a jelszó visszaállításához."
+		title: Elfelejtette a belépési jelszavát?
+		info: "Kérjük írja be a regisztrációnál használt email címet, küldünk egy jelszó módosító emailt! Ha nem emlékszik a regisztrációnál használt email címre sem, sajnos újra kell regisztrálnia."
 		email:
 			label: 'E-mail cím:'
 			required: Kérjük adja meg e-mail címét
 			placeholder: "az Ön e-mail címe, amellyel regisztrált"
 		submit: Új jelszó igénylése
 		invalid_email: Hibás e-mail cím
-		success: Siker! Küldtünk Önnek e-mailt a következő lépésekről
+		success: "Az ön által megadott email címre elküldtünk egy jelszó módosító emailt. Kérjük nézze meg a postafiókját, a reklám, esetleg SPAM fiókot is beleértve!"
 	reset_password:
-		title: Jelszó változtatás
-		info: Itt tudja megváltoztatni a jelszavát
+		title: Jelszó módosítás
+		info: Ezen az oldalon módosíthatja jelszavát.
 		errors:
 			invalid_password_reset_token: Jelszó változtatáshoz használt link érvényessége lejárt. Igényeljen új linket.
 		new_password:
@@ -131,14 +131,14 @@ frontend:
 			placeholder: új jelszó
 			min_length: Jelszavának legalább %count% karakterből kell állnia.
 		new_password_confirm:
-			label: 'Új jelszó ismét:'
+			label: 'Új jelszó még egyszer:'
 			required: Kérjük adja meg az új jelszavát még egyszer
 			not_matching: Jelszavak nem egyeznek
-			placeholder: új jelszó ismét
+			placeholder: új jelszó még egyszer
 			description: Kérjük adja meg az új jelszavát még egyszer megerősités céljából
-		submit: Jelszó változtatás
+		submit: Módosít
 		could_not_set: Jelszó változtatás sikertelen
-		success: Sikeres jelszó változtatás
+		success: Sikeresen módosította jelszavát!
 	settings:
 		title: Rendszer beállítások
 		personal_data:
