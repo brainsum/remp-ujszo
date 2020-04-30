@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0378ebab1ff2077dd739f3710b8c8a2d",
+    "content-hash": "c5ebe9a012e229327f68b80a619db946",
     "packages": [
         {
             "name": "cakephp/cache",
@@ -4189,16 +4189,16 @@
         },
         {
             "name": "remp/crm-invoices-module",
-            "version": "0.12.0",
+            "version": "dev-remp",
             "source": {
                 "type": "git",
-                "url": "https://github.com/remp2020/crm-invoices-module.git",
-                "reference": "3ff4badbeb09fa564e94e95fa0bb24c8301501fa"
+                "url": "https://github.com/brainsum/crm-invoices-module.git",
+                "reference": "b4a520775899dff7dba305da33ed4733bee1af2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/remp2020/crm-invoices-module/zipball/3ff4badbeb09fa564e94e95fa0bb24c8301501fa",
-                "reference": "3ff4badbeb09fa564e94e95fa0bb24c8301501fa",
+                "url": "https://api.github.com/repos/brainsum/crm-invoices-module/zipball/b4a520775899dff7dba305da33ed4733bee1af2c",
+                "reference": "b4a520775899dff7dba305da33ed4733bee1af2c",
                 "shasum": ""
             },
             "require": {
@@ -4215,13 +4215,15 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "CRM Invoices Module",
             "homepage": "https://remp2020.com",
-            "time": "2020-03-11T12:15:51+00:00"
+            "support": {
+                "source": "https://github.com/brainsum/crm-invoices-module/tree/remp"
+            },
+            "time": "2020-04-30T10:48:02+00:00"
         },
         {
             "name": "remp/crm-issues-module",
@@ -6437,26 +6439,33 @@
     "packages-dev": [],
     "aliases": [
         {
-            "alias": "0.9.0",
-            "alias_normalized": "0.9.0.0",
+            "alias": "0.12.0",
+            "alias_normalized": "0.12.0.0",
+            "version": "dev-remp",
+            "package": "remp/crm-invoices-module"
+        },
+        {
+            "alias": "0.12.0",
+            "alias_normalized": "0.12.0.0",
             "version": "dev-remp",
             "package": "remp/crm-payments-module"
         },
         {
-            "alias": "0.9.0",
-            "alias_normalized": "0.9.0.0",
+            "alias": "0.12.0",
+            "alias_normalized": "0.12.0.0",
             "version": "dev-remp",
             "package": "remp/crm-salesfunnel-module"
         },
         {
-            "alias": "0.9.0",
-            "alias_normalized": "0.9.0.0",
+            "alias": "0.12.0",
+            "alias_normalized": "0.12.0.0",
             "version": "dev-remp",
             "package": "remp/crm-subscriptions-module"
         }
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "remp/crm-invoices-module": 20,
         "remp/crm-payments-module": 20,
         "remp/crm-salesfunnel-module": 20,
         "remp/crm-subscriptions-module": 20,

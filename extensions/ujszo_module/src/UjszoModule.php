@@ -48,6 +48,16 @@ class UjszoModule extends CrmModule
       \Crm\UsersModule\Events\UserChangePasswordRequestEvent::class,
       $this->getInstance(\Crm\UjszoModule\Events\UserChangePasswordRequestEventHandler::class)
     );
+
+    $emitter->addListener(
+      \Crm\PaymentsModule\Events\PaymentChangeStatusEvent::class,
+      $this->getInstance(\Crm\UjszoModule\Events\PaymentChangeStatusEventHandler::class)
+    );
+
+    $emitter->addListener(
+      \Crm\InvoicesModule\Events\InvoiceCreatedEvent::class,
+      $this->getInstance(\Crm\UjszoModule\Events\InvoiceCreatedEventHandler::class)
+    );
   }
 
   public function registerLayouts(LayoutManager $layoutManager)

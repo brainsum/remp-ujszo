@@ -3,6 +3,8 @@ services:
 	- Crm\UjszoModule\Events\SubscriptionEventHandler
 	- Crm\UjszoModule\Events\UserChangePasswordEventHandler
 	- Crm\UjszoModule\Events\UserChangePasswordRequestEventHandler
+	- Crm\UjszoModule\Events\PaymentChangeStatusEventHandler
+	- Crm\UjszoModule\Events\InvoiceCreatedEventHandler
 	- Crm\UjszoModule\Authenticator\ContentAuthenticator
 	- Crm\UjszoModule\Commands\EndingSubscriptionsCommand
 	- Crm\UjszoModule\Seeders\PaymentGatewaysSeeder
