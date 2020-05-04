@@ -113,11 +113,14 @@ frontend:
 	request_password:
 		title: Elfelejtette a belépési jelszavát?
 		info: "Kérjük írja be a regisztrációnál használt email címet, küldünk egy jelszó módosító emailt! Ha nem emlékszik a regisztrációnál használt email címre sem, sajnos újra kell regisztrálnia."
+		login:
+			text: "Ha tudja a jelszavát, "
+			link: "jelentkezzen be itt"
 		email:
 			label: 'E-mail cím:'
 			required: Kérjük adja meg e-mail címét
 			placeholder: "az Ön e-mail címe, amellyel regisztrált"
-		submit: Új jelszó igénylése
+		submit: Küldés
 		invalid_email: Hibás e-mail cím
 		success: "Az ön által megadott email címre elküldtünk egy jelszó módosító emailt. Kérjük nézze meg a postafiókját, a reklám, esetleg SPAM fiókot is beleértve!"
 	reset_password:
