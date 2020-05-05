@@ -2,7 +2,7 @@
 
 {block #content}
 
-<script  src="https://www.paypal.com/sdk/js?client-id={$client_id}&locale=hu_HU&currency=EUR"></script>
+<script  src="https://www.paypal.com/sdk/js?client-id={$client_id}&locale=sk_SK&currency=EUR"></script>
 <script>
   var paymentId = {$payment_id};
   var orderIdUrl = {$order_id_url};
@@ -40,7 +40,7 @@
     }
   }).render('#pp-buttons');</script>
 
-<div class="clearfix">
+<div class="col-md-6 col-md-offset-3">
   <div class="payment">
     <div class="checkout_wrapper">
       <div id="pp-buttons"></div>

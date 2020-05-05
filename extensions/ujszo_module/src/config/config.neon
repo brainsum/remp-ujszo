@@ -8,6 +8,7 @@ services:
 	- Crm\UjszoModule\Authenticator\ContentAuthenticator
 	- Crm\UjszoModule\Commands\EndingSubscriptionsCommand
 	- Crm\UjszoModule\Seeders\PaymentGatewaysSeeder
+	- Crm\UjszoModule\Seeders\ConfigsSeeder
 	- Crm\UjszoModule\Gateways\Paypal
 	moduleManager:
 		setup:

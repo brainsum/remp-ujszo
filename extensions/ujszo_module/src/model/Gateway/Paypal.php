@@ -12,16 +12,12 @@ use Omnipay\Omnipay;
 use Omnipay\PayPal\ExpressGateway;
 use PayPalCheckoutSdk\Orders\OrdersCreateRequest;
 use PayPalCheckoutSdk\Core\PayPalHttpClient;
-use PayPalCheckoutSdk\Core\SandboxEnvironment;
 use PayPalCheckoutSdk\Orders\OrdersGetRequest;
 
 class Paypal extends GatewayAbstract
 {
-    private const CLIENT_ID = 'ATS2lBak3X2HLnOqu8dVHAEk4wTlpt8r3DGiZUJoQ4QYmI_aNJsu7nDPyh31h8W1XszrH7kFvXePldn6';
 
-    private const CLIENT_SECRET = 'EEne5Hhr8BUWIyOTAy3f6krb6ggiAHPn4KRsFn3eIaDHhJuGjeRXepwxXlcfEBhNO6LSF1DiGWt57rYt';
-
-    private $paymentMetaRepository;
+  private $paymentMetaRepository;
 
     public function __construct(
         LinkGenerator $linkGenerator,
@@ -36,14 +32,22 @@ class Paypal extends GatewayAbstract
 
     protected function initialize()
     {
-      $environment = new SandboxEnvironment(self::CLIENT_ID, self::CLIENT_SECRET);
+      if ($this->applicationConfig->get('paypal_mode') == 'live') {
+        $environmentClass = \PayPalCheckoutSdk\Core\ProductionEnvironment::class;
+      } else {
+        $environmentClass = \PayPalCheckoutSdk\Core\SandboxEnvironment::class;
+      }
+
+      $environment = new $environmentClass(
+        $this->applicationConfig->get('paypal_client_id'),
+        $this->applicationConfig->get('paypal_client_secret')
+      );
       $this->client = new PayPalHttpClient($environment);
     }
 
     public function begin($payment)
     {
       $this->initialize();
-
       $request = new OrdersCreateRequest();
       $request->prefer('return=representation');
       $request->body = [
@@ -81,7 +85,7 @@ class Paypal extends GatewayAbstract
 
         $this->httpResponse->redirect($url);
         exit();
-      }catch (HttpException $ex) {
+      } catch (HttpException $ex) {
         // echo $ex->statusCode;
         dump($ex->getMessage());
       }

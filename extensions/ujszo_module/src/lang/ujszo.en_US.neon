@@ -1,0 +1,9 @@
+config:
+	paypal:
+		client_secret:
+			label: PayPal application client secret
+			description: ""
+		client_id:
+			label: PayPal application client id
+			description: ""
+

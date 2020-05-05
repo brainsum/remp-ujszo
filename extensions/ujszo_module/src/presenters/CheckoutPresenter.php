@@ -15,10 +15,6 @@ use PayPalCheckoutSdk\Orders\OrdersGetRequest;
 
 class CheckoutPresenter extends FrontendPresenter
 {
-    private const CLIENT_ID = 'ATS2lBak3X2HLnOqu8dVHAEk4wTlpt8r3DGiZUJoQ4QYmI_aNJsu7nDPyh31h8W1XszrH7kFvXePldn6';
-
-    private const CLIENT_SECRET = 'EEne5Hhr8BUWIyOTAy3f6krb6ggiAHPn4KRsFn3eIaDHhJuGjeRXepwxXlcfEBhNO6LSF1DiGWt57rYt';
-
     private $paymentsRepository;
 
     private $paymentMetaRepository;
@@ -52,7 +48,7 @@ class CheckoutPresenter extends FrontendPresenter
       $this->template->order_id_url = $this->linkGenerator->link('Ujszo:Checkout:OrderId');
       $this->template->return_url = $this->linkGenerator->link('Payments:Return:gateway', ['gatewayCode' => $payment->payment_gateway->code, 'VS' => $vs, 'paypal_success' => 1]);
       $this->template->error_url = $this->linkGenerator->link('Payments:Return:gateway', ['gatewayCode' => $payment->payment_gateway->code, 'VS' => $vs, 'paypal_success' => 0]);
-      $this->template->client_id = self::CLIENT_ID;
+      $this->template->client_id = $this->applicationConfig->get('paypal_client_id');
     }
 
     public function renderOrderId() {
@@ -80,7 +76,16 @@ class CheckoutPresenter extends FrontendPresenter
     }
 
     private function getPaypalOrder($order_id) {
-      $environment = new SandboxEnvironment(self::CLIENT_ID, self::CLIENT_SECRET);
+      if ($this->applicationConfig->get('paypal_mode') == 'live') {
+        $environmentClass = \PayPalCheckoutSdk\Core\ProductionEnvironment::class;
+      } else {
+        $environmentClass = \PayPalCheckoutSdk\Core\SandboxEnvironment::class;
+      }
+
+      $environment = new $environmentClass(
+        $this->applicationConfig->get('paypal_client_id'),
+        $this->applicationConfig->get('paypal_client_secret')
+      );
       $client = new PayPalHttpClient($environment);
       return $client->execute(new OrdersGetRequest($order_id));
     }
