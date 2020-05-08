@@ -51,7 +51,8 @@ class UjszoModule extends CrmModule
 
     $emitter->addListener(
       \Crm\PaymentsModule\Events\PaymentChangeStatusEvent::class,
-      $this->getInstance(\Crm\UjszoModule\Events\PaymentChangeStatusEventHandler::class)
+      $this->getInstance(\Crm\UjszoModule\Events\PaymentChangeStatusEventHandler::class),
+      600
     );
 
     $emitter->addListener(
