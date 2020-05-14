@@ -22,9 +22,9 @@ confirm_delete: Biztos törli a bejegyzést?
 download: Letöltés
 
 message:
-	success: Siker!
-	error: Hiba!
-	warning: Figyelmeztetés!
+	success: ""
+	error: ""
+	warning: ""
 
 "yes": "Igen"
 "no": "Nem"

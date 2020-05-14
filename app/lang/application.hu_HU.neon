@@ -1,8 +1,8 @@
 frontend:
 	layout:
-		warning: Figyelmeztetés!
-		danger: Hiba!
-		success: Siker!
+		warning: ""
+		danger: ""
+		success: ""
 
 config:
 	category: Applikáció

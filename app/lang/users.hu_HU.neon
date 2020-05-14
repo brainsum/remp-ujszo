@@ -25,7 +25,7 @@ frontend:
 			placeholder: Saját jelszó
 		remember: Maradjon bejelentkezve
 		submit: Bejelentkezés
-		signed_out: Sikeres kijelentkezés.
+		signed_out: Sikeresen kijelentkezett.
 	sign_up:
 		title: Regisztráció
 		username:
@@ -137,7 +137,7 @@ frontend:
 			label: 'Új jelszó még egyszer:'
 			required: Kérjük adja meg az új jelszavát még egyszer
 			not_matching: Jelszavak nem egyeznek
-			placeholder: új jelszó még egyszer
+			placeholder: Új jelszó még egyszer
 			description: Kérjük adja meg az új jelszavát még egyszer megerősités céljából
 		submit: Módosít
 		could_not_set: Jelszó változtatás sikertelen
