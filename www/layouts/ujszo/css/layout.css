@@ -1,21 +1,52 @@
-header.page-header {
-  background: #000056;
-  margin: 0;
-  padding: 1rem 0;
-  color: #fff;
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  color: #3f3f44;
+  background: #F3F3F3;
 }
-header.page-header .row > div {
-  display: flex;
-  justify-content: space-between;
+
+.sale-page-header {
+  background:#fcbf1e;
+  padding: 50px 0;
+  margin-bottom: 50px;
 }
-header.page-header .row > div h1 {
-  margin: 0;
-  align-self: center;
-  padding: 2.8rem 2rem 1rem;
+.sale-page-header p:last-child::before {
+  content: '';
+  height: 1px;
+  width: 50px;
+  background-color: #3f3f447a;
+  display: block;
+  margin: 15px auto 15px;
+}
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+p {
+  line-height: 1.5;
+}
+
+.registration-form-container .form-container-inner {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px #dedede;
+}
+
+h4 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.help-block {
+  font-size: 12px;
+  margin-bottom: 20px;
 }
 
 input[type=checkbox] {
-  margin-right: 1rem;
+  margin-right: 5px;
 }
 
 .btn-group-lg > .btn, .btn-lg {
@@ -23,19 +54,22 @@ input[type=checkbox] {
 }
 
 .btn-primary {
-  background-color: #fd014b;
-  color: #FFFFFF;
-  border-color: #fd014b;
+  font-family: 'Roboto Slab', serif;
+  background-color: #3f3f44;
+  color: #f7f7f7;
+  border: none;
   font-weight: bold;
+  text-transform: uppercase;
+  outline: none;
+  font-size: 15px;
+  letter-spacing: 1px;
 }
 .btn-primary:hover, .btn-primary:focus {
-  background-color: #ca013c;
-  border-color: #ca013c;
+  color: #fcbf1e;
+  background-color: #000;
 }
 .btn-primary:active, .btn-primary:active:focus {
-  background-color: #97012d;
-  border-color: #97012d;
+  color: #fcbf1e;
+  background-color: #000;
 }
-/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxheW91dC5zY3NzIiwibGF5b3V0LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1CQUFBO0VBQ0EsU0FBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0FDQ0Y7QURDRTtFQUNFLGFBQUE7RUFDQSw4QkFBQTtBQ0NKO0FEQ0k7RUFDRSxTQUFBO0VBQ0Esa0JBQUE7RUFDQSx5QkFBQTtBQ0NOOztBRElBO0VBQ0Usa0JBQUE7QUNERjs7QURJQTtFQUNFLGdCQUFBO0FDREY7O0FESUE7RUFDRSx5QkFBQTtFQUNBLGNBQUE7RUFDQSxxQkFBQTtFQUNBLGlCQUFBO0FDREY7QURHRTtFQUVFLHlCQUFBO0VBQ0EscUJBQUE7QUNGSjtBREtFO0VBRUUseUJBQUE7RUFDQSxxQkFBQTtBQ0pKIiwiZmlsZSI6ImxheW91dC5jc3MifQ== */
 
-/*# sourceMappingURL=layout.css.map */
