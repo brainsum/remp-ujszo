@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="{$basePath}/layouts/ujszo/js/jquery-ui.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet" type="text/css" />
     <style type="text/css">
     html, body { font-family: 'Source Sans Pro'; }
     </style>
@@ -26,19 +26,28 @@
 	{block head}{/block}
 </head>
 <body>
-  <header class="page-header">
-		<div class="container">
-			<div class="row">
-        <div class="col-md-6 col-md-offset-3">
-				  <img src="/layouts/ujszo/images/ujszo-logo--desktop.png" alt="ujszo-logo" title="Ujszo"/>
-        </div>
+  <header class="remp-header text-center">
+		<div class="page-header-logo-holder">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<img src="/layouts/ujszo/images/ujszo-logo--desktop--inverse.png" alt="ujszo-logo" title="Ujszo"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-header-text-holder">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<h1>{ifset #title}{include title|striptags}{/ifset}</h1>
+						{ifset #list}{include list}{/ifset}
+					</div>
+				</div>
 			</div>
 		</div>
 	</header>
-  <div class="container">
-		<div class="row">
-      {include content}
-    </div>
-  </div>
+	{include content}
 </body>
 </html>
