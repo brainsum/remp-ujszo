@@ -18,11 +18,11 @@ frontend:
 		username:
 			label: 'E-mail cím:'
 			required: Kérjük adja meg az e-mail címét
-			placeholder: Pl. moj@email.sk
+			placeholder: E-mail cím
 		password:
 			label: 'Jelszó:'
 			required: Kérjük adja meg a jelszavát.
-			placeholder: Saját jelszó
+			placeholder: Jelszó
 		remember: Maradjon bejelentkezve
 		submit: Bejelentkezés
 		signed_out: Sikeresen kijelentkezett.
@@ -124,7 +124,7 @@ frontend:
 		invalid_email: Hibás e-mail cím
 		success: "Az ön által megadott email címre elküldtünk egy jelszó módosító emailt. Kérjük nézze meg a postafiókját, a reklám, esetleg SPAM fiókot is beleértve!"
 	reset_password:
-		title: Jelszó módosítás
+		title: Jelszó beállítás
 		info: Ezen az oldalon módosíthatja jelszavát.
 		errors:
 			invalid_password_reset_token: Jelszó változtatáshoz használt link érvényessége lejárt. Igényeljen új linket.
@@ -139,7 +139,7 @@ frontend:
 			not_matching: Jelszavak nem egyeznek
 			placeholder: Új jelszó még egyszer
 			description: Kérjük adja meg az új jelszavát még egyszer megerősités céljából
-		submit: Módosít
+		submit: Beállítás
 		could_not_set: Jelszó változtatás sikertelen
 		success: Sikeresen módosította jelszavát!
 	settings:
