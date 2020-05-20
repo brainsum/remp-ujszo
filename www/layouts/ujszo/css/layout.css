@@ -31,31 +31,104 @@ p {
   line-height: 1.5;
 }
 
-.registration-form-container .form-container-inner {
+.remp-form-container .form-container-inner {
   background: #fff;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 5px 15px #dedede;
 }
 
-h4 {
+.remp-form-container h4 {
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
   margin-top: 0;
 }
 
-.help-block {
+.remp-form-container .help-block {
   font-size: 12px;
   margin-bottom: 20px;
   color: #3f3f44;
 }
 
-input[type=checkbox] {
-  margin: 0 5px 0 0;
+.remp-form-container label {
+  font-weight: 400;
+  font-size: 12px;
 }
 
-.btn-group-lg > .btn, .btn-lg {
-  border-radius: 0;
+.remp-form-container .checkbox-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.remp-form-container .registration-checkbox-container {
+  margin-bottom: 25px;
+}
+
+.remp-form-container .checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.remp-form-container .checkmark {
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border: 1px solid #3f3f447a;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: -3px;
+  border-radius: 3px;
+}
+
+.remp-form-container .checkbox-container:hover input ~ .checkmark {
+  background-color: #F3F3F3;
+}
+
+.remp-form-container .checkbox-container input:checked ~ .checkmark {
+  background-color: #fcbf1e;
+  border-color: #3f3f44;
+}
+
+.remp-form-container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.remp-form-container .checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.remp-form-container .checkbox-container .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 4px;
+  height: 7px;
+  border: solid #3f3f44;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.remp-form-container .has-error .checkbox-container input ~ .checkmark {
+  background-color: #ffabbc57;
+  border-color: #ab1414;
+}
+
+.remp-form-container .has-error input {
+  border-color: #ab1414;
+  background-color: #ffabbc57;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .btn-primary {
@@ -78,86 +151,5 @@ input[type=checkbox] {
 .btn-primary:active, .btn-primary:active:focus {
   color: #fcbf1e;
   background-color: #000;
-}
-
-label {
-  font-weight: 400;
-  font-size: 12px;
-}
-
-.checkbox-container {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.registration-checkbox-container {
-  margin-bottom: 25px;
-}
-
-.checkbox-container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.checkmark {
-  height: 15px;
-  width: 15px;
-  background-color: transparent;
-  border: 1px solid #3f3f447a;
-  display: inline-block;
-  margin-right: 5px;
-  margin-bottom: -3px;
-  border-radius: 3px;
-}
-
-.checkbox-container:hover input ~ .checkmark {
-  background-color: #F3F3F3;
-}
-
-.checkbox-container input:checked ~ .checkmark {
-  background-color: #fcbf1e;
-  border-color: #3f3f44;
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.container .checkmark:after {
-  left: 6px;
-  top: 3px;
-  width: 4px;
-  height: 7px;
-  border: solid #3f3f44;
-  border-width: 0 1px 1px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.has-error .checkbox-container input ~ .checkmark {
-  background-color: #ffabbc57;
-  border-color: #ab1414;
-}
-
-.has-error input {
-  border-color: #ab1414;
-  background-color: #ffabbc57;
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }
 
