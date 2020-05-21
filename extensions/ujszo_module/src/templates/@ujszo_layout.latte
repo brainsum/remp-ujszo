@@ -27,6 +27,7 @@
 {php $addWrapper = in_array($current, $forms)}
 {php $classname = preg_replace('/\:/','-', strtolower($current))}
 {php $classname2 = preg_replace('/-.*$/','', $classname) . '-page'}
+{var $url = $presenter->applicationConfig->get('site_url')}
 <body class="{$classname2} {$classname}">
 
 	<script> document.documentElement.className+=' js' </script>
@@ -37,7 +38,7 @@
 					{if $addWrapper}
 						<div class="col-md-8 col-md-offset-2 text-center">
 					{/if}
-							<img src="/layouts/ujszo/images/ujszo-logo--desktop--inverse.png" alt="ujszo-logo" title="Ujszo"/>
+							<a href="{$url}"><img src="/layouts/ujszo/images/ujszo-logo--desktop--inverse.png" alt="ujszo-logo" title="Ujszo"/></a>
 					{if $addWrapper}
 						</div>
 					{/if}
