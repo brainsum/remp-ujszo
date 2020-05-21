@@ -22,30 +22,35 @@
 
 	{block head}{/block}
 </head>
-<body>
-	{var $current = $presenter->name . ":" .$presenter->action}
-	{var $forms = ['Users:Users:requestPassword', 'Users:Users:resetPassword', 'Users:Sign:in']}
-	{php $addWrapper = in_array($current, $forms)}
+{var $current = $presenter->name . ":" .$presenter->action}
+{var $forms = ['Users:Users:requestPassword', 'Users:Users:resetPassword', 'Users:Sign:in']}
+{php $addWrapper = in_array($current, $forms)}
+{php $classname = preg_replace('/\:/','-', strtolower($current))}
+{php $classname2 = preg_replace('/-.*$/','', $classname) . '-page'}
+<body class="{$classname2} {$classname}">
 
 	<script> document.documentElement.className+=' js' </script>
 	<header class="remp-header">
-		<div class="container">
-			<div class="row">
-				{if $addWrapper}
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<img src="/layouts/ujszo/images/ujszo-logo--desktop--inverse.png" alt="ujszo-logo" title="Ujszo"/>
-				</div>
-				{dump}
-				{/if}
-				<br/>
-				{if $user->isLoggedIn()}
-					{_system.logged} <b>{$user->getIdentity()->getData()['email']}</b>
-					{if $user->getIdentity()->role === \Crm\UsersModule\Repository\UsersRepository::ROLE_ADMIN}
-						<a href="{link :Dashboard:Dashboard:}">ADMIN</a>
+		<div class="page-header-logo-holder">
+			<div class="container">
+				<div class="row">
+					{if $addWrapper}
+						<div class="col-md-8 col-md-offset-2 text-center">
 					{/if}
-        	<a class="btn btn-primary pull-right" href="{link :Subscriptions:Subscriptions:New}">{_system.buy_subscription}</a>
-				{else}
-				{/if}
+							<img src="/layouts/ujszo/images/ujszo-logo--desktop--inverse.png" alt="ujszo-logo" title="Ujszo"/>
+					{if $addWrapper}
+						</div>
+					{/if}
+					<br/>
+					{if $user->isLoggedIn()}
+						{_system.logged} <b>{$user->getIdentity()->getData()['email']}</b>
+						{if $user->getIdentity()->role === \Crm\UsersModule\Repository\UsersRepository::ROLE_ADMIN}
+							<a href="{link :Dashboard:Dashboard:}">ADMIN</a>
+						{/if}
+						<a class="btn btn-primary pull-right" href="{link :Subscriptions:Subscriptions:New}">{_system.buy_subscription}</a>
+					{else}
+					{/if}
+				</div>
 			</div>
 		</div>
 	</header>
