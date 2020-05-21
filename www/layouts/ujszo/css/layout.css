@@ -13,14 +13,7 @@ body {
   padding: 50px 0;
   margin-bottom: 50px;
 }
-.sale-page-header p:last-child::before {
-  content: '';
-  height: 1px;
-  width: 50px;
-  background-color: #3f3f447a;
-  display: block;
-  margin: 15px auto 15px;
-}
+
 h1 {
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
@@ -29,6 +22,15 @@ h1 {
 }
 p {
   line-height: 1.5;
+}
+
+p.text-border-top::before {
+  content: '';
+  height: 1px;
+  width: 50px;
+  background-color: #3f3f447a;
+  display: block;
+  margin: 15px auto 15px;
 }
 
 .remp-form-container .form-container-inner {
