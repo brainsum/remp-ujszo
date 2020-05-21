@@ -153,6 +153,11 @@ p {
   background-color: #000;
 }
 
+.thank-you-list {
+  text-align: left;
+  margin-top: 45px;
+}
+
 .thank-you-list li {
   list-style: none;
   position: relative;
