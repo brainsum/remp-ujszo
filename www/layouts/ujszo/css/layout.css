@@ -229,7 +229,7 @@ p.text-border-top::before {
 }
 
 .users-page .remp-form-container {
-  margin-top: 40px
+  margin-top: 40px;
 }
 
 .users-page .form-group .control-label {
@@ -238,4 +238,32 @@ p.text-border-top::before {
 
 .users-page .form-group .col-sm-9 {
   width: 100%;
+}
+
+.users-users-requestpassword .remp-form-container .page-header {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.users-users-requestpassword .remp-form-container .link {
+  color: #000000;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.users-users-requestpassword .remp-form-container .link:hover {
+  text-decoration: none;
+}
+
+.users-users-requestpassword .remp-form-container .well {
+  min-height: 20px;
+  padding: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-top: 30px;
 }
