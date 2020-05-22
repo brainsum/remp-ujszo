@@ -14,6 +14,21 @@ body {
   margin-bottom: 50px;
 }
 
+.page-header-text-holder a {
+  transition: all,0.3s;
+  font-family: "Roboto Condensed",sans-serif;
+  color: #000000;
+  text-decoration: underline;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 3px;
+}
+
+.page-header-text-holder a:hover,
+.page-header-text-holder a:focus {
+  text-decoration: none;
+}
+
 h1 {
   font-family: 'Roboto Slab', serif;
   font-weight: 700;

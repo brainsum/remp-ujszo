@@ -34,17 +34,19 @@
 				</div>
 			</div>
 		</div>
+		{ifset #list}
 		<div class="page-header-text-holder">
 			<div class="container">
 
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<h1>{ifset #title}{include title|striptags}{/ifset}</h1>
-						{ifset #list}{include list}{/ifset}
+						{include list}
 					</div>
 				</div>
 			</div>
 		</div>
+		{/ifset}
 	</header>
 	{include content}
 </body>
