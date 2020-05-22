@@ -118,8 +118,8 @@ frontend:
 			link: "jelentkezzen be itt"
 		email:
 			label: 'E-mail cím:'
-			required: Kérjük adja meg e-mail címét
-			placeholder: "az Ön e-mail címe, amellyel regisztrált"
+			required: Kérjük add meg az e-mail címed
+			placeholder: "Az e-mail címed, amellyel regisztráltál"
 		submit: Küldés
 		invalid_email: Hibás e-mail cím
 		success: "Az ön által megadott email címre elküldtünk egy jelszó módosító emailt. Kérjük nézze meg a postafiókját, a reklám, esetleg SPAM fiókot is beleértve!"
