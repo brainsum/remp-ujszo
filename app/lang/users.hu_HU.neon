@@ -17,13 +17,13 @@ frontend:
 		title: Bejelentkezés
 		username:
 			label: 'E-mail cím:'
-			required: Kérjük adja meg az e-mail címét
+			required: Kérjük add meg az e-mail címed
 			placeholder: E-mail cím
 		password:
 			label: 'Jelszó:'
-			required: Kérjük adja meg a jelszavát.
+			required: Kérjük add meg a jelszavad.
 			placeholder: Jelszó
-		remember: Maradjon bejelentkezve
+		remember: Maradj bejelentkezve
 		submit: Bejelentkezés
 		signed_out: Sikeresen kijelentkezett.
 	sign_up:
@@ -111,21 +111,21 @@ frontend:
 			required: "Áfa azonosító kötelező (amennyiben nincs, adjon meg 0-t)"
 		submit: Mentés
 	request_password:
-		title: Elfelejtette a belépési jelszavát?
-		info: "Kérjük írja be a regisztrációnál használt email címet, küldünk egy jelszó módosító emailt! Ha nem emlékszik a regisztrációnál használt email címre sem, sajnos újra kell regisztrálnia."
+		title: Elfelejtetted a jelszavad?
+		info: "Kérjük írd be a regisztrációnál használt e-mail címed, majd küldünk egy jelszó módosító e-mailt! Ha nem emlékszel a regisztrációnál használt e-mail címedre sem, akkor sajnos újra kell regisztrálnod."
 		login:
-			text: "Ha tudja a jelszavát, "
-			link: "jelentkezzen be itt"
+			text: "Ha tudod a jelszavad, "
+			link: "jelentkezz be itt"
 		email:
 			label: 'E-mail cím:'
 			required: Kérjük add meg az e-mail címed
 			placeholder: "Az e-mail címed, amellyel regisztráltál"
 		submit: Küldés
 		invalid_email: Hibás e-mail cím
-		success: "Az ön által megadott email címre elküldtünk egy jelszó módosító emailt. Kérjük nézze meg a postafiókját, a reklám, esetleg SPAM fiókot is beleértve!"
+		success: "Az általad megadott e-mail címre elküldtünk egy jelszó módosító e-mailt. Kérlek nézd meg a postafiókod, a reklám, esetleg SPAM fiókot is beleértve!"
 	reset_password:
 		title: Jelszó beállítás
-		info: Ezen az oldalon módosíthatja jelszavát.
+		info: Ezen az oldalon módosíthatod jelszavad.
 		errors:
 			invalid_password_reset_token: Jelszó változtatáshoz használt link érvényessége lejárt. Igényeljen új linket.
 		new_password:
