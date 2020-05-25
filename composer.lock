@@ -4607,12 +4607,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/crm-users-module.git",
-                "reference": "8e470063a8d09f3b6ba846848331db516d9e2e52"
+                "reference": "0ca53947b5f318ded0093925c534ff2a4822601b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/crm-users-module/zipball/8e470063a8d09f3b6ba846848331db516d9e2e52",
-                "reference": "8e470063a8d09f3b6ba846848331db516d9e2e52",
+                "url": "https://api.github.com/repos/brainsum/crm-users-module/zipball/0ca53947b5f318ded0093925c534ff2a4822601b",
+                "reference": "0ca53947b5f318ded0093925c534ff2a4822601b",
                 "shasum": ""
             },
             "require": {
@@ -4638,7 +4638,7 @@
             "support": {
                 "source": "https://github.com/brainsum/crm-users-module/tree/remp"
             },
-            "time": "2020-05-25T11:16:12+00:00"
+            "time": "2020-05-25T11:46:58+00:00"
         },
         {
             "name": "riimu/kit-phpencoder",
