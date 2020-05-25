@@ -14,21 +14,6 @@ body {
   margin-bottom: 50px;
 }
 
-.page-header-text-holder a {
-  transition: all,0.3s;
-  font-family: "Roboto Condensed",sans-serif;
-  color: #000000;
-  text-decoration: underline;
-  font-weight: bold;
-  display: inline-block;
-  margin-left: 3px;
-}
-
-.page-header-text-holder a:hover,
-.page-header-text-holder a:focus {
-  text-decoration: none;
-}
-
 h1 {
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
@@ -196,7 +181,7 @@ p.text-border-top::before {
   position: relative;
   padding-left: 30px;
   font-weight: 700;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
 }
 
 .thank-you-list li::before {
@@ -231,12 +216,12 @@ p.text-border-top::before {
 .thank-you-list li span::before {
   content: '';
   width: 1px;
-  height: 55px;
+  height: 100%;
   background-color: #3f3f44a8;
   display: block;
   position: absolute;
   left: 10px;
-  top: 30px;
+  top: 32px;
 }
 
 .thank-you-list li:last-child span::before {
