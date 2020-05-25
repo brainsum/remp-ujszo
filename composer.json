@@ -32,6 +32,10 @@
 		{
 			"type": "vcs",
 			"url": "https://github.com/brainsum/crm-invoices-module"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/brainsum/crm-users-module"
 		}
 	],
 	"require": {
@@ -52,7 +56,7 @@
 		"remp/crm-segment-module": "~0.12",
 		"remp/crm-subscriptions-module": "dev-remp as 0.12.0",
 		"remp/crm-upgrades-module": "~0.12",
-		"remp/crm-users-module": "~0.12",
+		"remp/crm-users-module": "dev-remp as 0.12.0",
 		"ujszo/ujszo_module": "@dev"
 	}
 }

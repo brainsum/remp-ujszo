@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5ebe9a012e229327f68b80a619db946",
+    "content-hash": "a1664660400b1f93e1ca369976eb628e",
     "packages": [
         {
             "name": "cakephp/cache",
@@ -4603,16 +4603,16 @@
         },
         {
             "name": "remp/crm-users-module",
-            "version": "0.12.0",
+            "version": "dev-remp",
             "source": {
                 "type": "git",
-                "url": "https://github.com/remp2020/crm-users-module.git",
-                "reference": "827c14ea5c2fd197f141494dd7357a60751fa17b"
+                "url": "https://github.com/brainsum/crm-users-module.git",
+                "reference": "8e470063a8d09f3b6ba846848331db516d9e2e52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/remp2020/crm-users-module/zipball/827c14ea5c2fd197f141494dd7357a60751fa17b",
-                "reference": "827c14ea5c2fd197f141494dd7357a60751fa17b",
+                "url": "https://api.github.com/repos/brainsum/crm-users-module/zipball/8e470063a8d09f3b6ba846848331db516d9e2e52",
+                "reference": "8e470063a8d09f3b6ba846848331db516d9e2e52",
                 "shasum": ""
             },
             "require": {
@@ -4630,13 +4630,15 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "CRM Users Module",
             "homepage": "https://remp2020.com",
-            "time": "2020-04-06T14:08:28+00:00"
+            "support": {
+                "source": "https://github.com/brainsum/crm-users-module/tree/remp"
+            },
+            "time": "2020-05-25T11:16:12+00:00"
         },
         {
             "name": "riimu/kit-phpencoder",
@@ -6461,6 +6463,12 @@
             "alias_normalized": "0.12.0.0",
             "version": "dev-remp",
             "package": "remp/crm-subscriptions-module"
+        },
+        {
+            "alias": "0.12.0",
+            "alias_normalized": "0.12.0.0",
+            "version": "dev-remp",
+            "package": "remp/crm-users-module"
         }
     ],
     "minimum-stability": "stable",
@@ -6469,6 +6477,7 @@
         "remp/crm-payments-module": 20,
         "remp/crm-salesfunnel-module": 20,
         "remp/crm-subscriptions-module": 20,
+        "remp/crm-users-module": 20,
         "ujszo/ujszo_module": 20
     },
     "prefer-stable": true,
