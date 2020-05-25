@@ -54,12 +54,12 @@ frontend:
 		new_password:
 			label: 'Új jelszó:'
 			required: Kérjük adja meg az új jelszavát
-			placeholder: új jelszó
+			placeholder: Új jelszó
 			minlength: Jelszavának legalább %d karakterből kell állnia.
 		new_password_confirm:
 			label: 'Új jelszó ismét:'
 			required: Kérjük adja meg az új jelszavát még egyszer
-			placeholder: új jelszó ismét
+			placeholder: Új jelszó ismét
 			description: Kérjük adja meg az új jelszavát még egyszer megerősités céljából
 			not_matching: Jelszavak nem egyeznek
 		errors:
@@ -131,7 +131,7 @@ frontend:
 		new_password:
 			label: 'Új jelszó:'
 			required: Adja meg az új jelszavát
-			placeholder: új jelszó
+			placeholder: Új jelszó
 			min_length: Jelszavának legalább %count% karakterből kell állnia.
 		new_password_confirm:
 			label: 'Új jelszó még egyszer:'
@@ -243,7 +243,7 @@ admin:
 		export: Exportálás
 
 	user_form:
-		title: új Felhasználó
+		title: Új Felhasználó
 		back_to_list: vissza a listához
 		credentials: Hitelesítő adatok
 		email:
