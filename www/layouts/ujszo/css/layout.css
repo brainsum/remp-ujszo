@@ -21,7 +21,8 @@ h1 {
   margin-top: 0;
 }
 
-.users-page h1 {
+.users-page h1,
+.salesfunnel-salesfunnelfrontend-signin h1 {
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
   margin-top: 0;
@@ -30,7 +31,8 @@ h1 {
   margin-bottom: 10px
 }
 
-.users-page hr {
+.users-page hr,
+.salesfunnel-salesfunnelfrontend-signin  hr {
   display: none;
 }
 
