@@ -14,6 +14,7 @@ use Crm\ApplicationModule\CrmModule;
 use Crm\ApplicationModule\LayoutManager;
 use Crm\UjszoModule\Seeders\PaymentGatewaysSeeder;
 use Crm\UjszoModule\Seeders\ConfigsSeeder;
+use Crm\UjszoModule\Seeders\ContentAccessSeeder;
 use League\Event\Emitter;
 use Nette\DI\Container;
 use Nette\Application\Routers\Route;
@@ -84,5 +85,6 @@ class UjszoModule extends CrmModule
   {
     $seederManager->addSeeder($this->getInstance(PaymentGatewaysSeeder::class));
     $seederManager->addSeeder($this->getInstance(ConfigsSeeder::class));
+    $seederManager->addSeeder($this->getInstance(ContentAccessSeeder::class));
   }
 }

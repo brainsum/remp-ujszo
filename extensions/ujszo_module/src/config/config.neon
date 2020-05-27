@@ -9,6 +9,7 @@ services:
 	- Crm\UjszoModule\Commands\EndingSubscriptionsCommand
 	- Crm\UjszoModule\Seeders\PaymentGatewaysSeeder
 	- Crm\UjszoModule\Seeders\ConfigsSeeder
+	- Crm\UjszoModule\Seeders\ContentAccessSeeder
 	- Crm\UjszoModule\Gateways\Paypal
 	moduleManager:
 		setup:
