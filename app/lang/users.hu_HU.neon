@@ -1,6 +1,6 @@
 menu:
 	stats: Stats
-	change_password: Change password
+	change_password: Jelszó módosítás
 	settings: Beállítások
 	sign_out: Kijelentkezés
 	people: Felhasználók
@@ -25,48 +25,48 @@ frontend:
 			placeholder: Jelszó
 		remember: Maradj bejelentkezve
 		submit: Bejelentkezés
-		signed_out: Sikeresen kijelentkezett.
+		signed_out: Sikeresen kijelentkeztél.
 	sign_up:
 		title: Regisztráció
 		username:
 			label: 'E-mail cím:'
-			required: Kérjük adja meg az e-mail címét
-			placeholder: Pl. moj@email.sk
+			required: Kérjük add meg az e-mail címed
+			placeholder: Pl. en@email.sk
 		password:
 			label: 'Jelszó:'
-			required: Kérjük adja meg a jelszavát.
+			required: Kérjük add meg a jelszavad.
 			placeholder: Saját jelszó
 		toc:
-		    required: El kell fogadja a felhasználói feltételeket
+		    required: El kell fogadnod a felhasználói feltételeket
 		submit: Fiók létrehozása
 		error:
-		    already_registered: 'E-mail cím foglalt. Kérjük adja meg a jelszavát vagy cserélje le <a href="/users/users/reset-password" style="text-decoration:underline">itt</a>'
-		    invalid_email: Hibás e-mail cím. Kérjük ellenőrizze a megadott e-mail címet.
+		    already_registered: 'E-mail cím foglalt. Kérjük add meg a jelszavad vagy cseréld le <a href="/users/users/reset-password" style="text-decoration:underline">itt</a>'
+		    invalid_email: Hibás e-mail cím. Kérjük ellenőrizd a megadott e-mail címed.
 	change_password:
-		title: Jelszó változtatás
-		submit: Jelszó változtatás
-		submit_with_devices_logout: Jelszó változtatás és más eszközökről való kijelentkezés
+		title: Jelszó módosítás
+		submit: Jelszó módosítás
+		submit_with_devices_logout: Jelszó módosítás és más eszközökről való kijelentkezés
 		actual_password:
 			label: 'Jelenlegi jelszó:'
-			required: Kérjük adja meg jelenlegi jelszavát
-			placeholder: jelenlegi jelszó
-			description: "Amennyiben eflelejtette régi jelszavát, <a href=\"%url%\" class=\"link\">kattintson ide</a> és elküldünk egy új jelszót az email címére."
+			required: Kérjük add meg jelenlegi jelszavad
+			placeholder: Jelenlegi jelszó
+			description: "Amennyiben eflelejtetted régi jelszavad, <a href=\"%url%\" class=\"link\">kattints ide</a> és elküldünk egy új jelszót az email címedre."
 		new_password:
 			label: 'Új jelszó:'
-			required: Kérjük adja meg az új jelszavát
+			required: Kérjük add meg az új jelszavad
 			placeholder: Új jelszó
-			minlength: Jelszavának legalább %d karakterből kell állnia.
+			minlength: Jelszavadnak legalább %d karakterből kell állnia.
 		new_password_confirm:
 			label: 'Új jelszó ismét:'
-			required: Kérjük adja meg az új jelszavát még egyszer
+			required: Kérjük add meg az új jelszavad még egyszer
 			placeholder: Új jelszó ismét
-			description: Kérjük adja meg az új jelszavát még egyszer megerősités céljából
+			description: Kérjük add meg az új jelszavad még egyszer megerősités céljából
 			not_matching: Jelszavak nem egyeznek
 		errors:
 			could_not_authenticate: Sikertelen próbálkozás.
 			invalid_credentials: Hibás jelszó.
 		success: Jelszó sikeresen módosítva.
-		success_with_logout: "Jelszó sikeresen módosítva, kijelentkeztettük a többi eszközről."
+		success_with_logout: "Jelszó sikeresen módosítva, kijelentkeztettünk a többi eszközről."
 		reset_success: 'Jelszó sikeresen módosítva és elküldve emailben a %email% címre.'
 	address:
 		type:
@@ -82,7 +82,7 @@ frontend:
 			placeholder: pl. 0915 123 456
 		address:
 			label: 'Utca:'
-			placeholder: ajda meg az utca nevét
+			placeholder: add meg az utca nevét
 		number:
 			label: 'Szám:'
 			placeholder: pl. 14/A
@@ -96,19 +96,19 @@ frontend:
 			label: 'Ország:'
 		company_name:
 			label: 'Cégnév:'
-			placeholder: 'pl. Cég kft.'
+			placeholder: 'pl. Cég s.r.o.'
 		company_id:
-			label: 'Cég Azonosító:'
+			label: 'Cég azonosító:'
 			placeholder: pl. 9238598283
-			required: "Cég Azonosító mező kötelező (amennyiben nincs, adjon meg 0-t)"
+			required: "Cég azonosító mező kötelező (amennyiben nincs, adj meg 0-t)"
 		company_tax_id:
 			label: 'Adó azonosító:'
 			placeholder: pl. 2359023591
-			required: "Adószám mező kötelező (amennyiben nincs, adjon meg 0-t)"
+			required: "Adószám mező kötelező (amennyiben nincs, adj meg 0-t)"
 		company_vat_id:
 			label: 'Áfa azonosító:'
 			placeholder: pl. SK2359023591
-			required: "Áfa azonosító kötelező (amennyiben nincs, adjon meg 0-t)"
+			required: "Áfa azonosító kötelező (amennyiben nincs, ad meg 0-t)"
 		submit: Mentés
 	request_password:
 		title: Elfelejtetted a jelszavad?
@@ -127,43 +127,43 @@ frontend:
 		title: Jelszó beállítás
 		info: Ezen az oldalon módosíthatod jelszavad.
 		errors:
-			invalid_password_reset_token: Jelszó változtatáshoz használt link érvényessége lejárt. Igényeljen új linket.
+			invalid_password_reset_token: Jelszó módosításhoz használt link érvényessége lejárt. Igényeljen új linket.
 		new_password:
 			label: 'Új jelszó:'
-			required: Adja meg az új jelszavát
+			required: Add meg az új jelszavad
 			placeholder: Új jelszó
-			min_length: Jelszavának legalább %count% karakterből kell állnia.
+			min_length: Jelszavadnak legalább %count% karakterből kell állnia.
 		new_password_confirm:
 			label: 'Új jelszó még egyszer:'
-			required: Kérjük adja meg az új jelszavát még egyszer
+			required: Kérjük add meg az új jelszavad még egyszer
 			not_matching: Jelszavak nem egyeznek
 			placeholder: Új jelszó még egyszer
-			description: Kérjük adja meg az új jelszavát még egyszer megerősités céljából
+			description: Kérjük add meg az új jelszavad még egyszer megerősités céljából
 		submit: Beállítás
-		could_not_set: Jelszó változtatás sikertelen
-		success: Sikeresen módosította jelszavát!
+		could_not_set: Jelszó módosítás sikertelen
+		success: Sikeresen módosítottad jelszavad!
 	settings:
 		title: Rendszer beállítások
 		personal_data:
-			title: Personal data
-			info: "You can download and browse all personal data system stores."
-			download: Download
+			title: Személyes adatok
+			info: "Itt tudod letölteni a rólad tárolt adatokat"
+			download: Letöltés
 		devices_logout:
-			title: Device management
-			logout: Sign out from other devices
-			confirm: "Do you wish to sign out from all devices except the current one?"
-			success: "You have been signed out of other devices."
+			title: Eszközkezelés
+			logout: Kijelentkeztetés minden más eszközről
+			confirm: "Ki szeretnél jelentkezni minden más eszközről?"
+			success: "Ki lettél jelentkeztetve minden más eszközről"
 		account_delete:
-			title: Delete account
-			info: 'If you wish to permanently delete user account, please enter your password and press "Delete account". <strong>This action is irrevertible.</strong>'
+			title: Felhasználó törlése
+			info: 'Ha szeretnéd végleg törölni a felhasználódat, kérjük írd be jelszavad, és kattints a felhasználó törlése gombra <strong>Ez a múvelet visszafordíthatatlam.</strong>'
 			password:
-				label: 'Password:'
-				required: Password needs to be entered
-			submit: Delete account
-			invalid_password: Invalid password
-			cannot_delete: Account cannot be deleted automatically. Please contact customer support.
-			confirm: Deleting the account is irreversible. Are you sure you want to proceed?
-			success: Your account was deleted.
+				label: 'Jelszó:'
+				required: Jelszó kötelező
+			submit: Felhasználó törlése
+			invalid_password: Hibás jelszó
+			cannot_delete: Felhasználó nem törölhető automatikusan. Kérlek vedd fel a kapcsolatot a szupporttal.
+			confirm: Felhasználó törlése visszafordíthatatlan. Biztos folytatod?
+			success: Felhasználó sikeresen törölve.
 
 admin:
 	actions:
@@ -210,7 +210,7 @@ admin:
 		active: Aktív
 		deactivate: Inaktív
 		activate: Aktiválás
-		external_id: Külső Azonosító
+		external_id: Külső azonosító
 		source: Forrás
 		funnel: Regisztrációs csatorna
 		referer: Regisztrációs hivatkozó
@@ -221,7 +221,7 @@ admin:
 		last_login: Utolsó bejelentkezés
 		no_login: Nincs bejelentkezési bejegyzés
 		personal_info: Személyes adatok
-		anonymize_alert: "Felhasználói fiók anonimizálása visszafordíthatatlan. Felhasználó többé nem tud bejelentkezni és minden személyes adata törlődik. Biztos folytatja?"
+		anonymize_alert: "Felhasználói fiók anonimizálása visszafordíthatatlan. Felhasználó többé nem tud bejelentkezni és minden személyes adata törlődik. Biztos folytatod?"
 		anonymize: Felhasználó anonimizálása
 		company_id: Cégnév
 		company_tax_id: Adó azonosító
@@ -249,12 +249,12 @@ admin:
 		email:
 			label: 'E-mail cím*:'
 			required: E-mail cím kötelező
-			placeholder: adja meg az e-mail címét
+			placeholder: add meg az e-mail címed
 		password:
 			label: 'Jelszó:'
-			placeholder: Jelszavának legalább 6 karakterből kell állnia.
+			placeholder: Jelszavadnak legalább 6 karakterből kell állnia.
 			required: Jelszó kötelező
-			description: 'Hagyja üresen, amennyiben nem szeretné megváltoztatni'
+			description: 'Hagyd üresen, amennyiben nem szeretnéd megváltoztatni'
 		source:
 			label: 'Forrás'
 			required: Forrás kötelező
@@ -441,8 +441,8 @@ month_users_small_bar_graph_widget:
 
 api:
 	users_login_handler:
-		identity_not_found: "Megadott e-mail cím nem egyezik a bejegyzéseinkkel. Kérjük jelentkezzen be ahogy az Újszó weboldalon tenné."
-		invalid_credentials: "Megadott jelszó nem egyezik meg a bejegyzéseinkkel. Kérjük jelentkezzen be ahogy az Újszó weboldalon tenné."
+		identity_not_found: "Megadott e-mail cím nem egyezik a bejegyzéseinkkel. Kérjük jelentkezz be ahogy az Újszó weboldalon tennéd."
+		invalid_credentials: "Megadott jelszó nem egyezik meg a bejegyzéseinkkel. Kérjük jelentkezz be ahogy az Újszó weboldalon tennéd."
 
 form:
 	admin_user_group:
@@ -523,11 +523,11 @@ component:
 		empty_text: Ennek a felhasználónak nincs bejelentkezési kódja.
 
 	user_password_changes:
-		title: Változtatások
-		title_requests: Változtatások igénylése
+		title: Módosítások
+		title_requests: Módosítások igénylése
 		empty_title: Nincs bejegyzés
 		empty_entry_text: "Ez a felhasználó még nem változtatott kódot."
-		empty_request_text: Ez a Felhasználó még nem igényelt jelszó változtatást.
+		empty_request_text: Ez a Felhasználó még nem igényelt jelszó módosítás.
 		type: Típus
 		when: Mikor
 		expire_at: Érvényesség vége

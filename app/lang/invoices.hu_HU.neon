@@ -1,0 +1,203 @@
+menu:
+	invoice_details: Számlázás
+
+frontend:
+	invoice_button:
+		no_invoice: Számla nélkül
+		not_available_anymore: Számla már nem igényelhető
+		generate: Generálás
+		system_error: Rendszerhiba! Kérlek vedd fel a kapcsolatot a szupportal!
+		download: Számla letöltése
+		invoice_details: Számlázás részletek
+
+	invoice_details:
+		title: Számlázás részletek
+		invoices_link_prefix: "Eddigi számláid itt találhodja meg: "
+		invoices_link: fizetések
+
+	change_invoice_details:
+		submit: Mentés
+		invoice: Szeretnék számlát
+		company_name:
+			label: Cégnév
+			placeholder: ""
+			required: Cégnév szükséges
+		address:
+			label: Cím
+			placeholder: ""
+			required: Cím szükséges
+		number:
+			label: Házszám
+			placeholder: ""
+			required: Házszám szükséges
+		city:
+			label: Település
+			placeholder: ""
+			required: Település szükséges
+		zip:
+			label: ZIP
+			placeholder: ""
+			required: ZIP szükséges
+		company_id:
+			label: IČO -cégjegyzékszám
+			placeholder: "Adj meg 0-t, ha nincs"
+			required: IČO -cégjegyzékszám szükséges
+		company_tax_id:
+			label: DIČ -adószám
+			placeholder: "Adj meg 0-t, ha nincs"
+			required: DIČ -adószám szükséges
+		company_vat_id:
+			label: IČ DPH -ÁFA reg. szám
+			placeholder: "Adj meg 0-t, ha nincs"
+			required: IČ DPH -ÁFA reg. szám szükséges
+		success: Cím sikeresen módosítva.
+		warning: "Fizetéstől számított 14 napig igényelhetsz számlát. Ezt megteheted <a href='%link%' style='text-decoration: underline;'>itt</a>."
+	download_receipt: Blokk letöltése
+	proforma_invoice:
+		title: Proforma invoice payment
+		form_title: 'Please fill up your invoice details to complete the order'
+		thank_you: 'Thank you for the order, the invoice will be sent to your email within 3 working days.'
+
+admin:
+	menu:
+		export: Számla exportálása
+	user_form:
+		invoices: Számlák
+		invoice: Számlázás engedélyezése
+		disable_autoinvoice: Automatikus számlagenerálás tiltása
+	default:
+		export: Számla exportálása
+		filelist: Fájlok generálása
+		download: Letöltés
+		delete: Törlés
+		time: Idő
+		filename: Fájlnév
+	export_form:
+		from_time: Kezdet
+		to_time: Vég
+		invoices: Számlák
+		generate: Generálás
+		scheduled: "Batch generation was scheduled, please wait."
+component:
+	payment_success_invoice_widget:
+		require_invoice: Szeretnék számlát
+		require_invoice_info: "Ha szeretnél számlát ne felejtsd el kitölteni a számlázási adatokat. Ha nem töltöd ki ennél alépésnél, később nem lesz lehetőséged."
+		fill_invoice_address: Számlázási adatok kitöltése
+		saved: Mentve
+
+	invoice_label:
+		invoice: Számla
+
+form:
+	invoice:
+		label:
+			company_name: Cégnév
+			address: Cím
+			number: Házszám
+			city: Település
+			zip: ZIP
+			ico: IČO-cégjegyzékszám
+			dic: DIČ-adószám
+			icdph: IČ DPH -ÁFA reg. szám
+			invoice_country_id: Ország
+			send: Küldés
+			save: Mentés
+		placeholder:
+			company_name: ""
+			address: ""
+			number: ""
+			city: ""
+			zip: ""
+			ico: "Adj meg 0-t, ha nincs"
+			dic: "Adj meg 0-t, ha nincs"
+			icdph: "Adj meg 0-t, ha nincs"
+		required:
+			company_name: Cégnév szükséges
+			address: Cím szükséges
+			number: Házszám szükséges
+			city: Település szükséges
+			zip: ZIP szükséges
+			ico: IČO-cégjegyzékszám szükséges
+			dic: DIČ-adószám szükséges
+			icdph: IČ DPH -ÁFA reg. szám is szükséges
+		options:
+			foreign_country: "Külföldre szállítás esetében vegye fel velünk a kapcsolatot itt: %contactEmail%"
+
+invoice_template:
+	title: Invoice
+	date_issued: Issue date
+	date_due: Due date
+	date_delivered: Date of delivery
+	variable_symbol: Variable symbol
+	constant_symbol: Constant symbol
+	company_id: Company ID
+	company_tax_id: Tax ID
+	company_vat_id: VAT ID
+	buyer: Buyer
+	supplier: Supplier
+	invoice_details: Invoice details
+	item_name: Item name
+	item_count: Count
+	unit_price: Unit price
+	vat: VAT
+	unit_price_with_vat: "Unit price (with VAT)"
+	vat_amount_per_item: "VAT (amount)"
+	item_sum_with_vat: Sum with VAT
+	deposit: Deposit
+	note:
+		title: Note
+		invoice_paid: "Invoice is payed. Please do not pay again!"
+	price_no_vat: VAT base
+	vat_amount: VAT amount
+	item_sum: Sum
+	sum: Total sum
+	sum_deposit: Paid deposit
+	sum_remains_to_pay: Remains to pay
+	summary: Summary
+	bank_account: Bank account
+	bank: Bank
+	bank_iban: IBAN
+	bank_swift: SWIFT
+	stamp_and_signature: Stamp and signature
+
+config:
+	category: Invoices
+	supplier_name:
+		name: 'Company'
+		description: 'Invoice company name (e.g. Company Ltd.)'
+	supplier_address:
+		name: 'Address'
+		description: 'Invoice company address (e.g. 957 Sycamore St.)'
+	supplier_city:
+		name: 'City'
+		description: 'Invoice company city (e.g. Morgantown)'
+	supplier_zip:
+		name: 'ZIP'
+		description: 'Invoice company ZIP (e.g. WV 26508)'
+	supplier_id:
+		name: 'Business ID'
+		description: 'Invoice business ID (e.g. 1234567-8)'
+	supplier_tax_id:
+		name: 'Tax ID'
+		description: 'Invoice tax ID (e.g. 912-71-1234)'
+	supplier_vat_id:
+		name: 'VAT reg. no.'
+		description: 'Invoice VAT reg. no. (e.g. SK1234567890)'
+	supplier_bank_account_number:
+		name: 'Bank number'
+		description: 'Bank number in old format (e.g. 1234567890/1234)'
+	supplier_bank_name:
+		name: 'Bank name'
+		description: 'Whole bank name, will be displayed on invoice (e.g. Random bank, Inc)'
+	supplier_iban:
+		name: 'IBAN'
+		description: 'Bank number in IBAN format (e.g. SK35 5000 0000 0549 1000 0003)'
+	supplier_swift:
+		name: 'SWIFT'
+		description: 'Bank number SWIFT (e.g. TATRSKBX)'
+	business_register_detail:
+		name: 'Business register detail'
+		description: "Where was business registered (eg. 'Business register of the District Court Bratislava I., section: sro, id: 4242/DA')"
+	invoice_constant_symbol:
+		name: 'Constant symbol'
+		description: "Constant symbol (code) used on invoice. If you don't know, leave default '0308'."

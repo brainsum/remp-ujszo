@@ -44,18 +44,14 @@
 		"remp/crm-api-module": "~0.9",
 		"remp/crm-application-module": "~0.12",
 		"remp/crm-dashboard-module": "~0.12",
-		"remp/crm-gifts-module": "~0.12",
 		"remp/crm-invoices-module": "dev-remp as 0.12.0",
 		"remp/crm-issues-module": "~0.12",
 		"remp/crm-onboarding-module": "~0.12",
 		"remp/crm-payments-module": "dev-remp as 0.12.0",
-		"remp/crm-print-module": "~0.12",
-		"remp/crm-products-module": "~0.12",
 		"remp/crm-salesfunnel-module": "dev-remp as 0.12.0",
 		"remp/crm-scenarios-module": "~0.12",
 		"remp/crm-segment-module": "~0.12",
 		"remp/crm-subscriptions-module": "dev-remp as 0.12.0",
-		"remp/crm-upgrades-module": "~0.12",
 		"remp/crm-users-module": "dev-remp as 0.12.0",
 		"ujszo/ujszo_module": "@dev"
 	}

@@ -34,10 +34,10 @@ class UjszoModule extends CrmModule
       $this->getInstance(\Crm\UjszoModule\Events\SubscriptionEventHandler::class)
     );
 
-    $emitter->addListener(
-      \Crm\SubscriptionsModule\Events\SubscriptionUpdatedEvent::class,
-      $this->getInstance(\Crm\UjszoModule\Events\SubscriptionEventHandler::class)
-    );
+    // $emitter->addListener(
+    //   \Crm\SubscriptionsModule\Events\SubscriptionUpdatedEvent::class,
+    //   $this->getInstance(\Crm\UjszoModule\Events\SubscriptionEventHandler::class)
+    // );
 
     $emitter->addListener(
       \Crm\UsersModule\Events\UserChangePasswordEvent::class,

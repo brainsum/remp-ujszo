@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1664660400b1f93e1ca369976eb628e",
+    "content-hash": "4f0a809bc46039cce281629f0fb3fb9e",
     "packages": [
         {
             "name": "cakephp/cache",
@@ -4154,40 +4154,6 @@
             "time": "2020-02-20T14:06:56+00:00"
         },
         {
-            "name": "remp/crm-gifts-module",
-            "version": "0.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/remp2020/crm-gifts-module.git",
-                "reference": "dbd9d769fd8cdc12e9456eb0ce22f20f42b03e25"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/remp2020/crm-gifts-module/zipball/dbd9d769fd8cdc12e9456eb0ce22f20f42b03e25",
-                "reference": "dbd9d769fd8cdc12e9456eb0ce22f20f42b03e25",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Crm\\GiftsModule\\": "src/"
-                },
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "CRM Gifts Module",
-            "homepage": "https://remp2020.com",
-            "time": "2020-04-03T08:59:09+00:00"
-        },
-        {
             "name": "remp/crm-invoices-module",
             "version": "dev-remp",
             "source": {
@@ -4345,86 +4311,6 @@
             "time": "2020-04-28T10:19:53+00:00"
         },
         {
-            "name": "remp/crm-print-module",
-            "version": "0.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/remp2020/crm-print-module.git",
-                "reference": "14403cf30ee8fa566a588e721101aeda112bf0db"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/remp2020/crm-print-module/zipball/14403cf30ee8fa566a588e721101aeda112bf0db",
-                "reference": "14403cf30ee8fa566a588e721101aeda112bf0db",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2",
-                "remp/crm-admin-module": "~0.4 >=0.4.2",
-                "remp/crm-api-module": "~0.4 >=0.4.2",
-                "remp/crm-application-module": "~0.4 >=0.4.2",
-                "remp/crm-payments-module": "~0.4 >=0.4.2",
-                "remp/crm-salesfunnel-module": "~0.4 >=0.4.2",
-                "remp/crm-subscriptions-module": "~0.4 >=0.4.2",
-                "remp/crm-users-module": "~0.4 >=0.4.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Crm\\PrintModule\\": "src/"
-                },
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "CRM Print Module",
-            "homepage": "https://remp2020.com",
-            "time": "2020-04-06T07:15:02+00:00"
-        },
-        {
-            "name": "remp/crm-products-module",
-            "version": "0.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/remp2020/crm-products-module.git",
-                "reference": "ec440fc5b81f16b33d112c485beda56bd272814f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/remp2020/crm-products-module/zipball/ec440fc5b81f16b33d112c485beda56bd272814f",
-                "reference": "ec440fc5b81f16b33d112c485beda56bd272814f",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2",
-                "remp/crm-admin-module": "~0.4 >=0.4.2",
-                "remp/crm-application-module": "~0.4 >=0.4.2",
-                "remp/crm-payments-module": "~0.4 >=0.4.2",
-                "remp/crm-subscriptions-module": "~0.4 >=0.4.2",
-                "remp/crm-users-module": "~0.4 >=0.4.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Crm\\ProductsModule\\": "src/"
-                },
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "CRM Products Module",
-            "homepage": "https://remp2020.com",
-            "time": "2020-03-31T11:40:04+00:00"
-        },
-        {
             "name": "remp/crm-salesfunnel-module",
             "version": "dev-remp",
             "source": {
@@ -4566,40 +4452,6 @@
                 "source": "https://github.com/brainsum/crm-subscriptions-module/tree/remp"
             },
             "time": "2020-05-08T11:48:06+00:00"
-        },
-        {
-            "name": "remp/crm-upgrades-module",
-            "version": "0.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/remp2020/crm-upgrades-module.git",
-                "reference": "7a6e278bda5d416c282c509eb120060e5d70652a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/remp2020/crm-upgrades-module/zipball/7a6e278bda5d416c282c509eb120060e5d70652a",
-                "reference": "7a6e278bda5d416c282c509eb120060e5d70652a",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Crm\\UpgradesModule\\": "src/"
-                },
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "CRM Upgrades Module",
-            "homepage": "https://remp2020.com",
-            "time": "2020-04-01T16:28:47+00:00"
         },
         {
             "name": "remp/crm-users-module",

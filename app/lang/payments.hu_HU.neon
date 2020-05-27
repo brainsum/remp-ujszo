@@ -113,7 +113,7 @@ admin:
 				next_charge: Következő díjbekérés
 				subscription_type: Előfizetés típusa
 				card_expiration: Kártya lejárati dátuma
-				created_payment_id: Létrehozott fizetés Azonosítója
+				created_payment_id: Létrehozott fizetés azonosítója
 				recurrent_state: Ismétlődő fizetés állapota
 				payment: Fizetés
 				message: Üzenet
@@ -428,7 +428,7 @@ frontend:
 		my_payments: Saját fizetések
 		payment_type: Fizetések típusa
 		payment_day: Nap
-		variable_symbol: Tranzakció Azonosítója
+		variable_symbol: Tranzakció azonosítója
 		price: Ár
 		is_recurrent: Ismétlődő fizetés
 		receipts: Nyugták
