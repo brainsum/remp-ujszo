@@ -28,7 +28,7 @@
 {php $classname = preg_replace('/\:/','-', strtolower($current))}
 {php $classname2 = preg_replace('/-.*$/','', $classname) . '-page'}
 {var $url = $presenter->applicationConfig->get('site_url')}
-<body class="{$classname2} {$classname} {if $addWrapper}user-page{/if}">
+<body class="{$classname2} {$classname} {if $addWrapper}users-page{/if}">
   <header class="remp-header text-center">
 		<div class="page-header-logo-holder">
 			<div class="container">
