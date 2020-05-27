@@ -302,6 +302,10 @@ p.text-border-top::before {
   margin-top: 40px;
 }
 
+.users-page .remp-form-container .container-fluid {
+  padding: 0;
+}
+
 .users-page .form-group .control-label {
   display: none;
 }
@@ -311,7 +315,8 @@ p.text-border-top::before {
 }
 
 .users-users-resetpassword .remp-form-container .page-header,
-.users-users-requestpassword .remp-form-container .page-header {
+.users-users-requestpassword .remp-form-container .page-header,
+.users-page .remp-form-container .page-header {
   margin: 0;
   border: none;
   padding: 0;
@@ -327,7 +332,8 @@ p.text-border-top::before {
   text-decoration: none;
 }
 
-.users-users-requestpassword .remp-form-container .well {
+.users-users-requestpassword .remp-form-container .well,
+.users-page .remp-form-container .well {
   min-height: 20px;
   padding: 0;
   margin-bottom: 0;
