@@ -190,8 +190,7 @@ p.text-border-top::before {
   background-color: #000;
 }
 
-.page-header .btn-primary {
-  margin-top: 30px;
+.page-header-text-holder .btn-primary {
   width: auto;
   display: inline-block;
 }
@@ -353,7 +352,7 @@ p.text-border-top::before {
 
 .price-box {
   box-shadow: 0 5px 15px #dedede;
-  max-width: 250px;
+  max-width: 300px;
   margin: 0 auto;
   border-radius: 5px;
   background-color: #fff;
@@ -370,6 +369,10 @@ p.text-border-top::before {
 
 .price-box .text-holder {
   padding: 10px 20px 20px;
+  min-height: 355px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .price-box h3 {
@@ -394,3 +397,6 @@ p.text-border-top::before {
   margin-bottom: 15px;
 }
 
+#frm-payment {
+  display: none;
+}
