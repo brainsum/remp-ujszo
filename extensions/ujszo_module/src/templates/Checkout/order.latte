@@ -43,6 +43,19 @@
 <div class="col-md-6 col-md-offset-3">
   <div class="payment">
     <div class="checkout_wrapper">
+      <div class="price-box">
+        <div class="image">
+            <img src="https://placeimg.com/300/180/animal">
+        </div>
+        <div class="text-holder">
+          <h3>{$subscription_type->user_label}</h3>
+          {$subscription_type->description|noescape}
+          <p class="price">
+            {$subscription_type->price} €
+          </p>
+        </div>
+      </div>
+
       <p class="text-center">Válassza ki a fizetés módját, vagy PayPal fiókkal, vagy bankkártyával/hitelkártyával. A kártyás fizetőkaput a PayPal üzemelteti.</p>
       <div id="pp-buttons"></div>
     </div>

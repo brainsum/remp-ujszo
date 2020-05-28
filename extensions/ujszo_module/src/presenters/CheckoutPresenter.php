@@ -49,6 +49,7 @@ class CheckoutPresenter extends FrontendPresenter
       $this->template->return_url = $this->linkGenerator->link('Payments:Return:gateway', ['gatewayCode' => $payment->payment_gateway->code, 'VS' => $vs, 'paypal_success' => 1]);
       $this->template->error_url = $this->linkGenerator->link('Payments:Return:gateway', ['gatewayCode' => $payment->payment_gateway->code, 'VS' => $vs, 'paypal_success' => 0]);
       $this->template->client_id = $this->applicationConfig->get('paypal_client_id');
+      $this->template->subscription_type = $payment->subscription_type;
     }
 
     public function renderOrderId() {
