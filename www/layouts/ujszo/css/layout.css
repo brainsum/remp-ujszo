@@ -396,7 +396,3 @@ p.text-border-top::before {
   font-size: 25px;
   margin-bottom: 15px;
 }
-
-#frm-payment {
-  display: none;
-}
