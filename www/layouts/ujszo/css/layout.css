@@ -390,6 +390,10 @@ p.text-border-top::before {
   padding: 15px 0 15px 15px;
 }
 
+.price-box ul li{
+  margin-bottom: 10px;
+}
+
 .price-box .price {
   font-weight: 700;
   text-align: center;
