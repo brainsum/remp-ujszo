@@ -60,6 +60,11 @@ class UjszoModule extends CrmModule
       \Crm\InvoicesModule\Events\InvoiceCreatedEvent::class,
       $this->getInstance(\Crm\UjszoModule\Events\InvoiceCreatedEventHandler::class)
     );
+
+    $emitter->addListener(
+      \Crm\UsersModule\Events\NotificationEvent::class,
+      $this->getInstance(\Crm\UjszoModule\Events\NotificationEventHandler::class)
+    );
   }
 
   public function registerLayouts(LayoutManager $layoutManager)
