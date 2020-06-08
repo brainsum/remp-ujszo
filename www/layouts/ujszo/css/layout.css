@@ -369,7 +369,7 @@ p.text-border-top::before {
 
 .price-box .text-holder {
   padding: 10px 20px 20px;
-  min-height: 355px;
+  min-height: 385px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
