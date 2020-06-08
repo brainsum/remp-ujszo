@@ -400,3 +400,25 @@ p.text-border-top::before {
   font-size: 25px;
   margin-bottom: 15px;
 }
+
+.ujszo-checkout-order .checkout-box {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 5px 15px #dedede;
+  margin-bottom: 30px;
+  background-color: #fff
+}
+
+.ujszo-checkout-order .checkout-box .price-box {
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+.ujszo-checkout-order .checkout-box .price-box .price {
+  margin-bottom: 0;
+}
+
+.ujszo-checkout-order .col-md-6 p {
+  font-size: 14px;
+  margin-bottom: 25px
+}
