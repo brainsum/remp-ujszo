@@ -23,7 +23,7 @@
 	{block head}{/block}
 </head>
 {var $current = $presenter->name . ":" .$presenter->action}
-{var $forms = ['Users:Users:requestPassword', 'Users:Users:resetPassword', 'Users:Sign:in']}
+{var $forms = ['Users:Users:requestPassword', 'Users:Users:resetPassword', 'Users:Sign:in', 'Users:Users:changePassword']}
 {php $addWrapper = in_array($current, $forms)}
 {php $classname = preg_replace('/\:/','-', strtolower($current))}
 {php $classname2 = preg_replace('/-.*$/','', $classname) . '-page'}
