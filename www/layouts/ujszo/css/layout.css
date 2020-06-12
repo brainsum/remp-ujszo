@@ -14,15 +14,64 @@ body {
 }
 
 .page-header-logo-holder .btn {
-  margin-top: 30px;
+  margin-top: 15px;
   width: auto;
   height: auto;
+}
+
+.page-header-user-details {
+  display: block;
+  margin-top: 11px;
+}
+
+.page-header-buttons .back-to-site {
+  background-color: #000056;
+  color: #fff;
+  margin-left: 15px;
+}
+
+.page-header-buttons .back-to-site:hover {
+  background-color: #000056;
+  color: #fd014b;
 }
 
 .page-header-text-holder {
   background:#fcbf1e;
   padding: 50px 0;
   margin-bottom: 50px;
+}
+
+.page-content-holder .remp-content-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.page-content-holder .remp-content-nav li:first-child {
+  border-top-left-radius: 5px;
+  overflow: hidden;
+}
+
+.page-content-holder .remp-content-nav li:first-child {
+  border-bottom-left-radius: 5px;
+}
+
+.page-content-holder .remp-content-nav li:last-child {
+  border-top-right-radius: 5px;
+  overflow: hidden;
+}
+
+.page-content-holder .remp-content-nav li:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+.page-content-holder .remp-content-nav li a {
+  background:#fcbf1e;
+  color: #3f3f44;
+}
+
+.page-content-holder .remp-content-nav li a:hover {
+  background:#fcbf1e;
+  color: #000;
 }
 
 h1 {
