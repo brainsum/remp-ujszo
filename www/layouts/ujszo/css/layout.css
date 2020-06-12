@@ -6,6 +6,16 @@ body {
 }
 .page-header-logo-holder {
   padding: 40px 0;
+  text-align: center;
+}
+
+.page-header-logo-holder img {
+  max-width: 100%;
+}
+
+.page-header-logo-holder .btn {
+  display: block;
+  width: auto;
 }
 
 .page-header-text-holder {
@@ -403,10 +413,20 @@ p.text-border-top::before {
 
 .ujszo-checkout-order .checkout-box {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   box-shadow: 0 5px 15px #dedede;
   margin-bottom: 30px;
-  background-color: #fff
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .ujszo-checkout-order .checkout-box {
+    flex-direction: row;
+  }
+}
+
+.ujszo-checkout-order .checkout-box .image-box .image img {
+  max-width: 100%;
 }
 
 .ujszo-checkout-order .checkout-box .price-box {
@@ -418,7 +438,7 @@ p.text-border-top::before {
   margin-bottom: 0;
 }
 
-.ujszo-checkout-order .col-md-6 p {
+.ujszo-checkout-order .checkout-buttons p {
   font-size: 14px;
   margin-bottom: 25px
 }
