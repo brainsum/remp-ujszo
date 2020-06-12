@@ -43,18 +43,12 @@
 		<div class="page-header-logo-holder">
 			<div class="container">
 				<div class="row">
-					{if $addWrapper}
-						<div class="col-md-8 col-md-offset-2 text-center">
-					{/if}
-							<a href="{$url}"><img src="/layouts/ujszo/images/ujszo-logo--desktop--inverse.png" alt="ujszo-logo" title="Ujszo"/></a>
-					{if $addWrapper}
-						</div>
-					{/if}
+					<a href="{$url}"><img src="/layouts/ujszo/images/ujszo-logo--desktop--inverse.png" alt="ujszo-logo" title="Ujszo"/></a>
 					{if $user->isLoggedIn()}
 						<div class="page-header-user-details">
 							{_system.logged} <b>{$user->getIdentity()->getData()['email']}</b>
 							{if $user->getIdentity()->role === \Crm\UsersModule\Repository\UsersRepository::ROLE_ADMIN}
-								<a href="{link :Dashboard:Dashboard:}">ADMIN</a>
+								<a href="{link :Dashboard:Dashboard:}">{_system.dashboard}</a>
 							{/if}
 						</div>
 						<div class="page-header-buttons">
