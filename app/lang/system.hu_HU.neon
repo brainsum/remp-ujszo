@@ -21,6 +21,8 @@ confirm_delete: Biztos törli a bejegyzést?
 
 download: Letöltés
 
+back_to_site: "Vissza az ujszo.com-ra"
+
 message:
 	success: ""
 	error: ""

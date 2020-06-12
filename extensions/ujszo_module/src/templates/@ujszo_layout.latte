@@ -23,10 +23,18 @@
 	{block head}{/block}
 </head>
 {var $current = $presenter->name . ":" .$presenter->action}
-{var $forms = ['Users:Users:requestPassword', 'Users:Users:resetPassword', 'Users:Sign:in', 'Users:Users:changePassword']}
+{var $forms = [
+	'Users:Users:requestPassword',
+	'Users:Users:resetPassword',
+	'Users:Sign:in',
+	'Users:Users:changePassword',
+	'Invoices:Invoices:invoiceDetails',
+	'Users:Users:settings'
+	]}
 {php $addWrapper = in_array($current, $forms)}
 {php $classname = preg_replace('/\:/','-', strtolower($current))}
 {php $classname2 = preg_replace('/-.*$/','', $classname) . '-page'}
+{var $colClass = ($current == 'Invoices:Invoices:invoiceDetails') ? "col-md-8 col-md-offset-2" : "col-md-4 col-md-offset-4" }
 {var $url = $presenter->applicationConfig->get('site_url')}
 <body class="{$classname2} {$classname} {if $addWrapper}users-page{/if}">
 
@@ -42,12 +50,17 @@
 					{if $addWrapper}
 						</div>
 					{/if}
-					<br/>
 					{if $user->isLoggedIn()}
-						{if $user->getIdentity()->role === \Crm\UsersModule\Repository\UsersRepository::ROLE_ADMIN}
-							<a href="{link :Dashboard:Dashboard:}">ADMIN</a>
-						{/if}
-						<a class="btn btn-primary" href="{link :SalesFunnel:SalesFunnelFrontend:Show}?funnel=elofizetes">{_system.buy_subscription}</a>
+						<div class="page-header-user-details">
+							{_system.logged} <b>{$user->getIdentity()->getData()['email']}</b>
+							{if $user->getIdentity()->role === \Crm\UsersModule\Repository\UsersRepository::ROLE_ADMIN}
+								<a href="{link :Dashboard:Dashboard:}">ADMIN</a>
+							{/if}
+						</div>
+						<div class="page-header-buttons">
+							<a class="btn btn-primary" href="{link :SalesFunnel:SalesFunnelFrontend:Show}?funnel=elofizetes">{_system.buy_subscription}</a>
+							<a class="btn btn-primary back-to-site" href="{$url}">{_system.back_to_site}</a>
+						</div>
 					{else}
 					{/if}
 				</div>
@@ -55,43 +68,45 @@
 		</div>
 	</header>
 
-	<div class="container">
-		<div class="row">
+	<div class="page-content-holder">
+		<div class="container">
+			<div class="row">
 				{if $user->isLoggedIn()}
 					{control frontendMenu}
 				{/if}
-		</div>
+			</div>
 
-		<div class="row">
-			{control simpleWidget 'frontend.layout.top'}
+			<div class="row">
+				{control simpleWidget 'frontend.layout.top'}
 
-			{foreach $flashes as $flash}
-				{if $flash->type == 'info'}
-					<div class="alert alert-success">
-						<strong>{_system.message.success|noescape}</strong> {$flash->message|noescape}
-					</div>
-				{elseif $flash->type == 'error'}
-					<div class="alert alert-danger">
-						<strong>{_system.message.error|noescape}</strong> {$flash->message|noescape}
-					</div>
-				{else}
-					<div class="alert alert-warning">
-						<strong>{_system.message.warning|noescape}</strong> {$flash->message|noescape}
+				{foreach $flashes as $flash}
+					{if $flash->type == 'info'}
+						<div class="alert alert-success">
+							<strong>{_system.message.success|noescape}</strong> {$flash->message|noescape}
+						</div>
+					{elseif $flash->type == 'error'}
+						<div class="alert alert-danger">
+							<strong>{_system.message.error|noescape}</strong> {$flash->message|noescape}
+						</div>
+					{else}
+						<div class="alert alert-warning">
+							<strong>{_system.message.warning|noescape}</strong> {$flash->message|noescape}
+						</div>
+					{/if}
+				{/foreach}
+			</div>
+
+			<div class="row">
+				{if $addWrapper}
+					<div class="remp-form-container">
+						<div class="{$colClass} form-container-inner">
+				{/if}
+					{include content}
+				{if $addWrapper}
+						</div>
 					</div>
 				{/if}
-			{/foreach}
-		</div>
-
-		<div class="row">
-			{if $addWrapper}
-				<div class="remp-form-container">
-					<div class="col-md-4 col-md-offset-4 form-container-inner">
-			{/if}
-				{include content}
-			{if $addWrapper}
-					</div>
-				</div>
-			{/if}
+			</div>
 		</div>
 	</div>
 

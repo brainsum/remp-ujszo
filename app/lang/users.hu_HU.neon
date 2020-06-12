@@ -145,7 +145,7 @@ frontend:
 	settings:
 		title: Rendszer beállítások
 		personal_data:
-			title: Személyes adatok
+			title: Személyes adatok letöltése
 			info: "Itt tudod letölteni a rólad tárolt adatokat"
 			download: Letöltés
 		devices_logout:
