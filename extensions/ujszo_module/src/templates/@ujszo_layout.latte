@@ -44,11 +44,10 @@
 					{/if}
 					<br/>
 					{if $user->isLoggedIn()}
-						{_system.logged} <b>{$user->getIdentity()->getData()['email']}</b>
 						{if $user->getIdentity()->role === \Crm\UsersModule\Repository\UsersRepository::ROLE_ADMIN}
 							<a href="{link :Dashboard:Dashboard:}">ADMIN</a>
 						{/if}
-						<a class="btn btn-primary pull-right" href="{link :SalesFunnel:SalesFunnelFrontend:Show}?funnel=elofizetes">{_system.buy_subscription}</a>
+						<a class="btn btn-primary" href="{link :SalesFunnel:SalesFunnelFrontend:Show}?funnel=elofizetes">{_system.buy_subscription}</a>
 					{else}
 					{/if}
 				</div>
