@@ -20,35 +20,35 @@ frontend:
 		invoice: Szeretnék számlát
 		company_name:
 			label: Cégnév
-			placeholder: ""
+			placeholder: "Cégnév"
 			required: Cégnév szükséges
 		address:
 			label: Cím
-			placeholder: ""
+			placeholder: "Cím"
 			required: Cím szükséges
 		number:
 			label: Házszám
-			placeholder: ""
+			placeholder: "Házszám"
 			required: Házszám szükséges
 		city:
 			label: Település
-			placeholder: ""
+			placeholder: "Település"
 			required: Település szükséges
 		zip:
 			label: ZIP
-			placeholder: ""
+			placeholder: "ZIP"
 			required: ZIP szükséges
 		company_id:
 			label: IČO -cégjegyzékszám
-			placeholder: "Adj meg 0-t, ha nincs"
+			placeholder: "IČO -cégjegyzékszám. Adj meg 0-t, ha nincs"
 			required: IČO -cégjegyzékszám szükséges
 		company_tax_id:
 			label: DIČ -adószám
-			placeholder: "Adj meg 0-t, ha nincs"
+			placeholder: "DIČ -adószám. Adj meg 0-t, ha nincs"
 			required: DIČ -adószám szükséges
 		company_vat_id:
 			label: IČ DPH -ÁFA reg. szám
-			placeholder: "Adj meg 0-t, ha nincs"
+			placeholder: "IČ DPH -ÁFA reg. szám. Adj meg 0-t, ha nincs"
 			required: IČ DPH -ÁFA reg. szám szükséges
 		success: Cím sikeresen módosítva.
 		warning: "Fizetéstől számított 14 napig igényelhetsz számlát. Ezt megteheted <a href='%link%' style='text-decoration: underline;'>itt</a>."
