@@ -21,7 +21,12 @@ body {
 
 .page-header-user-details {
   display: block;
-  margin-top: 11px;
+  margin-top: 40px;
+}
+
+.page-header-buttons .btn {
+  background-color: #fcbf1e;
+  color: #3f3f44;
 }
 
 .page-header-buttons .back-to-site {
@@ -36,7 +41,6 @@ body {
 }
 
 .page-header-text-holder {
-  background:#fcbf1e;
   padding: 50px 0;
   margin-bottom: 50px;
 }
@@ -44,29 +48,12 @@ body {
 .page-content-holder .remp-content-nav {
   display: flex;
   justify-content: center;
-}
-
-.page-content-holder .remp-content-nav li:first-child {
-  border-top-left-radius: 5px;
-  overflow: hidden;
-}
-
-.page-content-holder .remp-content-nav li:first-child {
-  border-bottom-left-radius: 5px;
-}
-
-.page-content-holder .remp-content-nav li:last-child {
-  border-top-right-radius: 5px;
-  overflow: hidden;
-}
-
-.page-content-holder .remp-content-nav li:last-child {
-  border-bottom-right-radius: 5px;
+  background:#3f3f44;
+  border-radius: 5px
 }
 
 .page-content-holder .remp-content-nav li a {
-  background:#fcbf1e;
-  color: #3f3f44;
+  color: #f7f7f7;
 }
 
 .page-content-holder .remp-content-nav li a:hover {
@@ -372,6 +359,33 @@ p.text-border-top::before {
 .users-page .form-group .col-sm-9 {
   width: 100%;
 }
+
+.users-page .remp-form-container .btn + .btn {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.users-users-settings .remp-form-container h1 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.users-users-settings .remp-form-container a.btn-primary {
+  line-height: 29px;
+}
+
+.users-users-settings .remp-form-container .row {
+  margin-bottom: 15px
+}
+
+.users-users-settings .remp-form-container .form-group .col-md-4 {
+  width: 100%
+}
+
+.users-users-settings .remp-form-container .row .btn-warning {
+  width: 100%
+}
+
 
 .users-users-resetpassword .remp-form-container .page-header,
 .users-users-requestpassword .remp-form-container .page-header,
