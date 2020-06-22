@@ -4,6 +4,13 @@ body {
   color: #3f3f44;
   background: #F3F3F3;
 }
+
+a:focus {
+  background-color: transparent !important;
+  outline: none;
+  outline-offset: 0;
+}
+
 .page-header-logo-holder {
   padding: 40px 0;
   text-align: center;
@@ -539,4 +546,33 @@ p.text-border-top::before {
 .ujszo-checkout-order .checkout-buttons p {
   font-size: 14px;
   margin-bottom: 25px
+}
+
+.page-content-holder .table .label {
+  display: inline-block;
+  padding: .2em .6em .2em;
+  font-size: 70%;
+  vertical-align: middle;
+  margin-top: -3px;
+}
+
+.page-content-holder .table>thead>tr>th,
+.page-content-holder .table>tbody>tr>th,
+.page-content-holder .table>tfoot>tr>th,
+.page-content-holder .table>thead>tr>td,
+.page-content-holder .table>tbody>tr>td,
+.page-content-holder .table>tfoot>tr>td {
+  line-height: 22px;
+  vertical-align: middle;
+}
+
+.page-content-holder .table .btn-primary {
+  font-size: 12px;
+  height: auto;
+  width: auto;
+  text-transform: none;
+}
+
+.alert {
+  margin-top: 20px;
 }
