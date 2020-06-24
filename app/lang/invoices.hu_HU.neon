@@ -81,7 +81,7 @@ admin:
 component:
 	payment_success_invoice_widget:
 		require_invoice: Szeretnék számlát
-		require_invoice_info: "Ha szeretnél számlát ne felejtsd el kitölteni a számlázási adatokat. Ha nem töltöd ki ennél alépésnél, később nem lesz lehetőséged."
+		require_invoice_info: "Ha szeretne számlát, ne felejtse el kitölteni a számlázási adatokat <a href=\"/invoices/invoices/invoice-details\">ezen az oldalon</a>, majd ezután tud kérvényezni számlát ugyanitt."
 		fill_invoice_address: Számlázási adatok kitöltése
 		saved: Mentve
 

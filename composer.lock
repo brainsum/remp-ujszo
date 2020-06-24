@@ -4159,12 +4159,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/crm-invoices-module.git",
-                "reference": "7207c1bb13f1d8c8b8f4616769bfbbbc2f814ddb"
+                "reference": "6f75ed84430e3d060d7e64d28a42ebf31d29fd21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/crm-invoices-module/zipball/7207c1bb13f1d8c8b8f4616769bfbbbc2f814ddb",
-                "reference": "7207c1bb13f1d8c8b8f4616769bfbbbc2f814ddb",
+                "url": "https://api.github.com/repos/brainsum/crm-invoices-module/zipball/6f75ed84430e3d060d7e64d28a42ebf31d29fd21",
+                "reference": "6f75ed84430e3d060d7e64d28a42ebf31d29fd21",
                 "shasum": ""
             },
             "require": {
@@ -4189,7 +4189,7 @@
             "support": {
                 "source": "https://github.com/brainsum/crm-invoices-module/tree/remp"
             },
-            "time": "2020-06-24T10:48:56+00:00"
+            "time": "2020-06-24T11:01:02+00:00"
         },
         {
             "name": "remp/crm-issues-module",
