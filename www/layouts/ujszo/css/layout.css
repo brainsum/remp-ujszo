@@ -576,3 +576,10 @@ p.text-border-top::before {
 .alert {
   margin-top: 20px;
 }
+
+.label a {
+  text-decoration: underline;
+}
+.label a:hover {git
+  text-decoration: none;
+}
