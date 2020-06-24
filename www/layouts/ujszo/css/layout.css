@@ -577,9 +577,9 @@ p.text-border-top::before {
   margin-top: 20px;
 }
 
-.label a {
+label a {
   text-decoration: underline;
 }
-.label a:hover {
+label a:hover {
   text-decoration: none;
 }
