@@ -4159,12 +4159,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/crm-invoices-module.git",
-                "reference": "b4a520775899dff7dba305da33ed4733bee1af2c"
+                "reference": "7207c1bb13f1d8c8b8f4616769bfbbbc2f814ddb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/crm-invoices-module/zipball/b4a520775899dff7dba305da33ed4733bee1af2c",
-                "reference": "b4a520775899dff7dba305da33ed4733bee1af2c",
+                "url": "https://api.github.com/repos/brainsum/crm-invoices-module/zipball/7207c1bb13f1d8c8b8f4616769bfbbbc2f814ddb",
+                "reference": "7207c1bb13f1d8c8b8f4616769bfbbbc2f814ddb",
                 "shasum": ""
             },
             "require": {
@@ -4189,7 +4189,7 @@
             "support": {
                 "source": "https://github.com/brainsum/crm-invoices-module/tree/remp"
             },
-            "time": "2020-04-30T10:48:02+00:00"
+            "time": "2020-06-24T10:48:56+00:00"
         },
         {
             "name": "remp/crm-issues-module",
@@ -4422,12 +4422,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/crm-subscriptions-module.git",
-                "reference": "8714f1c9ab422e0b6d99aed25ab90c81fc3dfb31"
+                "reference": "4f17d1cdc39f18114f2731b44595d552bca993a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/crm-subscriptions-module/zipball/8714f1c9ab422e0b6d99aed25ab90c81fc3dfb31",
-                "reference": "8714f1c9ab422e0b6d99aed25ab90c81fc3dfb31",
+                "url": "https://api.github.com/repos/brainsum/crm-subscriptions-module/zipball/4f17d1cdc39f18114f2731b44595d552bca993a8",
+                "reference": "4f17d1cdc39f18114f2731b44595d552bca993a8",
                 "shasum": ""
             },
             "require": {
@@ -4451,7 +4451,7 @@
             "support": {
                 "source": "https://github.com/brainsum/crm-subscriptions-module/tree/remp"
             },
-            "time": "2020-05-27T18:07:16+00:00"
+            "time": "2020-06-24T10:34:55+00:00"
         },
         {
             "name": "remp/crm-users-module",
