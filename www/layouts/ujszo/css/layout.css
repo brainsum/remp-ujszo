@@ -580,6 +580,6 @@ p.text-border-top::before {
 .label a {
   text-decoration: underline;
 }
-.label a:hover {git
+.label a:hover {
   text-decoration: none;
 }
