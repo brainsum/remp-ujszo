@@ -44,6 +44,7 @@ class CheckoutPresenter extends FrontendPresenter
       $payment = $this->paymentsRepository->findByVS($vs);
       $gateway = $payment->payment_gateway;
 
+      $this->template->img_src = "/layouts/ujszo/images/subscription/" . $payment->subscription_type->code . ".jpg";
       $this->template->payment_id = $payment_id;
       $this->template->order_id_url = $this->linkGenerator->link('Ujszo:Checkout:OrderId');
       $this->template->return_url = $this->linkGenerator->link('Payments:Return:gateway', ['gatewayCode' => $payment->payment_gateway->code, 'VS' => $vs, 'paypal_success' => 1]);

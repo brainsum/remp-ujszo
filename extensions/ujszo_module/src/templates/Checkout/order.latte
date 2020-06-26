@@ -44,7 +44,9 @@
   <div class="checkout-box">
     <div class="image-box">
       <div class="image">
-          <img src="https://placeimg.com/460/300/animal">
+        {ifset $img_src}
+          <img src={$img_src}>
+        {/ifset}
       </div>
     </div>
     <div class="price-box">
