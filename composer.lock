@@ -4422,12 +4422,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/crm-subscriptions-module.git",
-                "reference": "4f17d1cdc39f18114f2731b44595d552bca993a8"
+                "reference": "ff7c25a19ece97c3515777174e4fb7fadca64a65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/crm-subscriptions-module/zipball/4f17d1cdc39f18114f2731b44595d552bca993a8",
-                "reference": "4f17d1cdc39f18114f2731b44595d552bca993a8",
+                "url": "https://api.github.com/repos/brainsum/crm-subscriptions-module/zipball/ff7c25a19ece97c3515777174e4fb7fadca64a65",
+                "reference": "ff7c25a19ece97c3515777174e4fb7fadca64a65",
                 "shasum": ""
             },
             "require": {
@@ -4451,7 +4451,7 @@
             "support": {
                 "source": "https://github.com/brainsum/crm-subscriptions-module/tree/remp"
             },
-            "time": "2020-06-24T10:34:55+00:00"
+            "time": "2020-06-26T11:02:02+00:00"
         },
         {
             "name": "remp/crm-users-module",
