@@ -482,6 +482,10 @@ p.text-border-top::before {
   border-top-right-radius: 5px;
 }
 
+.price-box .image img {
+  width: 100%
+}
+
 .price-box .text-holder {
   padding: 10px 20px 20px;
   min-height: 385px;
