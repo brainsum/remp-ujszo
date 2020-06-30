@@ -58,17 +58,6 @@ class InvoiceCreatedEventHandler extends AbstractListener {
       ],
     ];
 
-    $attachment = $this->invoiceGenerator->renderInvoiceMailAttachment($payment);
-
-    if ($attachment) {
-      unset($attachment['mime_type']);
-      $attachment['content'] = base64_encode($attachment['content']);
-
-      $body["attachments"] = [
-        (object)$attachment
-      ];
-    }
-
     try {
       $res = $client->post($url, [
         'headers' => [
