@@ -587,3 +587,17 @@ label a {
 label a:hover {
   text-decoration: none;
 }
+.thank-you-title {
+  margin-top: 30px;
+}
+.thank-you-text {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.additionalform-header-info a {
+  text-decoration: underline;
+}
+.additionalform-header-info a:hover {
+  text-decoration: none;
+}
