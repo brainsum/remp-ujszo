@@ -34,6 +34,7 @@ class PaymentChangeStatusEventHandler extends AbstractListener {
       $payment = $event->getPayment();
       // hard reload, other handlers could have alter the payment already
       $payment = $this->paymentsRepository->find($payment->id);
+      $payment_gateway = $payment->payment_gateway;
 
       $subscriptionType = $this->subscriptionTypesRepository->find($payment->subscription_type_id);
 
@@ -47,6 +48,7 @@ class PaymentChangeStatusEventHandler extends AbstractListener {
         "email" => $this->applicationConfig->get('contact_email'),
         "params" => [
           'payment' => $payment->toArray(),
+          'payment_gateway' => $payment_gateway->toArray(),
           'subscription_type' => $subscriptionType->toArray(),
           'currency' => $this->applicationConfig->get('currency')
         ]
