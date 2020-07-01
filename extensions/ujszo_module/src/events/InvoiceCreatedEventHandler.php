@@ -3,12 +3,14 @@
 namespace Crm\UjszoModule\Events;
 
 use Crm\ApplicationModule\Config\ApplicationConfig;
-use Crm\SubscriptionsModule\Repository\SubscriptionTypesRepository;
-use Crm\PaymentsModule\Repository\PaymentsRepository;
 use Crm\InvoicesModule\InvoiceGenerator;
+use Crm\PaymentsModule\Repository\PaymentsRepository;
+use Crm\SubscriptionsModule\Repository\SubscriptionTypesRepository;
+use Crm\UsersModule\Repository\AddressesRepository;
+use Crm\UsersModule\Repository\UsersRepository;
+use GuzzleHttp\Client as HttpClient;
 use League\Event\AbstractListener;
 use League\Event\EventInterface;
-use GuzzleHttp\Client as HttpClient;
 
 class InvoiceCreatedEventHandler extends AbstractListener {
 
@@ -22,21 +24,48 @@ class InvoiceCreatedEventHandler extends AbstractListener {
 
   private $invoiceGenerator;
 
+  private $usersRepository;
+
+  private $addressesRepository;
+
   public function __construct(
-        SubscriptionTypesRepository $subscriptionTypesRepository,
-        ApplicationConfig $applicationConfig,
-        PaymentsRepository $paymentsRepository,
-        InvoiceGenerator $invoiceGenerator
+    UsersRepository $usersRepository,
+    SubscriptionTypesRepository $subscriptionTypesRepository,
+    ApplicationConfig $applicationConfig,
+    PaymentsRepository $paymentsRepository,
+    InvoiceGenerator $invoiceGenerator,
+    AddressesRepository $addressesRepository
   ) {
-      $this->subscriptionTypesRepository = $subscriptionTypesRepository;
-      $this->paymentsRepository = $paymentsRepository;
-      $this->applicationConfig = $applicationConfig;
-      $this->invoiceGenerator = $invoiceGenerator;
+    $this->usersRepository = $usersRepository;
+    $this->subscriptionTypesRepository = $subscriptionTypesRepository;
+    $this->paymentsRepository = $paymentsRepository;
+    $this->applicationConfig = $applicationConfig;
+    $this->invoiceGenerator = $invoiceGenerator;
+    $this->addressesRepository = $addressesRepository;
   }
 
   public function handle(EventInterface $event) {
     $payment = $event->getPayment();
-    $pdf = $event->getPDF();
+
+    $row = $this->usersRepository->find($payment->user->id);
+
+    $invoiceAddress = $this->addressesRepository->address($row, 'invoice');
+    $address = [];
+
+    if ($invoiceAddress) {
+      $address = [
+        'invoice' => $row->invoice,
+        'company_name' => $invoiceAddress->company_name ? $invoiceAddress->company_name : '',
+        'address' => $invoiceAddress->address ? $invoiceAddress->address : '',
+        'number' => $invoiceAddress->number,
+        'city' => $invoiceAddress->city,
+        'zip' => $invoiceAddress->zip,
+        'company_id' => $invoiceAddress->company_id,
+        'company_tax_id' => $invoiceAddress->company_tax_id,
+        'company_vat_id' => $invoiceAddress->company_vat_id
+      ];
+    }
+
     // hard reload, other handlers could have alter the payment already
     $payment = $this->paymentsRepository->find($payment->id);
 
@@ -54,7 +83,8 @@ class InvoiceCreatedEventHandler extends AbstractListener {
         'payment' => $payment->toArray(),
         'user' => $payment->user->toArray(),
         'subscription_type' => $subscriptionType->toArray(),
-        'currency' => $this->applicationConfig->get('currency')
+        'currency' => $this->applicationConfig->get('currency'),
+        'address' => $address
       ],
     ];
 
@@ -70,6 +100,5 @@ class InvoiceCreatedEventHandler extends AbstractListener {
       Debugger::log($e);
     }
   }
-
 
 }
