@@ -589,11 +589,16 @@ label a:hover {
 }
 .thank-you-title {
   margin-top: 30px;
+  text-align: center;
 }
 .thank-you-text {
   display: block;
   margin-top: 10px;
   margin-bottom: 30px;
+  text-align: center;
+}
+.additionalform-header {
+  text-align: center;
 }
 .additionalform-header-info a {
   text-decoration: underline;
