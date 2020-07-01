@@ -44,6 +44,7 @@ frontend:
 		    invalid_email: Hibás e-mail cím. Kérjük ellenőrizd a megadott e-mail címed.
 	change_password:
 		title: Jelszó módosítás
+		info: "A jelenlegi jelszava segítségével új jelszót állíthat be."
 		submit: Jelszó módosítás
 		submit_with_devices_logout: Jelszó módosítás és más eszközökről való kijelentkezés
 		actual_password:
