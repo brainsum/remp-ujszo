@@ -124,8 +124,12 @@ frontend:
 		submit: Küldés
 		invalid_email: Hibás e-mail cím
 		success: "Az általad megadott e-mail címre elküldtünk egy jelszó módosító e-mailt. Kérlek nézd meg a postafiókod, a reklám, esetleg SPAM fiókot is beleértve!"
-	reset_password:
+	set_password:
 		title: Jelszó beállítás
+		info: Ezen az oldalon állíthatja be jelszavát.
+		success: Sikeresen beállította jelszavát!
+	reset_password:
+		title: Jelszó módosítás
 		info: Ezen az oldalon módosíthatod jelszavad.
 		errors:
 			invalid_password_reset_token: Jelszó módosításhoz használt link érvényessége lejárt. Igényeljen új linket.

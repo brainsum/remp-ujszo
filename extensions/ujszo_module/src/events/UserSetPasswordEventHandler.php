@@ -12,7 +12,7 @@ use League\Event\EventInterface;
 use Nette\Security\User;
 use GuzzleHttp\Client as HttpClient;
 
-class UserChangePasswordEventHandler extends AbstractListener
+class UserSetPasswordEventHandler extends AbstractListener
 {
 
     private $userAuthenticator;
@@ -27,7 +27,6 @@ class UserChangePasswordEventHandler extends AbstractListener
     {
         if ($event->shouldNotify()) {
             $user = $event->getUser();
-            $r = $this->userAuthenticator->authenticate(['username' => $user->email, 'alwaysLogin' => true]);
 
             $client = new HttpClient();
             $mailer_host = getenv('MAILER_ADDR');
@@ -35,7 +34,7 @@ class UserChangePasswordEventHandler extends AbstractListener
 
             $url = $mailer_host . '/api/v1/mailers/send-email';
             $body = [
-                "mail_template_code" => "password_changed",
+                "mail_template_code" => "password_set",
                 "email" => $user->email
             ];
 

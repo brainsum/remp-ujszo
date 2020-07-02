@@ -12,9 +12,11 @@ use Crm\ApplicationModule\Seeders\SnippetsSeeder;
 use Crm\ApplicationModule\SeederManager;
 use Crm\ApplicationModule\CrmModule;
 use Crm\ApplicationModule\LayoutManager;
+use Crm\ApplicationModule\Event\EventsStorage;
 use Crm\UjszoModule\Seeders\PaymentGatewaysSeeder;
 use Crm\UjszoModule\Seeders\ConfigsSeeder;
 use Crm\UjszoModule\Seeders\ContentAccessSeeder;
+use Crm\UjszoModule\Events\UserSetPasswordEvent;
 use League\Event\Emitter;
 use Nette\DI\Container;
 use Nette\Application\Routers\Route;
@@ -23,7 +25,12 @@ use Nette\Application\Routers\RouteList;
 class UjszoModule extends CrmModule
 {
 
-  public function registerEventHandlers(\League\Event\Emitter $emitter)
+  public function registerEvents(EventsStorage $eventsStorage)
+  {
+    $eventsStorage->register('user_set_password', UserSetPasswordEvent::class);
+  }
+
+  public function registerEventHandlers(Emitter $emitter)
   {
     $emitter->addListener(
       \Crm\UsersModule\Events\UserCreatedEvent::class,
@@ -43,6 +50,11 @@ class UjszoModule extends CrmModule
     $emitter->addListener(
       \Crm\UsersModule\Events\UserChangePasswordEvent::class,
       $this->getInstance(\Crm\UjszoModule\Events\UserChangePasswordEventHandler::class)
+    );
+
+    $emitter->addListener(
+      \Crm\UjszoModule\Events\UserSetPasswordEvent::class,
+      $this->getInstance(\Crm\UjszoModule\Events\UserSetPasswordEventHandler::class)
     );
 
     $emitter->addListener(
@@ -91,5 +103,10 @@ class UjszoModule extends CrmModule
     $seederManager->addSeeder($this->getInstance(PaymentGatewaysSeeder::class));
     $seederManager->addSeeder($this->getInstance(ConfigsSeeder::class));
     $seederManager->addSeeder($this->getInstance(ContentAccessSeeder::class));
+  }
+
+  public function registerRoutes(RouteList $router)
+  {
+    $router[] = new Route('password/set/<id>', 'Ujszo:Password:set');
   }
 }

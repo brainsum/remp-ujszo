@@ -2,6 +2,7 @@ services:
 	- Crm\UjszoModule\Events\UserCreatedEventHandler
 	- Crm\UjszoModule\Events\SubscriptionEventHandler
 	- Crm\UjszoModule\Events\UserChangePasswordEventHandler
+	- Crm\UjszoModule\Events\UserSetPasswordEventHandler
 	- Crm\UjszoModule\Events\UserChangePasswordRequestEventHandler
 	- Crm\UjszoModule\Events\PaymentChangeStatusEventHandler
 	- Crm\UjszoModule\Events\NotificationEventHandler
@@ -12,6 +13,7 @@ services:
 	- Crm\UjszoModule\Seeders\ConfigsSeeder
 	- Crm\UjszoModule\Seeders\ContentAccessSeeder
 	- Crm\UjszoModule\Gateways\Paypal
+	- Crm\UjszoModule\Forms\SetPasswordFormFactory
 	moduleManager:
 		setup:
 			- addModule(Crm\UjszoModule\UjszoModule())
