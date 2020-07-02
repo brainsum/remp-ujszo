@@ -25,10 +25,10 @@ class UserChangePasswordEventHandler extends AbstractListener
 
     public function handle(EventInterface $event)
     {
-        if ($event->shouldNotify()) {
-            $user = $event->getUser();
-            $r = $this->userAuthenticator->authenticate(['username' => $user->email, 'alwaysLogin' => true]);
+        $user = $event->getUser();
+        $r = $this->userAuthenticator->authenticate(['username' => $user->email, 'alwaysLogin' => true]);
 
+        if ($event->shouldNotify()) {
             $client = new HttpClient();
             $mailer_host = getenv('MAILER_ADDR');
             $sso_token = getenv('SSO_TOKEN');
