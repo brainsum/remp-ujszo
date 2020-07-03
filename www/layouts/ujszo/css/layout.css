@@ -6,9 +6,14 @@ body {
 }
 
 a:focus {
-  background-color: transparent !important;
+  background-color: inherit;
   outline: none;
   outline-offset: 0;
+}
+
+.btn:focus {
+  outline: none;
+  outline-offset: none;
 }
 
 .page-header-logo-holder {
@@ -77,6 +82,11 @@ a:focus {
 }
 
 .page-content-holder .remp-content-nav li a:hover {
+  background:#fcbf1e;
+  color: #000;
+}
+
+.page-content-holder .remp-content-nav li a:focus{
   background:#fcbf1e;
   color: #000;
 }
