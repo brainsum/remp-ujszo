@@ -4316,12 +4316,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/crm-salesfunnel-module.git",
-                "reference": "bab2a8d77fddbef950a22ed0e9dac8534192148e"
+                "reference": "a95c53e99670c44da6ddc85347ca74ab25fe7014"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/crm-salesfunnel-module/zipball/bab2a8d77fddbef950a22ed0e9dac8534192148e",
-                "reference": "bab2a8d77fddbef950a22ed0e9dac8534192148e",
+                "url": "https://api.github.com/repos/brainsum/crm-salesfunnel-module/zipball/a95c53e99670c44da6ddc85347ca74ab25fe7014",
+                "reference": "a95c53e99670c44da6ddc85347ca74ab25fe7014",
                 "shasum": ""
             },
             "require": {
@@ -4345,7 +4345,7 @@
             "support": {
                 "source": "https://github.com/brainsum/crm-salesfunnel-module/tree/remp"
             },
-            "time": "2020-07-02T11:05:27+00:00"
+            "time": "2020-07-06T07:37:35+00:00"
         },
         {
             "name": "remp/crm-scenarios-module",
