@@ -17,31 +17,31 @@ frontend:
 		title: Bejelentkezés
 		username:
 			label: 'E-mail cím:'
-			required: Kérjük add meg az e-mail címed
+			required: Kérjük adja meg az e-mail címét
 			placeholder: E-mail cím
 		password:
 			label: 'Jelszó:'
-			required: Kérjük add meg a jelszavad.
+			required: Kérjük adja meg a jelszavát.
 			placeholder: Jelszó
-		remember: Maradj bejelentkezve
+		remember: Maradjon bejelentkezve
 		submit: Bejelentkezés
-		signed_out: Sikeresen kijelentkeztél.
+		signed_out: Sikeresen kijelentkezett.
 	sign_up:
 		title: Regisztráció
 		username:
 			label: 'E-mail cím:'
-			required: Kérjük add meg az e-mail címed
-			placeholder: Pl. en@email.sk
+			required: Kérjük adja meg az e-mail címét
+			placeholder: Pl. kiss.jozsef@email.sk
 		password:
 			label: 'Jelszó:'
-			required: Kérjük add meg a jelszavad.
+			required: Kérjük adja meg a jelszavát.
 			placeholder: Saját jelszó
 		toc:
-		    required: El kell fogadnod a felhasználói feltételeket
+		    required: El kell fogadnia a felhasználói feltételeket
 		submit: Fiók létrehozása
 		error:
-		    already_registered: 'E-mail cím foglalt. Kérjük add meg a jelszavad vagy cseréld le <a href="/users/users/reset-password" style="text-decoration:underline">itt</a>'
-		    invalid_email: Hibás e-mail cím. Kérjük ellenőrizd a megadott e-mail címed.
+		    already_registered: 'E-mail cím foglalt. Kérjük adja meg a jelszavát vagy cserélje le <a href="/users/users/reset-password" style="text-decoration:underline">itt</a>'
+		    invalid_email: Hibás e-mail cím. Kérjük ellenőrizze a megadott e-mail címét.
 	change_password:
 		title: Jelszó módosítás
 		info: "A jelenlegi jelszava segítségével új jelszót állíthat be."
@@ -49,19 +49,19 @@ frontend:
 		submit_with_devices_logout: Jelszó módosítás és más eszközökről való kijelentkezés
 		actual_password:
 			label: 'Jelenlegi jelszó:'
-			required: Kérjük add meg jelenlegi jelszavad
+			required: Kérjük adja meg jelenlegi jelszavát
 			placeholder: Jelenlegi jelszó
-			description: "Amennyiben eflelejtetted régi jelszavad, <a href=\"%url%\" class=\"link\">kattints ide</a> és elküldünk egy új jelszót az email címedre."
+			description: "Amennyiben eflelejtette régi jelszavát, <a href=\"%url%\" class=\"link\">kattintson ide</a> és elküldünk egy új jelszót az email címére."
 		new_password:
 			label: 'Új jelszó:'
-			required: Kérjük add meg az új jelszavad
+			required: Kérjük adja meg az új jelszavát
 			placeholder: Új jelszó
-			minlength: Jelszavadnak legalább %d karakterből kell állnia.
+			minlength: Jelszavának legalább %d karakterből kell állnia.
 		new_password_confirm:
 			label: 'Új jelszó ismét:'
-			required: Kérjük add meg az új jelszavad még egyszer
+			required: Kérjük adja meg az új jelszavát még egyszer
 			placeholder: Új jelszó ismét
-			description: Kérjük add meg az új jelszavad még egyszer megerősités céljából
+			description: Kérjük adja meg az új jelszavát még egyszer megerősités céljából
 			not_matching: Jelszavak nem egyeznek
 		errors:
 			could_not_authenticate: Sikertelen próbálkozás.
@@ -83,7 +83,7 @@ frontend:
 			placeholder: pl. 0915 123 456
 		address:
 			label: 'Utca:'
-			placeholder: add meg az utca nevét
+			placeholder: adja meg az utca nevét
 		number:
 			label: 'Szám:'
 			placeholder: pl. 14/A
@@ -101,73 +101,73 @@ frontend:
 		company_id:
 			label: 'Cég azonosító:'
 			placeholder: pl. 9238598283
-			required: "Cég azonosító mező kötelező (amennyiben nincs, adj meg 0-t)"
+			required: "Cég azonosító mező kötelező (amennyiben nincs, adjon meg 0-t)"
 		company_tax_id:
 			label: 'Adó azonosító:'
 			placeholder: pl. 2359023591
-			required: "Adószám mező kötelező (amennyiben nincs, adj meg 0-t)"
+			required: "Adószám mező kötelező (amennyiben nincs, adjon meg 0-t)"
 		company_vat_id:
 			label: 'Áfa azonosító:'
 			placeholder: pl. SK2359023591
-			required: "Áfa azonosító kötelező (amennyiben nincs, ad meg 0-t)"
+			required: "Áfa azonosító kötelező (amennyiben nincs, adjon meg 0-t)"
 		submit: Mentés
 	request_password:
-		title: Elfelejtetted a jelszavad?
-		info: "Kérjük írd be a regisztrációnál használt e-mail címed, majd küldünk egy jelszó módosító e-mailt! Ha nem emlékszel a regisztrációnál használt e-mail címedre sem, akkor sajnos újra kell regisztrálnod."
+		title: Elfelejtetted a jelszavát?
+		info: "Kérjük írja be a regisztrációnál használt e-mail címét, majd küldünk egy jelszó módosító e-mailt! Ha nem emlékszik a regisztrációnál használt e-mail címére sem, akkor sajnos újra kell regisztrálnia."
 		login:
-			text: "Ha tudod a jelszavad, "
-			link: "jelentkezz be itt"
+			text: "Ha tudja a jelszavát, "
+			link: "jelentkezzen be itt"
 		email:
 			label: 'E-mail cím:'
-			required: Kérjük add meg az e-mail címed
-			placeholder: "Az e-mail címed, amellyel regisztráltál"
+			required: Kérjük adja meg az e-mail címét
+			placeholder: "Az e-mail címét, amellyel regisztrált"
 		submit: Küldés
 		invalid_email: Hibás e-mail cím
-		success: "Az általad megadott e-mail címre elküldtünk egy jelszó módosító e-mailt. Kérlek nézd meg a postafiókod, a reklám, esetleg SPAM fiókot is beleértve!"
+		success: "Az Ön által megadott e-mail címre elküldtünk egy jelszó módosító e-mailt. Kérjük nézze meg a postafiókját, a reklám, esetleg SPAM fiókot is beleértve!"
 	set_password:
 		title: Jelszó beállítás
 		info: Ezen az oldalon állíthatja be jelszavát.
 		success: Sikeresen beállította jelszavát!
 	reset_password:
 		title: Jelszó módosítás
-		info: Ezen az oldalon módosíthatod jelszavad.
+		info: Ezen az oldalon módosíthatja jelszavát.
 		errors:
 			invalid_password_reset_token: Jelszó módosításhoz használt link érvényessége lejárt. Igényeljen új linket.
 		new_password:
 			label: 'Új jelszó:'
-			required: Add meg az új jelszavad
+			required: Adja meg az új jelszavát
 			placeholder: Új jelszó
-			min_length: Jelszavadnak legalább %count% karakterből kell állnia.
+			min_length: Jelszavának legalább %count% karakterből kell állnia.
 		new_password_confirm:
 			label: 'Új jelszó még egyszer:'
-			required: Kérjük add meg az új jelszavad még egyszer
+			required: Kérjük adja meg az új jelszavát még egyszer
 			not_matching: Jelszavak nem egyeznek
 			placeholder: Új jelszó még egyszer
-			description: Kérjük add meg az új jelszavad még egyszer megerősités céljából
+			description: Kérjük adja meg az új jelszavát még egyszer megerősités céljából
 		submit: Beállítás
 		could_not_set: Jelszó módosítás sikertelen
-		success: Sikeresen módosítottad jelszavad!
+		success: Sikeresen módosította jelszavát!
 	settings:
 		title: Rendszer beállítások
 		personal_data:
 			title: Személyes adatok letöltése
-			info: "Itt tudod letölteni a rólad tárolt adatokat"
+			info: "Itt tudja letölteni a tárolt személyes adatait"
 			download: Letöltés
 		devices_logout:
 			title: Eszközkezelés
 			logout: Kijelentkeztetés minden más eszközről
-			confirm: "Ki szeretnél jelentkezni minden más eszközről?"
-			success: "Ki lettél jelentkeztetve minden más eszközről"
+			confirm: "Ki szeretne jelentkezni minden más eszközről?"
+			success: "Ki lett jelentkeztetve minden más eszközről"
 		account_delete:
 			title: Felhasználó törlése
-			info: 'Ha szeretnéd végleg törölni a felhasználódat, kérjük írd be jelszavad, és kattints a felhasználó törlése gombra <strong>Ez a múvelet visszafordíthatatlam.</strong>'
+			info: 'Ha szeretné végleg törölni a felhasználói profilját, kérjük írja be jelszavát, és kattintson a felhasználó törlése gombra <strong>Ez a múvelet visszafordíthatatlam.</strong>'
 			password:
 				label: 'Jelszó:'
 				required: Jelszó kötelező
 			submit: Felhasználó törlése
 			invalid_password: Hibás jelszó
-			cannot_delete: Felhasználó nem törölhető automatikusan. Kérlek vedd fel a kapcsolatot a szupporttal.
-			confirm: Felhasználó törlése visszafordíthatatlan. Biztos folytatod?
+			cannot_delete: Felhasználó nem törölhető automatikusan. Kérjük vegye fel a kapcsolatot az ügyfélszolgálattal.
+			confirm: Felhasználó törlése visszafordíthatatlan. Biztos folytatja?
 			success: Felhasználó sikeresen törölve.
 
 admin:
@@ -254,10 +254,10 @@ admin:
 		email:
 			label: 'E-mail cím*:'
 			required: E-mail cím kötelező
-			placeholder: add meg az e-mail címed
+			placeholder: adja meg az e-mail címét
 		password:
 			label: 'Jelszó:'
-			placeholder: Jelszavadnak legalább 6 karakterből kell állnia.
+			placeholder: Jelszavátnak legalább 6 karakterből kell állnia.
 			required: Jelszó kötelező
 			description: 'Hagyd üresen, amennyiben nem szeretnéd megváltoztatni'
 		source:
@@ -446,8 +446,8 @@ month_users_small_bar_graph_widget:
 
 api:
 	users_login_handler:
-		identity_not_found: "Megadott e-mail cím nem egyezik a bejegyzéseinkkel. Kérjük jelentkezz be ahogy az Újszó weboldalon tennéd."
-		invalid_credentials: "Megadott jelszó nem egyezik meg a bejegyzéseinkkel. Kérjük jelentkezz be ahogy az Újszó weboldalon tennéd."
+		identity_not_found: "Megadott e-mail cím nem egyezik a bejegyzéseinkkel. Kérjük jelentkezzen be, ahogy az Újszó weboldalon tenné."
+		invalid_credentials: "Megadott jelszó nem egyezik meg a bejegyzéseinkkel. Kérjük jelentkezzen be, ahogy az Újszó weboldalon tenné."
 
 form:
 	admin_user_group:

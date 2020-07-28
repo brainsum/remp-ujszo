@@ -12,11 +12,11 @@ frontend:
 
 	invoice_generated:
 		info: "Ön már kérvényezett számlát ehhez az előfizetéshez. Amennyiben a számlával kapcsolatos problémája, vagy kérdése támadt, úgy kérjük írjon nekünk a blabla@ujszo.com cimre."
-		success: "Szamla igenlyeset tovabbitottuk az ujszonak."
+		success: "Számla igénylését továbbítottuk az Új Szó-nak."
 
 	invoice_details:
 		title: Számlázás részletek
-		invoices_link_prefix: "Eddigi számláid itt találhodja meg: "
+		invoices_link_prefix: "Eddigi számlái itt találhatja meg: "
 		invoices_link: fizetések
 
 	change_invoice_details:
@@ -44,18 +44,18 @@ frontend:
 			required: ZIP szükséges
 		company_id:
 			label: IČO -cégjegyzékszám
-			placeholder: "IČO -cégjegyzékszám. Adj meg 0-t, ha nincs"
+			placeholder: "IČO -cégjegyzékszám. Adjon meg 0-t, ha nincs"
 			required: IČO -cégjegyzékszám szükséges
 		company_tax_id:
 			label: DIČ -adószám
-			placeholder: "DIČ -adószám. Adj meg 0-t, ha nincs"
+			placeholder: "DIČ -adószám. Adjon meg 0-t, ha nincs"
 			required: DIČ -adószám szükséges
 		company_vat_id:
 			label: IČ DPH -ÁFA reg. szám
-			placeholder: "IČ DPH -ÁFA reg. szám. Adj meg 0-t, ha nincs"
+			placeholder: "IČ DPH -ÁFA reg. szám. Adjon meg 0-t, ha nincs"
 			required: IČ DPH -ÁFA reg. szám szükséges
 		success: Cím sikeresen módosítva.
-		warning: "Fizetéstől számított 14 napig igényelhetsz számlát. Ezt megteheted <a href='%link%' style='text-decoration: underline;'>itt</a>."
+		warning: "Fizetéstől számított 14 napig igényelhet számlát. Ezt megteheti <a href='%link%' style='text-decoration: underline;'>itt</a>."
 	download_receipt: Blokk letöltése
 	proforma_invoice:
 		title: Proforma invoice payment
@@ -112,9 +112,9 @@ form:
 			number: ""
 			city: ""
 			zip: ""
-			ico: "Adj meg 0-t, ha nincs"
-			dic: "Adj meg 0-t, ha nincs"
-			icdph: "Adj meg 0-t, ha nincs"
+			ico: "Adjon meg 0-t, ha nincs"
+			dic: "Adjon meg 0-t, ha nincs"
+			icdph: "Adjon meg 0-t, ha nincs"
 		required:
 			company_name: Cégnév szükséges
 			address: Cím szükséges

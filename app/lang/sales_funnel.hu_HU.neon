@@ -58,7 +58,7 @@ frontend:
 		complete_registration: Vissza a cikkhez
 		complete_registration_info: "Ha minden információt kitöltött,<br>folytassa ahol abbahagyta."
 	success:
-		title: "Köszönjük, hogy regisztráltál"
+		title: "Köszönjük, hogy regisztrált"
 		description: "A megadott e-mail címre küldtünk egy regisztrációt megerősítő levelet. Kérjük nyissa meg és járjon el a levélben megadott instrukciók szerint."
 		return: "Vissza a cikkre"
 	error_page:
