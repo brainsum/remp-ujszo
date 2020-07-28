@@ -176,6 +176,10 @@ p.text-border-top::before {
   line-height: 22px;
 }
 
+#frm-changeInvoiceDetailsForm label {
+  font-size: 16px;
+}
+
 .remp-form-container .checkbox-container {
   display: block;
   position: relative;
