@@ -41,6 +41,7 @@ class PaymentChangeStatusEventHandler extends AbstractListener {
       $client = new HttpClient();
       $mailer_host = getenv('MAILER_ADDR');
       $sso_token = getenv('SSO_TOKEN');
+      $beam_url = getenv('BEAM_ADDR');
 
       $url = $mailer_host . '/api/v1/mailers/send-email';
       $body = [
@@ -53,6 +54,35 @@ class PaymentChangeStatusEventHandler extends AbstractListener {
           'currency' => $this->applicationConfig->get('currency')
         ]
       ];
+
+      if ($payment->referer) {
+        $article_uuid = $payment->referer;
+        $conversion_body = [
+          'conversions' => [
+            [
+              "article_external_id" => $payment->referer,
+              "transaction_id" => $payment->variable_symbol,
+              "amount" => $payment->amount,
+              "currency" => $this->applicationConfig->get('currency'),
+              "paid_at" => $payment->paid_at,
+              "user_id" => (string)$payment->user_id,
+            ]
+          ]
+        ];
+
+        try {
+          $res = $client->post($beam_url . '/api/conversions/upsert', [
+            'headers' => [
+              'Content-Type' => 'application/json',
+              'Accept' => 'application/json',
+              'Authorization'=> 'Bearer ' . $sso_token,
+            ],
+            'body' => json_encode($conversion_body)
+          ]);
+        } catch (Exception $e) {
+          Debugger::log($e);
+        }
+      }
 
       try {
         $res = $client->post($url, [
