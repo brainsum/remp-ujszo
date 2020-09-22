@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a13c3d67f45971ee03961d3525d7eda",
+    "content-hash": "4d9338304d5e650d1c9ea7e33280cb96",
     "packages": [
         {
             "name": "cakephp/cache",
@@ -4378,40 +4378,6 @@
                 "source": "https://github.com/brainsum/crm-salesfunnel-module/tree/remp"
             },
             "time": "2020-09-22T09:54:36+00:00"
-        },
-        {
-            "name": "remp/crm-scenarios-module",
-            "version": "0.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/remp2020/crm-scenarios-module.git",
-                "reference": "a4500aaa7e3e02e8a007ea48cbd53bc36662ed18"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/remp2020/crm-scenarios-module/zipball/a4500aaa7e3e02e8a007ea48cbd53bc36662ed18",
-                "reference": "a4500aaa7e3e02e8a007ea48cbd53bc36662ed18",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Crm\\ScenariosModule\\": "src/"
-                },
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "CRM Scenarios Module",
-            "homepage": "https://remp2020.com",
-            "time": "2020-04-03T09:00:11+00:00"
         },
         {
             "name": "remp/crm-segment-module",
