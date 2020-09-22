@@ -55,7 +55,10 @@ class PaymentChangeStatusEventHandler extends AbstractListener {
         ]
       ];
 
-      if ($payment->referer) {
+      if (
+        !empty($payment->referer)
+        && preg_match('/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}/', $payment->referer)
+        ) {
         $article_uuid = $payment->referer;
         $conversion_body = [
           'conversions' => [
@@ -80,7 +83,7 @@ class PaymentChangeStatusEventHandler extends AbstractListener {
             'body' => json_encode($conversion_body)
           ]);
         } catch (Exception $e) {
-          Debugger::log($e);
+          Debugger::log($e->getMessage());
         }
       }
 
@@ -93,7 +96,7 @@ class PaymentChangeStatusEventHandler extends AbstractListener {
           'body' => json_encode($body)
         ]);
       } catch (Exception $e) {
-        Debugger::log($e);
+        Debugger::log($e->getMessage());
       }
     }
   }
