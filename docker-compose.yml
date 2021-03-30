@@ -16,14 +16,11 @@ services:
     build: "docker/php"
     extra_hosts:
       - "docker:192.168.99.100"
-    networks:
-      default:
-      remp_default:
     volumes:
       - ".:/var/www/html:rw"
     depends_on:
       - "nginx"
-      - "mysql_crm"
+      - "mysql"
       - "redis"
     restart: "unless-stopped"
 
@@ -33,10 +30,10 @@ services:
       - ".:/var/www/html:rw"
     depends_on:
       - "nginx"
-      - "mysql_crm"
+      - "mysql"
     restart: "unless-stopped"
 
-  mysql_crm:
+  mysql:
     image: "mysql:5.7"
     volumes:
       - "mysql-data:/var/lib/mysql"
@@ -65,5 +62,3 @@ volumes:
 
 networks:
   default:
-  remp_default:
-    external: true
