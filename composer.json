@@ -39,20 +39,32 @@
 		}
 	],
 	"require": {
+		"fakerphp/faker": "^1.14",
 		"paypal/paypal-checkout-sdk": "1.0.1",
-		"remp/crm-admin-module": "~0.9",
-		"remp/crm-api-module": "~0.9",
-		"remp/crm-application-module": "~0.12",
-		"remp/crm-dashboard-module": "~0.12",
-		"remp/crm-invoices-module": "dev-remp as 0.12.0",
-		"remp/crm-issues-module": "~0.12",
-		"remp/crm-onboarding-module": "~0.12",
-		"remp/crm-payments-module": "dev-remp as 0.12.0",
-		"remp/crm-remp-mailer-module": "^0.15.0",
-		"remp/crm-salesfunnel-module": "dev-remp as 0.12.0",
-		"remp/crm-segment-module": "~0.12",
-		"remp/crm-subscriptions-module": "dev-remp as 0.12.0",
-		"remp/crm-users-module": "dev-remp as 0.12.0",
+		"remp/crm-admin-module": "~0.28",
+		"remp/crm-api-module": "~0.28",
+		"remp/crm-application-module": "~0.28",
+		"remp/crm-dashboard-module": "~0.28",
+		"remp/crm-gifts-module": "~0.28",
+		"remp/crm-invoices-module": "dev-remp as 0.28",
+		"remp/crm-issues-module": "~0.28",
+		"remp/crm-onboarding-module": "~0.28",
+		"remp/crm-payments-module": "dev-remp as 0.28",
+		"remp/crm-print-module": "~0.28",
+		"remp/crm-products-module": "~0.28",
+		"remp/crm-remp-mailer-module": "^0.28",
+		"remp/crm-salesfunnel-module": "dev-remp as 0.28",
+		"remp/crm-scenarios-module": "~0.28",
+		"remp/crm-segment-module": "~0.28",
+		"remp/crm-stripe-module": "^0.28",
+		"remp/crm-subscriptions-module": "dev-remp as 0.28",
+		"remp/crm-upgrades-module": "~0.28",
+		"remp/crm-users-module": "dev-remp as 0.28",
 		"ujszo/ujszo_module": "@dev"
+	},
+	"scripts": {
+		"post-autoload-dump": [
+			"Crm\\ApplicationModule\\ComposerScripts::postAutoloadDump"
+		]
 	}
 }

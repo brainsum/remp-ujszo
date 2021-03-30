@@ -16,4 +16,4 @@ services:
 	- Crm\UjszoModule\Forms\SetPasswordFormFactory
 	moduleManager:
 		setup:
-			- addModule(Crm\UjszoModule\UjszoModule())
+			- addModule(Crm\UjszoModule\UjszoModule(), 290)

@@ -2,7 +2,6 @@
 
 namespace Crm\UjszoModule\Events;
 
-use Crm\ApplicationModule\User\UserData;
 use Crm\UsersModule\User\IUserGetter;
 use Crm\UsersModule\Repository\UsersRepository;
 use Crm\UsersModule\Repository\PasswordResetTokensRepository;
@@ -14,18 +13,14 @@ use Tracy\Debugger;
 
 class UserCreatedEventHandler extends AbstractListener
 {
-    private $userData;
-
     private $usersRepository;
 
     private $passwordResetTokensRepository;
 
     public function __construct(
-        UserData $userData,
         UsersRepository $usersRepository,
         PasswordResetTokensRepository $passwordResetTokensRepository
     ) {
-        $this->userData = $userData;
         $this->passwordResetTokensRepository = $passwordResetTokensRepository;
         $this->usersRepository = $usersRepository;
     }

@@ -2,7 +2,6 @@
 
 namespace Crm\UjszoModule\Events;
 
-use Crm\ApplicationModule\User\UserData;
 use Crm\UsersModule\User\IUserGetter;
 use Crm\UsersModule\Repository\UsersRepository;
 use Crm\UsersModule\Repository\PasswordResetTokensRepository;

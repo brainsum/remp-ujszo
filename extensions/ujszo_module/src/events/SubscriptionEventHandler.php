@@ -2,7 +2,6 @@
 
 namespace Crm\UjszoModule\Events;
 
-use Crm\ApplicationModule\User\UserData;
 use Crm\SubscriptionsModule\Repository\SubscriptionsRepository;
 use Crm\UsersModule\Repository\UsersRepository;
 use Crm\UsersModule\User\ISubscriptionGetter;
@@ -16,20 +15,16 @@ class SubscriptionEventHandler extends AbstractListener
 {
     private $usersRepository;
 
-    private $userData;
-
     private $subscriptionsRepository;
 
     private $emitter;
 
     public function __construct(
         UsersRepository $usersRepository,
-        UserData $userData,
         Emitter $emitter,
         SubscriptionsRepository $subscriptionsRepository
     ) {
         $this->usersRepository = $usersRepository;
-        $this->userData = $userData;
         $this->subscriptionsRepository = $subscriptionsRepository;
         $this->emitter = $emitter;
     }
