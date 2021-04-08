@@ -60,6 +60,7 @@
 		"remp/crm-subscriptions-module": "dev-remp as 0.28",
 		"remp/crm-upgrades-module": "~0.28",
 		"remp/crm-users-module": "dev-remp as 0.28",
+		"ujszo/ujszo_layout_module": "@dev",
 		"ujszo/ujszo_module": "@dev"
 	},
 	"scripts": {

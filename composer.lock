@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7857b7c481a3db79c1ae05c4a3121274",
+    "content-hash": "c4067bd15c8de7fdf6490cfeed4a1864",
     "packages": [
         {
             "name": "brick/math",
@@ -9062,6 +9062,37 @@
             "time": "2021-03-10T10:05:55+00:00"
         },
         {
+            "name": "ujszo/ujszo_layout_module",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "extensions/ujszo_layout_module",
+                "reference": "ca0f338a83582937968f5f2db1f5e84a8321f0d5"
+            },
+            "require": {
+                "php": "^7.2",
+                "remp/crm-application-module": "~0.2 >=0.2.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Crm\\UjszoLayoutModule\\": "src/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Ujszo Layout for REMP",
+            "homepage": "https://brainsum.com",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
             "name": "ujszo/ujszo_module",
             "version": "dev-master",
             "dist": {
@@ -9210,6 +9241,7 @@
         "remp/crm-salesfunnel-module": 20,
         "remp/crm-subscriptions-module": 20,
         "remp/crm-users-module": 20,
+        "ujszo/ujszo_layout_module": 20,
         "ujszo/ujszo_module": 20
     },
     "prefer-stable": true,
