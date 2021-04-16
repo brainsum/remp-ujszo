@@ -1,0 +1,5 @@
+
+services:
+	moduleManager:
+		setup:
+			- addModule(Crm\UjszoUsersModule\UjszoUsersModule(),200)

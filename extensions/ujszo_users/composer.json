@@ -1,0 +1,18 @@
+{
+  "name": "ujszo/ujszo_users_module",
+  "description": "Ujszo User Management for REMP",
+  "type": "library",
+  "homepage": "https://brainsum.com",
+  "license": "MIT",
+  "require": {
+    "php": "^7.2",
+    "remp/crm-application-module": "~0.2 >=0.2.7"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Crm\\UjszoUsersModule\\": "src/"
+    },
+    "classmap": ["src/"]
+  }
+}

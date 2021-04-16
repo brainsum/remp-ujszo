@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4067bd15c8de7fdf6490cfeed4a1864",
+    "content-hash": "08a572d9877873afff2d1a2d437dd307",
     "packages": [
         {
             "name": "brick/math",
@@ -9062,11 +9062,42 @@
             "time": "2021-03-10T10:05:55+00:00"
         },
         {
+            "name": "ujszo/ujszo_blog_module",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "extensions/ujszo_blog",
+                "reference": "e4ded2c74990dfb63314d88076d65edd2a89e899"
+            },
+            "require": {
+                "php": "^7.2",
+                "remp/crm-application-module": "~0.2 >=0.2.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Crm\\UjszoBlogModule\\": "src/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Ujszo Blog extension for REMP",
+            "homepage": "https://brainsum.com",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
             "name": "ujszo/ujszo_layout_module",
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "extensions/ujszo_layout_module",
+                "url": "extensions/ujszo_layout",
                 "reference": "ca0f338a83582937968f5f2db1f5e84a8321f0d5"
             },
             "require": {
@@ -9117,6 +9148,68 @@
                 "MIT"
             ],
             "description": "Ujszo specific REMP module",
+            "homepage": "https://brainsum.com",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "ujszo/ujszo_overrides_module",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "extensions/ujszo_overrides",
+                "reference": "99dc668024316676d3a2570cc61b281b0cace764"
+            },
+            "require": {
+                "php": "^7.2",
+                "remp/crm-application-module": "~0.2 >=0.2.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Crm\\UjszoOverridesModule\\": "src/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Ujszo Route overrides for REMP",
+            "homepage": "https://brainsum.com",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "ujszo/ujszo_users_module",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "extensions/ujszo_users",
+                "reference": "35ac9a21b773585c878c3ce410e1f906b200d076"
+            },
+            "require": {
+                "php": "^7.2",
+                "remp/crm-application-module": "~0.2 >=0.2.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Crm\\UjszoUsersModule\\": "src/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Ujszo User Management for REMP",
             "homepage": "https://brainsum.com",
             "transport-options": {
                 "symlink": true,
@@ -9241,8 +9334,11 @@
         "remp/crm-salesfunnel-module": 20,
         "remp/crm-subscriptions-module": 20,
         "remp/crm-users-module": 20,
+        "ujszo/ujszo_blog_module": 20,
         "ujszo/ujszo_layout_module": 20,
-        "ujszo/ujszo_module": 20
+        "ujszo/ujszo_module": 20,
+        "ujszo/ujszo_overrides_module": 20,
+        "ujszo/ujszo_users_module": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
