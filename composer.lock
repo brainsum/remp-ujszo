@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "08a572d9877873afff2d1a2d437dd307",
+    "content-hash": "1490264105c2b1bf71f070bb7d7fd6d7",
     "packages": [
         {
             "name": "brick/math",
@@ -584,16 +584,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.0.11",
+            "version": "2.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "a5a5632da0b1c2d6fa9a3b65f1f4e90d1f04abb9"
+                "reference": "6c12ce263da71641903e399c3ce8ecb08fd375fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/a5a5632da0b1c2d6fa9a3b65f1f4e90d1f04abb9",
-                "reference": "a5a5632da0b1c2d6fa9a3b65f1f4e90d1f04abb9",
+                "url": "https://api.github.com/repos/composer/composer/zipball/6c12ce263da71641903e399c3ce8ecb08fd375fb",
+                "reference": "6c12ce263da71641903e399c3ce8ecb08fd375fb",
                 "shasum": ""
             },
             "require": {
@@ -661,7 +661,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/2.0.11"
+                "source": "https://github.com/composer/composer/tree/2.0.12"
             },
             "funding": [
                 {
@@ -677,7 +677,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-24T13:57:23+00:00"
+            "time": "2021-04-01T08:14:59+00:00"
         },
         {
             "name": "composer/semver",
@@ -4457,7 +4457,6 @@
                 "issues": "https://github.com/paypal/paypalhttp_php/issues",
                 "source": "https://github.com/paypal/paypalhttp_php/tree/1.0.0"
             },
-            "abandoned": true,
             "time": "2019-11-06T21:27:12+00:00"
         },
         {
@@ -5070,23 +5069,22 @@
         },
         {
             "name": "predis/predis",
-            "version": "v1.1.6",
+            "version": "v1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/predis/predis.git",
-                "reference": "9930e933c67446962997b05201c69c2319bf26de"
+                "reference": "b240daa106d4e02f0c5b7079b41e31ddf66fddf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/predis/predis/zipball/9930e933c67446962997b05201c69c2319bf26de",
-                "reference": "9930e933c67446962997b05201c69c2319bf26de",
+                "url": "https://api.github.com/repos/predis/predis/zipball/b240daa106d4e02f0c5b7079b41e31ddf66fddf8",
+                "reference": "b240daa106d4e02f0c5b7079b41e31ddf66fddf8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
             },
             "require-dev": {
-                "cweagans/composer-patches": "^1.6",
                 "phpunit/phpunit": "~4.8"
             },
             "suggest": {
@@ -5094,18 +5092,6 @@
                 "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
             },
             "type": "library",
-            "extra": {
-                "composer-exit-on-patch-failure": true,
-                "patches": {
-                    "phpunit/phpunit-mock-objects": {
-                        "Fix PHP 7 and 8 compatibility": "./tests/phpunit_mock_objects.patch"
-                    },
-                    "phpunit/phpunit": {
-                        "Fix PHP 7 compatibility": "./tests/phpunit_php7.patch",
-                        "Fix PHP 8 compatibility": "./tests/phpunit_php8.patch"
-                    }
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Predis\\": "src/"
@@ -5137,7 +5123,7 @@
             ],
             "support": {
                 "issues": "https://github.com/predis/predis/issues",
-                "source": "https://github.com/predis/predis/tree/v1.1.6"
+                "source": "https://github.com/predis/predis/tree/v1.1.7"
             },
             "funding": [
                 {
@@ -5145,7 +5131,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-09-11T19:18:05+00:00"
+            "time": "2021-04-04T19:34:46+00:00"
         },
         {
             "name": "psr/container",
@@ -5799,16 +5785,16 @@
         },
         {
             "name": "remp/crm-application-module",
-            "version": "0.30.0",
+            "version": "0.30.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/remp2020/crm-application-module.git",
-                "reference": "f26002e39850382be6987c1732ea37b0f51c1354"
+                "reference": "4553f786606c960e7eabaf715756249ab5f1eb61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/remp2020/crm-application-module/zipball/f26002e39850382be6987c1732ea37b0f51c1354",
-                "reference": "f26002e39850382be6987c1732ea37b0f51c1354",
+                "url": "https://api.github.com/repos/remp2020/crm-application-module/zipball/4553f786606c960e7eabaf715756249ab5f1eb61",
+                "reference": "4553f786606c960e7eabaf715756249ab5f1eb61",
                 "shasum": ""
             },
             "require": {
@@ -5824,6 +5810,7 @@
                 "ext-posix": "*",
                 "ext-simplexml": "*",
                 "ext-zip": "*",
+                "fakerphp/faker": "^1.13",
                 "kdyby/autowired": "^1.5.0",
                 "kdyby/translation": "^2.5.0",
                 "latte/latte": "^2.4 <2.5.0",
@@ -5855,9 +5842,6 @@
                 "twig/twig": "^2.4",
                 "vlucas/phpdotenv": "^3.3"
             },
-            "require-dev": {
-                "fakerphp/faker": "^1.13"
-            },
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -5875,9 +5859,9 @@
             "homepage": "https://remp2020.com",
             "support": {
                 "issues": "https://github.com/remp2020/crm-application-module/issues",
-                "source": "https://github.com/remp2020/crm-application-module/tree/0.30.0"
+                "source": "https://github.com/remp2020/crm-application-module/tree/0.30.1"
             },
-            "time": "2021-03-23T12:11:24+00:00"
+            "time": "2021-04-01T09:22:04+00:00"
         },
         {
             "name": "remp/crm-dashboard-module",
@@ -6451,16 +6435,16 @@
         },
         {
             "name": "remp/crm-users-module",
-            "version": "dev-remp",
+            "version": "0.30.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/brainsum/crm-users-module.git",
-                "reference": "83b5633fc8c2862ac2e6c58f87e4b072ae2fba3a"
+                "url": "https://github.com/remp2020/crm-users-module.git",
+                "reference": "27550ae838b146e0af0eb5539eb1723dc70cf428"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/crm-users-module/zipball/83b5633fc8c2862ac2e6c58f87e4b072ae2fba3a",
-                "reference": "83b5633fc8c2862ac2e6c58f87e4b072ae2fba3a",
+                "url": "https://api.github.com/repos/remp2020/crm-users-module/zipball/27550ae838b146e0af0eb5539eb1723dc70cf428",
+                "reference": "27550ae838b146e0af0eb5539eb1723dc70cf428",
                 "shasum": ""
             },
             "require": {
@@ -6477,15 +6461,17 @@
                     "src/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "CRM Users Module",
             "homepage": "https://remp2020.com",
             "support": {
-                "source": "https://github.com/brainsum/crm-users-module/tree/remp"
+                "issues": "https://github.com/remp2020/crm-users-module/issues",
+                "source": "https://github.com/remp2020/crm-users-module/tree/0.30.0"
             },
-            "time": "2021-03-30T18:46:17+00:00"
+            "time": "2021-02-22T09:10:01+00:00"
         },
         {
             "name": "riimu/kit-phpencoder",
@@ -9319,12 +9305,6 @@
             "version": "dev-remp",
             "alias": "0.28",
             "alias_normalized": "0.28.0.0"
-        },
-        {
-            "package": "remp/crm-users-module",
-            "version": "dev-remp",
-            "alias": "0.28",
-            "alias_normalized": "0.28.0.0"
         }
     ],
     "minimum-stability": "stable",
@@ -9333,7 +9313,6 @@
         "remp/crm-payments-module": 20,
         "remp/crm-salesfunnel-module": 20,
         "remp/crm-subscriptions-module": 20,
-        "remp/crm-users-module": 20,
         "ujszo/ujszo_blog_module": 20,
         "ujszo/ujszo_layout_module": 20,
         "ujszo/ujszo_module": 20,

@@ -16,7 +16,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet" type="text/css" />
 
 	<script src="{$basePath}/layouts/ujszo/js/bootstrap.min.js"></script>
-    <script src="{$basePath}/layouts/ujszo/js/netteForms.js"></script>
+    {* <script src="{$basePath}/layouts/ujszo/js/netteForms.js"></script> *}
 
     {ifset $headerCode}{$headerCode|noescape}{/ifset}
 
@@ -26,7 +26,8 @@
 {var $forms = [
 	'Users:Users:requestPassword',
 	'Users:Users:resetPassword',
-	'Users:Sign:in',
+	'UjszoUsers:Sign:in',
+	'UjszoUsers:Sign:up',
 	'Users:Users:changePassword',
 	'Invoices:Invoices:invoiceDetails',
 	'Users:Users:settings',

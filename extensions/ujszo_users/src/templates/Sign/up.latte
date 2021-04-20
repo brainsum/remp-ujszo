@@ -1,0 +1,49 @@
+{block #content}
+
+<h1 n:block=title>{_users.frontend.sign_up.title}</h1>
+
+{form signUpForm, class=>'form-horizontal'}
+  <div class="alert alert-danger" n:if="$form->hasErrors()">
+    <p n:foreach="$form->errors as $error">{$error|noescape}</p>
+  </div>
+
+  <div>
+    <div class="form-group {if $form[username]->required}required{/if} {if $form['username']->error}has-error{/if}">
+      <div class="col-sm-12">
+        {input username, class=>'form-control'}
+      </div>
+    </div>
+    <div class="form-group {if $form[password]->required}required{/if} {if $form['password']->error}has-error{/if}">
+      <div class="col-sm-12">
+        {input password, class=>'form-control'}
+      </div>
+    </div>
+
+    <div class="form-group {if $form[password_confirm]->required}required{/if} {if $form['password_confirm']->error}has-error{/if}">
+      <div class="col-sm-12">
+        {input password_confirm, class=>'form-control'}
+      </div>
+    </div>
+
+    <div class="form-group {if $form[toc]->required}required{/if} {if $form['toc']->error}has-error{/if}">
+      <div class="col-sm-12">
+        <div class="checkbox">
+          <label n:name="toc">
+            {input toc:}
+            {$form[toc]->caption}
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-12">
+        {input send, class=>'btn btn-primary button'}
+      </div>
+    </div>
+  </div>
+
+{/form}
+
+{control snippet 'sing-up-bottom'}
+

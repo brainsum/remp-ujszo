@@ -14,6 +14,8 @@ class UjszoUsersModule extends CrmModule {
   public function registerRoutes(RouteList $router) {
     //users/users/settings
     $router[] = new Route('users/users/settings', 'UjszoUsers:Profile:default');
+    $router[] = new Route('sign/in', 'UjszoUsers:Sign:in');
+    $router[] = new Route('sign/up', 'UjszoUsers:Sign:up');
   }
 
 }
