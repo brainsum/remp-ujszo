@@ -1,10 +1,10 @@
-header.page-header{
+header.page-header {
   background: #000056;
   margin: 0;
   padding: 1rem 0;
   color: #fff;
 
-  .row > div{
+  .row > div {
     display: flex;
     justify-content: space-between;
 
@@ -16,17 +16,18 @@ header.page-header{
   }
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   margin-right: 1rem;
 }
 
-.btn-group-lg>.btn, .btn-lg{
+.btn-group-lg > .btn,
+.btn-lg {
   border-radius: 0;
 }
 
 .btn-primary {
   background-color: #fd014b;
-  color: #FFFFFF;
+  color: #ffffff;
   border-color: #fd014b;
   font-weight: bold;
 
@@ -42,3 +43,5 @@ input[type=checkbox] {
     border-color: darken(#fd014b, 20%);
   }
 }
+
+@import "page_admin_profile.scss";

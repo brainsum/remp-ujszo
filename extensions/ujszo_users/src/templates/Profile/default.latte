@@ -1,2 +1,50 @@
 {block #content}
-profile content
+
+<div class="page-admin-profile">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 title-wrapper">
+                <div class="title">Profilom</div>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 left-column">
+                <div class="left-column__profile-image-wrapper">
+                    <img src="/layouts/ujszo/images/oval.png" class="left-column__profile-image img-circle" alt="profile-picture">
+                    <!-- /layouts/ujszo/images/oval.png -->
+                </div>
+                <button type="button" class="base-button left-column__modify-image-button">Kép módosítása</button>
+                <div class="left-column__no-of-articles">13 bejegyzés</div>
+                <div class="left-column__no-of-karma">1215 karma</div>
+                </div>
+            <div class="col-md-4 middle-column text-center">
+            <form>
+                <div class="form-group">
+                    <label for="name">Teljes név vagy Becenév</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail cím</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="short-introduction">Rövid bemutatkozás</label>
+                    <textarea class="form-control" id="short-introduction" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="biography">Biográfia</label>
+                    <textarea class="form-control" id="biography" rows="5"></textarea>
+                </div>
+                
+                <button type="submit" class="base-button middle-column__save-changes-button">Módosítások mentése</button>
+            </form>
+            </div>
+            <div class="col-md-4 right-column">
+            </div>
+        </div>
+</div>
