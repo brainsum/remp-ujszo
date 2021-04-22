@@ -12,10 +12,13 @@
         <div class="row">
             <div class="col-md-4 left-column">
                 <div class="left-column__profile-image-wrapper">
-                    <img src="/layouts/ujszo/images/oval.png" class="left-column__profile-image img-circle" alt="profile-picture">
-                    <!-- /layouts/ujszo/images/oval.png -->
+                    <img src="/layouts/ujszo/images/placeholder.jpg" id="profile_picture" class="left-column__profile-image img-circle" alt="profile-picture">
                 </div>
-                <button type="button" class="base-button left-column__modify-image-button">Kép módosítása</button>
+                <label class="base-button left-column__modify-image-button">
+                    <input type="file" accept="image/*" onchange="loadFile(event)" >
+                    Kép módosítása
+                </label>
+
                 <div class="left-column__no-of-articles">13 bejegyzés</div>
                 <div class="left-column__no-of-karma">1215 karma</div>
                 </div>
@@ -48,3 +51,13 @@
             </div>
         </div>
 </div>
+
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('profile_picture');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src)
+    }
+  };
+</script>
