@@ -22,7 +22,7 @@ use Nette\Utils\Json;
 class ProfilePresenter extends FrontendPresenter {
 
   public function renderDefault() {
-
+    $this->onlyLoggedIn();
   }
 
 }
