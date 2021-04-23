@@ -1,0 +1,203 @@
+.page-admin-dashboard {
+  $border-radius: 10px;
+  background-color: #f3f3f3;
+  overflow: visible;
+
+  .header {
+    display: flex;
+    align-items: center;
+    margin: 30px 0px;
+
+    &__title {
+      font-family: Roboto Slab;
+      font-size: 36px;
+      color: #3f3f44;
+      margin-bottom: 9px;
+    }
+
+    &__no-of-articles {
+      font-family: Roboto;
+      font-size: 11px;
+      color: #555555;
+    }
+
+    &__no-of-karma {
+      font-family: Roboto;
+      font-size: 16px;
+      color: #555555;
+      text-align: right;
+
+      img {
+        margin-right: 10px;
+      }
+
+      .points {
+        display: inline;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .table-responsive {
+    overflow: visible;
+    // padding: 6px;
+  }
+
+  .table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+
+    td,
+    th {
+      border: none;
+    }
+
+    thead {
+      .table-header {
+        text-align: center;
+        font-family: Roboto Condensed;
+        font-size: 18px;
+        color: #3f3f44;
+        font-weight: bold;
+
+        &__title {
+          text-align: left;
+        }
+      }
+    }
+
+    tbody {
+      .article {
+        border-radius: $border-radius;
+        font-size: 16px;
+        color: #3f3f44;
+        font-family: Roboto;
+
+        &:hover {
+          box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+          cursor: pointer;
+        }
+
+        td {
+          background-color: #fff;
+          padding: 26px 0;
+          vertical-align: middle;
+        }
+
+        td:first-child {
+          border-top-left-radius: $border-radius;
+          border-bottom-left-radius: $border-radius;
+          padding-left: 40px;
+          width: 70px;
+        }
+
+        td:last-child {
+          border-top-right-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+          padding-right: 25px;
+        }
+
+        &__title {
+          text-align: left;
+
+          &:hover {
+            text-shadow: 0.5px 0 0 #3f3f44;
+          }
+        }
+        &__status {
+          text-align: center;
+        }
+        &__date {
+          text-align: center;
+        }
+
+        &__dropdown {
+          background-color: yellow;
+          text-align: right;
+
+          .dropdown-menu {
+            width: 210px;
+
+            border: none;
+            margin-top: 0;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            cursor: default;
+
+            .btn-success {
+              background-color: #fd014b;
+              border: 1px solid #fd014b;
+              color: white;
+
+              img {
+                margin-right: 5px;
+              }
+
+              &:hover {
+                background-color: #e70146;
+                border-color: #e70146;
+                border-right-color: #000056;
+              }
+            }
+
+            .btn-danger {
+              background-color: #00007e;
+              border: 1px solid #00007e;
+              color: white;
+
+              img {
+                margin-right: 5px;
+              }
+
+              &:hover {
+                background-color: #000056;
+                border-color: #000056;
+              }
+            }
+          }
+
+          .btn {
+            background-color: transparent;
+            border: none;
+            color: #121212;
+            cursor: pointer;
+
+            &:hover {
+              background-color: rgb(243, 243, 243);
+            }
+            &:focus {
+              outline: none;
+              box-shadow: none;
+            }
+            &:active {
+              box-shadow: none;
+              background-color: rgb(235, 235, 235);
+            }
+          }
+        }
+      }
+    }
+  }
+  @media all and (max-width: 766px) {
+    .header {
+      display: block;
+      text-align: center;
+      margin: 20px 0px;
+
+      &__no-of-karma {
+        text-align: center;
+        margin-top: 9px;
+      }
+    }
+
+    .table-responsive {
+      border: none;
+      overflow: auto;
+    }
+
+    .table {
+      padding: 6px;
+    }
+  }
+}
