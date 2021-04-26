@@ -116,8 +116,7 @@
           text-align: right;
 
           .dropdown-menu {
-            width: 210px;
-
+            width: 220px;
             border: none;
             margin-top: 0;
             justify-content: center;
@@ -126,25 +125,10 @@
             cursor: default;
 
             .btn-success {
-              background-color: #fd014b;
-              border: 1px solid #fd014b;
-              color: white;
-
-              img {
-                margin-right: 5px;
-              }
-
-              &:hover {
-                background-color: #e70146;
-                border-color: #e70146;
-                border-right-color: #000056;
-              }
-            }
-
-            .btn-danger {
               background-color: #00007e;
               border: 1px solid #00007e;
               color: white;
+              width: 87px;
 
               img {
                 margin-right: 5px;
@@ -153,6 +137,23 @@
               &:hover {
                 background-color: #000056;
                 border-color: #000056;
+                border-right-color: #fd014b;
+              }
+            }
+
+            .btn-danger {
+              background-color: #fd014b;
+              border: 1px solid #fd014b;
+              color: white;
+              width: 85px;
+
+              img {
+                margin-right: 5px;
+              }
+
+              &:hover {
+                background-color: #c4003b;
+                border-color: #c4003b;
               }
             }
           }
