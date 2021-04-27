@@ -1,0 +1,16 @@
+form:
+  name_or_nickname:
+    label: Name or Nickname
+    required: Name or Nickname is required
+  email:
+    label: Email
+    required: Email is required
+  short_description:
+    label: Short Description
+  bio:
+    label: Bio
+  profile_image:
+    label: Profile Image
+    file_extension: File_extension Error
+    file_size:  File size error
+  submit: Submit

@@ -33,6 +33,10 @@ class SignPresenter extends FrontendPresenter
     /** @persistent */
     public $back;
 
+    private $cmsSecret;
+
+    private $cmsUrl;
+
     public function __construct(
         Authorizator $authorizator,
         UserManager $userManager,
@@ -46,6 +50,8 @@ class SignPresenter extends FrontendPresenter
         $this->snippetRenderer = $snippetRenderer;
         $this->userBuilder = $userBuilder;
         $this->emailValidator = $emailValidator;
+        $this->cmsSecret = getenv('CMS_SECRET');
+        $this->cmsUrl = getenv('CMS_HOST');
     }
 
     public function startup()
@@ -111,14 +117,17 @@ class SignPresenter extends FrontendPresenter
         }
 
         try {
-            $this->getUser()->login(['username' => $values->username, 'password' => $values->password]);
+            $user = $this->getUser();
 
-            $this->getUser()->setAuthorizator($this->authorizator);
+            $user->login(['username' => $values->username, 'password' => $values->password]);
+            $user->setAuthorizator($this->authorizator);
 
             $session = $this->getSession('success_login');
             $session->success = 'success';
 
-            $this->restoreRequest($this->getParameter('back'));
+            $token = $this->encrypt($values->username, 'aes-256-cbc', $this->cmsSecret, false);
+
+            $this->redirectUrl($this->cmsUrl . '/remp/login/' . $token);
             $this->redirect($this->homeRoute);
         } catch (AuthenticationException $e) {
             $form->addError($e->getMessage());
@@ -132,9 +141,10 @@ class SignPresenter extends FrontendPresenter
         $this->getUser()->logout();
 
         $this->flashMessage($this->translator->translate('users.frontend.sign_in.signed_out'));
-        $this->restoreRequest($this->getParameter('back'));
+        // $this->restoreRequest($this->getParameter('back'));
 
-        $this->redirect('in');
+        // $this->redirect('in');
+        $this->redirectUrl($this->cmsUrl . '/remp/logout');
     }
 
     public function renderUp()
@@ -205,7 +215,7 @@ class SignPresenter extends FrontendPresenter
             try {
                 $user = $this->userBuilder->createNew()
                     ->setEmail($values->username)
-                    ->setPublicName($values->username)
+                    ->setPublicName(preg_replace('/@.*/', '', $values->username))
                     ->setPassword($values->password)
                     ->setActive(true)
                     ->setReferer($referer)
@@ -213,20 +223,25 @@ class SignPresenter extends FrontendPresenter
                     ->setAddTokenOption(true)
                     ->save();
 
-                    $this->emitter->emit(new NotificationEvent(
+                $this->emitter->emit(new NotificationEvent(
                     $this->emitter,
                     $user,
                     'user_registered',
                     [
                         'email' => $user->email,
                     ]
-                    ));
+                ));
+
             }
             catch (Exception $e) {
                 $form['username']->addError("Cannot create user '{$values->username}' due to following errors: " . Json::encode($e->getMessage()));
                 return;
             }
             $this->getUser()->login(['user' => $user, 'autoLogin' => true]);
+
+            $token = $this->encrypt($user->email, 'aes-256-cbc', $this->cmsSecret, false);
+
+            $this->redirectUrl($this->cmsUrl . '/remp/login/' . $token);
 
             if ($referer) {
                 $this->redirectUrl($referer);
@@ -235,4 +250,34 @@ class SignPresenter extends FrontendPresenter
             }
         }
     }
+
+    private function encrypt($value, $cipher, $key, $serialize = true) {
+        $iv = random_bytes(openssl_cipher_iv_length($cipher));
+
+        $value = \openssl_encrypt(
+          $serialize ? serialize($value) : $value,
+          $cipher, $key, 0, $iv
+        );
+
+        if ($value === false) {
+          throw new Exception('Could not encrypt the data.');
+        }
+
+        $mac = $this->hash($iv = base64_encode($iv), $value, $key);
+
+        $json = json_encode(compact('iv', 'value', 'mac'), JSON_UNESCAPED_SLASHES);
+
+        if (json_last_error() !== JSON_ERROR_NONE) {
+          throw new Exception('Could not encrypt the data.');
+        }
+
+        return base64_encode($json);
+      }
+
+      /**
+       * Create a MAC for the given value.
+       */
+      private function hash($iv, $value, $key) {
+          return hash_hmac('sha256', $iv . $value, $key);
+      }
 }

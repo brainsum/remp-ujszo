@@ -1,4 +1,4 @@
 services:
 	moduleManager:
 		setup:
-			- addModule(Crm\UjszoBlogModule\UjszoBlogModule(),200)
+			- addModule(Crm\UjszoBlogModule\UjszoBlogModule(),2000)

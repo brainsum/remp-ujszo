@@ -10,43 +10,47 @@
             <div class="col-md-4"></div>
         </div>
         <div class="row">
-            <div class="col-md-4 left-column">
-                <div class="left-column__profile-image-wrapper">
-                    <img src="/layouts/ujszo/images/placeholder.jpg" id="profile_picture" class="left-column__profile-image img-circle" alt="profile-picture">
-                </div>
-                <label class="base-button left-column__modify-image-button">
-                    <input type="file" accept="image/*" onchange="loadFile(event)" >
-                    Kép módosítása
-                </label>
+            {form profileForm}
+                <div class="col-md-4 left-column">
+                    <div class="left-column__profile-image-wrapper">
+                        <img src="/layouts/ujszo/images/placeholder.jpg" id="profile_picture" class="left-column__profile-image img-circle" alt="profile-picture">
+                    </div>
+                    <label n:name="profile_image" class="base-button left-column__modify-image-button">
+                        {input profile_image, accept=>"image/*", onchange=>"loadFile(event)"}
+                        {$form[profile_image]->caption}
+                    </label>
 
-                <div class="left-column__no-of-articles">13 bejegyzés</div>
-                <div class="left-column__no-of-karma">1215 karma</div>
+                    <div class="left-column__no-of-articles">13 bejegyzés</div>
+                    <div class="left-column__no-of-karma">1215 karma</div>
                 </div>
-            <div class="col-md-4 middle-column text-center">
-            <form>
-                <div class="form-group">
-                    <label for="name">Teljes név vagy Becenév</label>
-                    <input type="text" class="form-control" id="name">
-                </div>
+                <div class="col-md-4 middle-column text-center">
+                    <div class="alert alert-danger" n:if="$form->hasErrors()">
+                        <p n:foreach="$form->errors as $error">{$error|noescape}</p>
+                    </div>
+                    <div class="form-group {if $form['name']->error}has-error{/if}">
+                        {label name}
+                        {input name, class=>"form-control"}
+                    </div>
 
-                <div class="form-group">
-                    <label for="email">E-mail cím</label>
-                    <input type="email" class="form-control" id="email">
-                </div>
+                    <div class="form-group {if $form['email']->error}has-error{/if}">
+                        {label email}
+                        {input email, class=>"form-control"}
+                    </div>
 
-                <div class="form-group">
-                    <label for="short-introduction">Rövid bemutatkozás</label>
-                    <textarea class="form-control" id="short-introduction" rows="4"></textarea>
-                </div>
+                    <div class="form-group {if $form['short_description']->error}has-error{/if}">
+                        {label short_description}
+                        {input short_description, class=>"form-control", rows=>4}
+                    </div>
 
-                <div class="form-group">
-                    <label for="biography">Biográfia</label>
-                    <textarea class="form-control" id="biography" rows="5"></textarea>
+                    <div class="form-group {if $form['bio']->error}has-error{/if}">
+                        {label bio}
+                        {input bio, class=>"form-control", rows=>4}
+                    </div>
+
+                    {input submit, class=>"base-button middle-column__save-changes-button"}
+                    {* <button type="submit" class="base-button middle-column__save-changes-button">Módosítások mentése</button> *}
                 </div>
-                
-                <button type="submit" class="base-button middle-column__save-changes-button">Módosítások mentése</button>
-            </form>
-            </div>
+            {/form}
             <div class="col-md-4 right-column">
             </div>
         </div>

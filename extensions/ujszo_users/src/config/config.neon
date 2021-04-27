@@ -1,5 +1,10 @@
 
 services:
+	- Crm\UjszoUsersModule\Events\UserCreatedEventHandler
+
+	drupalUserRepository:
+	 	class: Crm\UjszoUsersModule\Repository\DrupalUserRepository
+
 	moduleManager:
 		setup:
 			- addModule(Crm\UjszoUsersModule\UjszoUsersModule(),200)
