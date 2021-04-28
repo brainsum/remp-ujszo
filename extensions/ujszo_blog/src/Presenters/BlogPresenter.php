@@ -34,6 +34,8 @@ class BlogPresenter extends FrontendPresenter {
 
   public function renderDefault() {
     $articles = $this->fetchArticles();
+    $this->template->baseUrl = rtrim(getenv('CMS_HOST'), '/');
+
     if ($articles->data) {
       $this->template->articles = $articles->data;
     }

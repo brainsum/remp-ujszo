@@ -3,7 +3,7 @@
       <div class="container-fluid">
         <div class="row header">
           <div class="col-sm-6">
-            <div class="header__title">Blog bejegyzéseim</div>
+            <div class="header__title">{_blog.list.title}</div>
             <div class="header__no-of-articles">13 bejegyzés</div>
           </div>
           <div class="col-sm-6">
@@ -16,96 +16,46 @@
         <div class="row">
           <div class="col-md-12">
             <div class="table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col" class="table-header"></th>
-                    <th scope="col" class="table-header table-header__title">Blog címe</th>
-                    <th scope="col" class="table-header">Státusz</th>
-                    <th scope="col" class="table-header">Létrehozás dátuma</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="article">
-                    <td>1.</td>
-                    <td class="article__title">Legnépszerűb blogbejegyzés egy nagyon érdekes történésről, amit majd sokan olvasnak</td>
-                    <td class="article__status">Jóváhagyásra vár</td>
-                    <td class="article__date">2021.03.10</td>
-                    <td class="article__dropdown">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                          <img src="/layouts/ujszo/images/expand_icon.svg" alt="" />
-                        </button>
+              {ifset $articles}
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="table-header"></th>
+                      <th scope="col" class="table-header table-header__title">{_blog.list.articleTitle}</th>
+                      <th scope="col" class="table-header">{_blog.list.status}</th>
+                      <th scope="col" class="table-header">{_blog.list.created}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="article" n:foreach="$articles as $article">
+                      <td>1.</td>
+                      <td class="article__title">{$article->attributes->title}</td>
+                      <td class="article__status">{$article->attributes->moderation_state|articleState}</td>
+                      <td class="article__date">{$article->attributes->created|userDate}</td>
+                      <td class="article__dropdown">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <img src="/layouts/ujszo/images/expand_icon.svg" alt="" />
+                          </button>
 
-                        <ul class="dropdown-menu dropdown-menu-right">
-                          <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-success button-edit">
-                              <img src="/layouts/ujszo/images/edit_icon.svg" alt="" />
-                              Edit
-                            </button>
-                            <button type="button" class="btn btn-danger button-delete">
-                              <img src="/layouts/ujszo/images/trash_icon.svg" alt="" />
-                              Delete
-                            </button>
-                          </div>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="article">
-                    <td>1.</td>
-                    <td class="article__title">Legnépszerűb blogbejegyzés egy nagyon érdekes történésről, amit majd sokan olvasnak</td>
-                    <td class="article__status">Jóváhagyásra vár</td>
-                    <td class="article__date">2021.03.10</td>
-                    <td class="article__dropdown">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                          <img src="/layouts/ujszo/images/expand_icon.svg" alt="" />
-                        </button>
-
-                        <ul class="dropdown-menu dropdown-menu-right">
-                          <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-success button-edit">
-                              <img src="/layouts/ujszo/images/edit_icon.svg" alt="" />
-                              Edit
-                            </button>
-                            <button type="button" class="btn btn-danger button-delete">
-                              <img src="/layouts/ujszo/images/trash_icon.svg" alt="" />
-                              Delete
-                            </button>
-                          </div>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="article">
-                    <td>1.</td>
-                    <td class="article__title">Legnépszerűb blogbejegyzés egy nagyon érdekes történésről, amit majd sokan olvasnak</td>
-                    <td class="article__status">Jóváhagyásra vár</td>
-                    <td class="article__date">2021.03.10</td>
-                    <td class="article__dropdown">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                          <img src="/layouts/ujszo/images/expand_icon.svg" alt="" />
-                        </button>
-
-                        <ul class="dropdown-menu dropdown-menu-right">
-                          <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-success button-edit">
-                              <img src="/layouts/ujszo/images/edit_icon.svg" alt="" />
-                              Edit
-                            </button>
-                            <button type="button" class="btn btn-danger button-delete">
-                              <img src="/layouts/ujszo/images/trash_icon.svg" alt="" />
-                              Delete
-                            </button>
-                          </div>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                          <ul class="dropdown-menu dropdown-menu-right">
+                            <div class="btn-group" role="group">
+                              <a href="{$baseUrl}/node/{$article->attributes->drupal_internal__nid}/edit" type="button" class="btn btn-success button-edit">
+                                <img src="/layouts/ujszo/images/edit_icon.svg" alt="" />
+                                {_blog.list.edit}
+                              </a>
+                              <a href="{$baseUrl}/node/{$article->attributes->drupal_internal__nid}/delete" type="button" class="btn btn-danger button-delete">
+                                <img src="/layouts/ujszo/images/trash_icon.svg" alt="" />
+                                {_blog.list.delete}
+                              </a>
+                            </div>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              {/ifset}
             </div>
           </div>
         </div>

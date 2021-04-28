@@ -1,26 +1,31 @@
 {var $nextLine = false}
 
+{var $whitelisted = ['Blogs', 'Jelszó módosítás', 'Beállítások', 'Kijelentkezés']}
+
 <ul class="nav remp-content-nav">
 {foreach $menuItems as $menuItem}
 
   {var $append = []}
   {var $params = $menuItem->getParams()}
+
   {if $params}
     {foreach $params as $key => $value}
       {var $append[] = "{$key}=\"{$value}\""}
     {/foreach}
   {/if}
-  <li role="presentation">
-    <a href="{plink $menuItem->link()}"{implode(' ', $append)|noescape}>
-      {block |strip}
-        {ifCurrent $menuItem->link()}
-          <strong><i n:if="$menuItem->icon()" class="{$menuItem->icon()}"></i>{$menuItem->name()}</strong>
-        {else}
-          <i n:if="$menuItem->icon()" class="{$menuItem->icon()}"></i>{$menuItem->name()}
-        {/ifCurrent}
-      {/block}
-    </a>
-  </li>
+  {if in_array($menuItem->name(), $whitelisted)}
+    <li role="presentation">
+      <a href="{plink $menuItem->link()}"{implode(' ', $append)|noescape}>
+        {block |strip}
+          {ifCurrent $menuItem->link()}
+            <strong><i n:if="$menuItem->icon()" class="{$menuItem->icon()}"></i>{$menuItem->name()}</strong>
+          {else}
+            <i n:if="$menuItem->icon()" class="{$menuItem->icon()}"></i>{$menuItem->name()}
+          {/ifCurrent}
+        {/block}
+      </a>
+    </li>
+  {/if}
 
 {/foreach}
 </ul>

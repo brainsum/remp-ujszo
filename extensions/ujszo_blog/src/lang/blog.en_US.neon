@@ -1,2 +1,16 @@
 menu:
 	dashboard: Blogs
+
+states:
+	draft: Draft
+	to_moderation: In review
+	published: Published
+	archived: Archived
+
+list:
+	title: My articles
+	articleTitle: Title
+	status: Status
+	created: Created
+	edit:	Edit
+	delete: Delete
