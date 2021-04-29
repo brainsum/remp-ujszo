@@ -1,4 +1,6 @@
 services:
+	- Crm\UjszoBlogModule\Components\ArticleCount
+
 	moduleManager:
 		setup:
 			- addModule(Crm\UjszoBlogModule\UjszoBlogModule(),2000)
@@ -7,3 +9,5 @@ services:
 		# class: Crm\ApplicationModule\Helpers\FilterLoader
 		setup:
 			- register('articleState', [Crm\UjszoBlogModule\Helpers\ArticleState(), process])
+			- register('ujszoUserDate', [Crm\UjszoBlogModule\Helpers\UserDateHelper(), process])
+

@@ -20,7 +20,9 @@
                         {$form[profile_image]->caption}
                     </label>
 
-                    <div class="left-column__no-of-articles">13 bejegyzés</div>
+                    <div class="left-column__no-of-articles">
+                        {control simpleWidget 'ujszousers.profileblocks', $user}
+                    </div>
                     <div class="left-column__no-of-karma">1215 karma</div>
                 </div>
                 <div class="col-md-4 middle-column text-center">
@@ -64,4 +66,10 @@
       URL.revokeObjectURL(output.src)
     }
   };
+
+  var input = document.querySelector('input[name=user_picture_src]');
+  if (input && input.value) {
+    var output = document.getElementById('profile_picture');
+    output.src = input.value;
+  }
 </script>

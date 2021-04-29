@@ -16,6 +16,7 @@ use Nette\Utils\DateTime;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\RequestException;
 use Nette\Utils\Json;
+use Nette\Http\FileUpload;
 
 class DrupalUserRepository {
 
@@ -26,6 +27,8 @@ class DrupalUserRepository {
   private $emitter;
 
   private $httpClient;
+
+  private $cmsToken;
 
   public function __construct(
     UsersRepository $usersRepository,
@@ -40,6 +43,8 @@ class DrupalUserRepository {
       $this->httpClient = new HttpClient([
         'base_uri' => getenv('CMS_HOST')
       ]);
+
+      $this->cmsToken = getenv('CMS_TOKEN');
   }
 
   public function findByUser(Identity $user) {
@@ -71,6 +76,41 @@ class DrupalUserRepository {
     // }
   }
 
+  public function loadDrupalUser(ActiveRow $user) {
+    $id = $this->userMetaRepository->userMetaValueByKey($user, 'drupal_user_id');
+
+    //
+    try {
+      $result = $this->httpClient->get('/user/' . $id . '?_format=json', [
+        'headers' => [
+          'Content-Type'=>'application/json',
+          'accept'=>'application/json',
+          'Authorization'=>'Basic ' . $this->cmsToken,
+        ],
+      ]);
+      $result_data = JSON::decode($result->getBody());
+      return $result_data;
+    } catch(RequestException $e) {
+      dump($e);
+    }
+  }
+
+  public function updateDrupalUser($drupalUser) {
+    try {
+      $result = $this->httpClient->patch('/user/' . $drupalUser->uid[0]->value . '?_format=json', [
+        'headers' => [
+          'Content-Type'=>'application/json',
+          'accept'=>'application/json',
+          'Authorization'=>'Basic ' . $this->cmsToken,
+        ],
+        'body' => JSON::encode($drupalUser)
+      ]);
+      $result_data = JSON::decode($result->getBody());
+    } catch(RequestException $e) {
+      dump($e);
+    }
+  }
+
   public function createByCrmUser(ActiveRow $user) {
 
     $data = [
@@ -86,8 +126,7 @@ class DrupalUserRepository {
         'headers' => [
           'Content-Type'=>'application/json',
           'accept'=>'application/json',
-          'Authorization'=>'Basic YWRtaW46S2F2dG91ZDM=',
-          // 'X-CSRF-Token'=>'EeMke8cbL_VhPp6Kdquw3hZW06QWxVoe_GwlQGuQN6o'
+          'Authorization'=>'Basic ' . $this->cmsToken,
         ],
         'body' => JSON::encode($data),
       ]);
@@ -98,6 +137,31 @@ class DrupalUserRepository {
       dump($e);
     }
 
+  }
+
+  public function uploadImage(FileUpload $image) {
+    //dump($image->getContents());
+
+    ///file/upload/user/user/user_picture?_format=json
+//     Content-Type: application/octet-stream
+// Content-Disposition: file; filename="filename.jpg"
+
+    try {
+      $result = $this->httpClient->post('/file/upload/user/user/user_picture?_format=json', [
+        'headers' => [
+          'Content-Type'=>'application/octet-stream',
+          'accept'=>'application/json',
+          'Content-Disposition' => 'file; filename="' . $image->getName() . '"',
+          'Authorization'=>'Basic ' . $this->cmsToken,
+        ],
+        'body' => $image->getContents()
+      ]);
+      $result_data = JSON::decode($result->getBody());
+
+      return $result_data;
+    } catch(RequestException $e) {
+      dump($e);
+    }
   }
 
   public function syncUser($user) {

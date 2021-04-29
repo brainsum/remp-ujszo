@@ -5,6 +5,8 @@ namespace Crm\UjszoBlogModule;
 use Crm\ApplicationModule\CrmModule;
 use Crm\ApplicationModule\Menu\MenuContainerInterface;
 use Crm\ApplicationModule\Menu\MenuItem;
+use Crm\ApplicationModule\Widget\WidgetManagerInterface;
+use Crm\UjszoBlogModule\Components\ArticleCount;
 use Crm\UsersModule\Auth\Permissions;
 use Crm\UsersModule\Repository\UsersRepository;
 use Kdyby\Translation\Translator;
@@ -40,6 +42,17 @@ class UjszoBlogModule extends CrmModule {
       $menuItem = new MenuItem($this->translator->translate('blog.menu.dashboard'), ':UjszoBlog:Blog:default', '', 0, true);
       $menuContainer->attachMenuItem($menuItem);
     }
+  }
+
+  public function registerRoutes(RouteList $router) {
+    $router[] = new Route('blog', 'UjszoBlog:Blog:default');
+  }
+
+  public function registerWidgets(WidgetManagerInterface $widgetManager){
+    $widgetManager->registerWidget(
+      'ujszousers.profileblocks',
+      $this->getInstance(ArticleCount::class)
+    );
   }
 
 }

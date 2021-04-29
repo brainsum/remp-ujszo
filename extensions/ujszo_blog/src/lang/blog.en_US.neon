@@ -14,3 +14,6 @@ list:
 	created: Created
 	edit:	Edit
 	delete: Delete
+
+articlecount:
+	articles: articles

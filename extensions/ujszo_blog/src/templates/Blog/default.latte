@@ -4,7 +4,9 @@
         <div class="row header">
           <div class="col-sm-6">
             <div class="header__title">{_blog.list.title}</div>
-            <div class="header__no-of-articles">13 bejegyzés</div>
+            <div class="header__no-of-articles">
+              {control simpleWidget 'ujszousers.profileblocks', $user}
+            </div>
           </div>
           <div class="col-sm-6">
             <div class="header__no-of-karma">
@@ -27,11 +29,11 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="article" n:foreach="$articles as $article">
-                      <td>1.</td>
-                      <td class="article__title">{$article->attributes->title}</td>
+                    <tr class="article" n:foreach="$articles as $i => $article">
+                      <td>{$i+1}</td>
+                      <td class="article__title"><a href="{$baseUrl}/node/{$article->attributes->drupal_internal__nid}">{$article->attributes->title}</a></td>
                       <td class="article__status">{$article->attributes->moderation_state|articleState}</td>
-                      <td class="article__date">{$article->attributes->created|userDate}</td>
+                      <td class="article__date">{$article->attributes->created|ujszoUserDate}</td>
                       <td class="article__dropdown">
                         <div class="btn-group">
                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">

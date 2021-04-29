@@ -35,7 +35,6 @@ class BlogPresenter extends FrontendPresenter {
   public function renderDefault() {
     $articles = $this->fetchArticles();
     $this->template->baseUrl = rtrim(getenv('CMS_HOST'), '/');
-
     if ($articles->data) {
       $this->template->articles = $articles->data;
     }
@@ -51,7 +50,7 @@ class BlogPresenter extends FrontendPresenter {
         'headers' => [
           'Content-Type'=>'application/json',
           'accept'=>'application/json',
-          'Authorization'=>'Basic YWRtaW46S2F2dG91ZDM=',
+          'Authorization'=>'Basic ' . getenv('CMS_TOKEN'),
         ],
       ]);
 

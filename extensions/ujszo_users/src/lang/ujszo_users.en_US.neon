@@ -1,3 +1,5 @@
+menu:
+  profile: My Profile
 form:
   name_or_nickname:
     label: Name or Nickname
