@@ -31,7 +31,13 @@
                   <tbody>
                     <tr class="article" n:foreach="$articles as $i => $article">
                       <td>{$i+1}</td>
-                      <td class="article__title"><a href="{$baseUrl}/node/{$article->attributes->drupal_internal__nid}">{$article->attributes->title}</a></td>
+                      <td class="article__title">
+                        {if $article->attributes->moderation_state == 'published'}
+                          <a href="{$baseUrl}/node/{$article->attributes->drupal_internal__nid}">{$article->attributes->title}</a>
+                        {else}
+                          {$article->attributes->title}
+                        {/if}
+                      </td>
                       <td class="article__status">{$article->attributes->moderation_state|articleState}</td>
                       <td class="article__date">{$article->attributes->created|ujszoUserDate}</td>
                       <td class="article__dropdown">
