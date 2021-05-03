@@ -67,7 +67,9 @@ class ProfilePresenter extends FrontendPresenter {
     $form->addTextArea('short_description', $this->translator->translate('ujszo_users.form.short_description.label'));
     $form->addTextArea('bio', $this->translator->translate('ujszo_users.form.bio.label'));
 
-    $form->addUpload('profile_image', $this->translator->translate('ujszo_users.form.profile_image.label'))
+    $image_label = $this->translator->translate(isset($drupalUser->user_picture[0]->target_id) ? 'ujszo_users.form.profile_image.change' : 'ujszo_users.form.profile_image.upload');
+
+    $form->addUpload('profile_image', $image_label)
       ->setRequired(false)
       ->addRule(Form::IMAGE, $this->translator->translate('ujszo_users.form.profile_image.file_extension'))
       ->addRule(Form::MAX_FILE_SIZE, $this->translator->translate('ujszo_users.form.profile_image.file_size'), 2048 * 1024);
@@ -109,6 +111,7 @@ class ProfilePresenter extends FrontendPresenter {
     $this->drupalUserRepository->updateDrupalUser($drupalUser);
 
     $this->flashMessage('Profile Saved');
+    $this->redirect('default');
   }
 
 }

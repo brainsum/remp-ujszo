@@ -69,6 +69,7 @@
 
   var input = document.querySelector('input[name=user_picture_src]');
   if (input && input.value) {
+      console.log(input.value);
     var output = document.getElementById('profile_picture');
     output.src = input.value;
   }

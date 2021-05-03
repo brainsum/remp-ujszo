@@ -12,7 +12,8 @@ form:
   bio:
     label: Bio
   profile_image:
-    label: Profile Image
+    change: Change Image
+    upload: Upload Image
     file_extension: File_extension Error
     file_size:  File size error
   submit: Submit
