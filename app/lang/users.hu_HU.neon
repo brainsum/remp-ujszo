@@ -36,6 +36,10 @@ frontend:
 			label: 'Jelszó:'
 			required: Kérjük adja meg a jelszavát.
 			placeholder: Saját jelszó
+		password_confirm:
+			label: 'Jelszó újra:'
+			required: Kérjük ismételje meg a jelszavát.
+			placeholder: Jelszó újra
 		toc:
 		    required: El kell fogadnia a felhasználói feltételeket
 		submit: Fiók létrehozása

@@ -182,7 +182,7 @@ class SignPresenter extends FrontendPresenter
         }
 
         $form
-            ->addCheckbox('toc', 'Elolvastam az adatvédelmi szabályzatot és hozzájárulok a személyes adataim feldolgozásához.')
+            ->addCheckbox('toc', Html::el()->setHtml('Elfogadom az <a href="https://ujszo.com/gdpr" target="_blank">adatvédelmi szabályzatot</a> és hozzájárulok a személyes adataim feldolgozásához.'))
             ->setRequired('El kell fogadni a feltételeket');
 
         $form->addSubmit('send', 'users.frontend.sign_up.submit')->setAttribute('class', 'btn btn-primary btn-block');;

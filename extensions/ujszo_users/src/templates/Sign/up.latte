@@ -1,3 +1,28 @@
+{block #highlight}
+
+<div class="page-header-text-holder">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>
+        Üdvözöljük az ujszo.com új világában!
+        </h1>
+        <p>
+          A legjobb cikkeinket csak előfizetéssel tudja megnézni, ám jelenleg lehetősége van <strong><br>5 lezát cikket ingyen elolvasni.</strong> <br>Ha elfogyott az 5 cikke és tovább szeretne olvasni, rendeljen meg egy előfizetési csomagot.
+        </p>
+        <p class="text-border-top">
+          Az <strong>Új Szó</strong> cikkeit már havi <strong>1,99 €</strong>-tól<br>
+          A <strong>Vasárnap</strong> cikkeit már havi <strong>1,99 €</strong>-tól<br>
+          <strong>Mindkét lap</strong> cikkeit közös online előfizetéssel már <strong>2,99 €</strong>-tól olvashatja.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/block}
+
+
 {block #content}
 
 <h1 n:block=title>{_users.frontend.sign_up.title}</h1>
@@ -39,6 +64,7 @@
     <div class="form-group">
       <div class="col-sm-12">
         {input send, class=>'btn btn-primary button'}
+        <a href="{plink ':Users:Sign:In'}" class="btn button">Már van fiókom, belépek</a>
       </div>
     </div>
   </div>
