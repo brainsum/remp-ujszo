@@ -25,7 +25,7 @@ class UserChangePasswordEventHandler extends AbstractListener
     public function handle(EventInterface $event)
     {
         $user = $event->getUser();
-        $r = $this->userAuthenticator->authenticate(['username' => $user->email, 'alwaysLogin' => true]);
+        // $r = $this->userAuthenticator->authenticate(['username' => $user->email, 'alwaysLogin' => true]);
 
         if ($event->shouldNotify()) {
             $client = new HttpClient();
