@@ -15,7 +15,7 @@
                     <div class="left-column__profile-image-wrapper">
                         <img src="/layouts/ujszo/images/placeholder.jpg" id="profile_picture" class="left-column__profile-image img-circle" alt="profile-picture">
                     </div>
-                    <label n:name="profile_image" class="base-button left-column__modify-image-button">
+                    <label n:name="profile_image" class="btn btn-primary button left-column__modify-image-button">
                         {input profile_image, accept=>"image/*", onchange=>"loadFile(event)"}
                         {$form[profile_image]->caption}
                     </label>
@@ -49,7 +49,7 @@
                         {input bio, class=>"form-control", rows=>4}
                     </div>
 
-                    {input submit, class=>"base-button middle-column__save-changes-button"}
+                    {input submit, class=>"btn btn-primary button middle-column__save-changes-button"}
                     {* <button type="submit" class="base-button middle-column__save-changes-button">Módosítások mentése</button> *}
                 </div>
             {/form}
