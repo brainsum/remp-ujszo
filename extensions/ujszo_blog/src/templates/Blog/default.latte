@@ -29,7 +29,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="article" n:foreach="$articles as $i => $article">
+                    <tr class="article {$article->attributes->moderation_state}" n:foreach="$articles as $i => $article">
                       <td>{$i+1}</td>
                       <td class="article__title">
                         {if $article->attributes->moderation_state == 'published'}

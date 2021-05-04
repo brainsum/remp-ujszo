@@ -17,7 +17,7 @@
 
     &__no-of-articles {
       font-family: Roboto;
-      font-size: 11px;
+      font-size: 16px;
       color: #555555;
     }
 
@@ -59,6 +59,7 @@
         font-size: 18px;
         color: #3f3f44;
         font-weight: bold;
+        padding: 0;
 
         &__title {
           text-align: left;
@@ -75,6 +76,9 @@
 
         &:hover {
           box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        &.published:hover {
           cursor: pointer;
         }
 
@@ -199,6 +203,21 @@
 
     .table {
       padding: 6px;
+      thead {
+        .table-header {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+
+      tbody {
+        .article {
+          td {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+      }
     }
   }
 }
