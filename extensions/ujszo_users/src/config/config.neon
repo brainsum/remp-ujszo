@@ -1,6 +1,7 @@
 
 services:
 	- Crm\UjszoUsersModule\Events\UserCreatedEventHandler
+	- Crm\UjszoUsersModule\Events\UserUpdatedEventHandler
 
 	drupalUserRepository:
 	 	class: Crm\UjszoUsersModule\Repository\DrupalUserRepository

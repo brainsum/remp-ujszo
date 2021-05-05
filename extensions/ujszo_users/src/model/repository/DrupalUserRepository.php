@@ -67,13 +67,6 @@ class DrupalUserRepository {
       return $drupalUserId;
     }
     return false;
-    // dump($drupalUserId);
-
-    // try {
-    //   $response = $this->httpClient->get('/');
-    // } catch(RequestException $e) {
-    //   dump($e);
-    // }
   }
 
   public function loadDrupalUser(ActiveRow $user) {
@@ -114,7 +107,7 @@ class DrupalUserRepository {
   public function createByCrmUser(ActiveRow $user) {
 
     $data = [
-      'name' => [['value' => $user->email]],
+      'name' => [['value' => $user->public_name]],
       'mail' => [['value' => $user->email]],
       'roles' => [["target_id" => "authenticated"],["target_id" => "blogger"]],
       'pass' => [['value' => 'passwd']],
@@ -140,12 +133,6 @@ class DrupalUserRepository {
   }
 
   public function uploadImage(FileUpload $image) {
-    //dump($image->getContents());
-
-    ///file/upload/user/user/user_picture?_format=json
-//     Content-Type: application/octet-stream
-// Content-Disposition: file; filename="filename.jpg"
-
     try {
       $result = $this->httpClient->post('/file/upload/user/user/user_picture?_format=json', [
         'headers' => [
@@ -165,6 +152,13 @@ class DrupalUserRepository {
   }
 
   public function syncUser($user) {
+    $currentDrupalUser = $this->loadDrupalUser($user);
+
+    if ($user->email !== $currentDrupalUser->mail[0]->value) {
+      // Anonymization !
+      $currentDrupalUser->mail[0]->value = $user->email;
+      $this->updateDrupalUser($currentDrupalUser);
+    }
 
   }
 

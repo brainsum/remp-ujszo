@@ -20,10 +20,7 @@
                         {$form[profile_image]->caption}
                     </label>
 
-                    <div class="left-column__no-of-articles">
-                        {control simpleWidget 'ujszousers.profileblocks', $user}
-                    </div>
-                    <div class="left-column__no-of-karma">1215 karma</div>
+                    {control simpleWidget 'ujszousers.profileblocks', ['user' => $user]}
                 </div>
                 <div class="col-md-4 middle-column text-center">
                     <div class="alert alert-danger" n:if="$form->hasErrors()">

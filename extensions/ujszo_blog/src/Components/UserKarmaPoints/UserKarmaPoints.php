@@ -4,13 +4,14 @@ namespace Crm\UjszoBlogModule\Components;
 use Crm\ApplicationModule\Widget\BaseWidget;
 use Crm\ApplicationModule\Widget\WidgetManager;
 use Crm\UjszoUsersModule\Repository\DrupalUserRepository;
+use Crm\UsersModule\Repository\UsersRepository;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\RequestException;
 use Nette\Utils\Json;
 
-class ArticleCount extends BaseWidget
+class UserKarmaPoints extends BaseWidget
 {
-  private $templateName = 'article_count.latte';
+  private $templateName = 'user_karma_points.latte';
 
   private $drupalUserId;
 
@@ -18,12 +19,16 @@ class ArticleCount extends BaseWidget
 
   private $httpClient;
 
+  private $usersRepository;
+
   public function __construct(
     WidgetManager $widgetManager,
-    DrupalUserRepository $drupalUserRepository
+    DrupalUserRepository $drupalUserRepository,
+    UsersRepository $usersRepository
     ) {
     parent::__construct($widgetManager);
     $this->drupalUserRepository = $drupalUserRepository;
+    $this->usersRepository = $usersRepository;
     $this->httpClient = new HttpClient([
       'base_uri' => getenv('CMS_HOST')
     ]);
@@ -31,7 +36,7 @@ class ArticleCount extends BaseWidget
 
   public function identifier()
   {
-    return 'ujszoblogarticlecount';
+    return 'ujszobloguserkarmapoints';
   }
 
   public function render($params)
@@ -39,26 +44,16 @@ class ArticleCount extends BaseWidget
     if (!isset($params['user'])) {
       return '';
     }
-    $articles = $this->fetchArticles($this->drupalUserRepository->findByUser($params['user']->getIdentity()));
-    $this->template->articleCount = $articles->meta->count ?? 0;
+
+    $crmUser = $this->usersRepository->find($params['user']->getIdentity()->id);
+    $drupalUser = $this->drupalUserRepository->loadDrupalUser($crmUser);
+
+    // TODO: Fetch karma points.
+
+    $this->template->points = 0;
     $this->template->header = isset($params['header']) ?? false;
     $this->template->setFile(__DIR__ . DIRECTORY_SEPARATOR . $this->templateName);
     $this->template->render();
   }
 
-  private function fetchArticles($drupalUserId) {
-    try {
-      $result = $this->httpClient->get('/jsonapi/node/blog?filter[uid.uid]=' . $drupalUserId, [
-        'headers' => [
-          'Content-Type'=>'application/json',
-          'accept'=>'application/json',
-          'Authorization'=>'Basic ' . getenv('CMS_TOKEN'),
-        ],
-      ]);
-
-      return JSON::decode($result->getBody());
-    } catch(RequestException $e) {
-      dump($e);
-    }
-  }
 }

@@ -1,1 +1,9 @@
-{$articleCount} {_blog.articlecount.articles}
+{if $header}
+  <div class="header__no-of-articles">
+    {$articleCount} {_blog.articlecount.articles}
+  </div>
+{else}
+  <div class="left-column__no-of-articles">
+    {$articleCount} {_blog.articlecount.articles}
+  </div>
+{/if}

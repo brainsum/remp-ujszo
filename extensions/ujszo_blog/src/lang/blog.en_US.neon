@@ -14,6 +14,9 @@ list:
 	created: Created
 	edit:	Edit
 	delete: Delete
+	empty: No articles posted yet
 
 articlecount:
 	articles: articles
+	karma_points: points
+	total_karma_points: "Total karma points:"

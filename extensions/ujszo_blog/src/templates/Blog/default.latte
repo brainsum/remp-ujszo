@@ -4,15 +4,10 @@
         <div class="row header">
           <div class="col-sm-6">
             <div class="header__title">{_blog.list.title}</div>
-            <div class="header__no-of-articles">
-              {control simpleWidget 'ujszousers.profileblocks', $user}
-            </div>
+            {control simpleWidget 'ujszousers.dashboardblocks.left', ['user' => $user, 'header' => true]}
           </div>
           <div class="col-sm-6">
-            <div class="header__no-of-karma">
-              <img src="/layouts/ujszo/images/UXPinIconSet.svg" alt="" />Összes karma:
-              <div class="points">1215 pont</div>
-            </div>
+            {control simpleWidget 'ujszousers.dashboardblocks.right', ['user' => $user, 'header' => true]}
           </div>
         </div>
         <div class="row">
@@ -63,6 +58,8 @@
                     </tr>
                   </tbody>
                 </table>
+              {else}
+                <div class="col-sm-12">{_blog.list.empty}</div>
               {/ifset}
             </div>
           </div>

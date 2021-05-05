@@ -58,7 +58,9 @@ a:focus {
   background: linear-gradient(to right, #472484, #fb004b);
   color: #fff;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     color: #cecece;
   }
 }
@@ -74,7 +76,8 @@ a:focus {
   }
 }
 
-.page-header-buttons .back-to-site:hover {
+.page-header-buttons .back-to-site:hover,
+.page-header-buttons .back-to-site:focus {
   background-color: #000056;
   color: #fd014b;
 }
@@ -306,13 +309,12 @@ p.text-border-top::before {
 }
 .btn-primary:hover,
 .btn-primary:focus {
-  color: #fcbf1e;
-  background-color: #000;
+  background-color: #000056;
+  color: #fd014b;
 }
-.btn-primary:active,
-.btn-primary:active:focus {
-  color: #fcbf1e;
-  background-color: #000;
+.btn-primary:active{
+  background-color: #000056;
+  color: #fd014b;
 }
 
 .page-header-text-holder .btn-primary {

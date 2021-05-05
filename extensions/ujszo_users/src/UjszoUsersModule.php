@@ -6,7 +6,9 @@ use Crm\ApplicationModule\CrmModule;
 use Crm\ApplicationModule\Menu\MenuContainerInterface;
 use Crm\ApplicationModule\Menu\MenuItem;
 use Crm\UjszoUsersModule\Events\UserCreatedEventHandler;
+use Crm\UjszoUsersModule\Events\UserUpdatedEventHandler;
 use Crm\UsersModule\Events\UserCreatedEvent;
+use Crm\UsersModule\Events\UserUpdatedEvent;
 use Kdyby\Translation\Translator;
 use League\Event\Emitter;
 use Nette\Application\Routers\Route;
@@ -52,6 +54,11 @@ class UjszoUsersModule extends CrmModule {
     $emitter->addListener(
       UserCreatedEvent::class,
       $this->getInstance(UserCreatedEventHandler::class)
+    );
+
+    $emitter->addListener(
+      UserUpdatedEvent::class,
+      $this->getInstance(UserUpdatedEventHandler::class)
     );
   }
 

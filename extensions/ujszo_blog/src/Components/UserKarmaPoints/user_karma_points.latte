@@ -1,0 +1,10 @@
+{if $header}
+  <div class="header__no-of-karma">
+    <img src="/layouts/ujszo/images/UXPinIconSet.svg" alt="" />{_blog.articlecount.total_karma_points}:
+    <div class="points">{$points} {_blog.articlecount.karma_points}</div>
+  </div>
+{else}
+  <div class="left-column__no-of-karma">
+    {$points} {_blog.articlecount.karma_points}
+  </div>
+{/if}

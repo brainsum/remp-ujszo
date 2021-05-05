@@ -1,5 +1,6 @@
 services:
 	- Crm\UjszoBlogModule\Components\ArticleCount
+	- Crm\UjszoBlogModule\Components\UserKarmaPoints
 
 	moduleManager:
 		setup:

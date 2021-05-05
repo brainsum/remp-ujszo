@@ -1,0 +1,22 @@
+menu:
+	dashboard: Blog bejegyzéseim
+
+states:
+	draft: Piszkozat
+	to_moderation: Jóváhagyásra vár
+	published: Publikus
+	archived: Arhivált
+
+list:
+	title: Blog bejegyzéseim
+	articleTitle: Blog címe
+	status: Státusz
+	created: Létrehozás dátuma
+	edit:	Szerkesztés
+	delete: Törlés
+	empty: Még nem hoztál létre blog bejegyzést
+
+articlecount:
+	articles: bejegyzés
+	karma_points: pont
+	total_karma_points: Összes karma

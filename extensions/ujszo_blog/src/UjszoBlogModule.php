@@ -7,6 +7,7 @@ use Crm\ApplicationModule\Menu\MenuContainerInterface;
 use Crm\ApplicationModule\Menu\MenuItem;
 use Crm\ApplicationModule\Widget\WidgetManagerInterface;
 use Crm\UjszoBlogModule\Components\ArticleCount;
+use Crm\UjszoBlogModule\Components\UserKarmaPoints;
 use Crm\UsersModule\Auth\Permissions;
 use Crm\UsersModule\Repository\UsersRepository;
 use Kdyby\Translation\Translator;
@@ -52,6 +53,21 @@ class UjszoBlogModule extends CrmModule {
     $widgetManager->registerWidget(
       'ujszousers.profileblocks',
       $this->getInstance(ArticleCount::class)
+    );
+
+    $widgetManager->registerWidget(
+      'ujszousers.profileblocks',
+      $this->getInstance(UserKarmaPoints::class)
+    );
+
+    $widgetManager->registerWidget(
+      'ujszousers.dashboardblocks.left',
+      $this->getInstance(ArticleCount::class)
+    );
+
+    $widgetManager->registerWidget(
+      'ujszousers.dashboardblocks.right',
+      $this->getInstance(UserKarmaPoints::class)
     );
   }
 
