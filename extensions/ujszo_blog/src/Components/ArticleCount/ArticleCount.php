@@ -7,6 +7,7 @@ use Crm\UjszoUsersModule\Repository\DrupalUserRepository;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\RequestException;
 use Nette\Utils\Json;
+use Tracy\Debugger;
 
 class ArticleCount extends BaseWidget
 {
@@ -58,7 +59,7 @@ class ArticleCount extends BaseWidget
 
       return JSON::decode($result->getBody());
     } catch(RequestException $e) {
-      dump($e);
+      Debugger::log($e);
     }
   }
 }

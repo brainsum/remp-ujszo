@@ -8,15 +8,16 @@ use Crm\UsersModule\Events\AddressChangedEvent;
 use Crm\UsersModule\Events\NewAddressEvent;
 use Crm\UsersModule\Repository\UserMetaRepository;
 use Crm\UsersModule\Repository\UsersRepository;
+use GuzzleHttp\Client as HttpClient;
+use GuzzleHttp\Exception\RequestException;
 use League\Event\Emitter;
 use Nette\Database\Context;
 use Nette\Database\Table\IRow;
+use Nette\Http\FileUpload;
 use Nette\Security\Identity;
 use Nette\Utils\DateTime;
-use GuzzleHttp\Client as HttpClient;
-use GuzzleHttp\Exception\RequestException;
 use Nette\Utils\Json;
-use Nette\Http\FileUpload;
+use Tracy\Debugger;
 
 class DrupalUserRepository {
 
@@ -84,7 +85,7 @@ class DrupalUserRepository {
       $result_data = JSON::decode($result->getBody());
       return $result_data;
     } catch(RequestException $e) {
-      dump($e);
+      Debugger::log($e);
     }
   }
 
@@ -100,7 +101,7 @@ class DrupalUserRepository {
       ]);
       $result_data = JSON::decode($result->getBody());
     } catch(RequestException $e) {
-      dump($e);
+      Debugger::log($e);
     }
   }
 
@@ -127,7 +128,7 @@ class DrupalUserRepository {
 
       $this->userMetaRepository->add($user, 'drupal_user_id', $result_data->uid[0]->value);
     } catch(RequestException $e) {
-      dump($e);
+      Debugger::log($e);
     }
 
   }
@@ -147,7 +148,7 @@ class DrupalUserRepository {
 
       return $result_data;
     } catch(RequestException $e) {
-      dump($e);
+      Debugger::log($e);
     }
   }
 

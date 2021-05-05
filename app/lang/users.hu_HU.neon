@@ -164,7 +164,7 @@ frontend:
 			success: "Ki lett jelentkeztetve minden más eszközről"
 		account_delete:
 			title: Felhasználó törlése
-			info: 'Ha szeretné végleg törölni a felhasználói profilját, kérjük írja be jelszavát, és kattintson a felhasználó törlése gombra <strong>Ez a múvelet visszafordíthatatlam.</strong>'
+			info: 'Ha szeretnéd végleg törölni a felhasználói profilodat, kérjük írjd be a jelszad, és kattints a felhasználó törlése gombra. A publikált bejegyzéseid élesek maradnak a weboldalon.  <strong>Ez a múvelet visszafordíthatatlam.</strong>'
 			password:
 				label: 'Jelszó:'
 				required: Jelszó kötelező

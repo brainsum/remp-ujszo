@@ -221,6 +221,7 @@ class SignPresenter extends FrontendPresenter
                     ->setReferer($referer)
                     ->setSource('signup-form')
                     ->setAddTokenOption(true)
+                    ->sendEmail(true)
                     ->save();
 
                 $this->emitter->emit(new NotificationEvent(

@@ -28,10 +28,7 @@ class UserCreatedEventHandler extends AbstractListener
     public function handle(EventInterface $event)
     {
         if ($event->sendEmail()) {
-          $password = $event->getOriginalPassword();
           $user = $event->getUser();
-
-          $passwordResetToken = $this->passwordResetTokensRepository->add($user);
 
           $client = new HttpClient();
           $mailer_host = getenv('MAILER_ADDR');
@@ -43,7 +40,6 @@ class UserCreatedEventHandler extends AbstractListener
             "email" => $user->email,
             "params" => [
               'email' => $user->email,
-              'token' => $passwordResetToken->token
             ]
           ];
 

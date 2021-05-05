@@ -13,6 +13,7 @@ use Omnipay\PayPal\ExpressGateway;
 use PayPalCheckoutSdk\Orders\OrdersCreateRequest;
 use PayPalCheckoutSdk\Core\PayPalHttpClient;
 use PayPalCheckoutSdk\Orders\OrdersGetRequest;
+use Tracy\Debugger;
 
 class Paypal extends GatewayAbstract
 {
@@ -85,9 +86,8 @@ class Paypal extends GatewayAbstract
 
         $this->httpResponse->redirect($url);
         exit();
-      } catch (HttpException $ex) {
-        // echo $ex->statusCode;
-        dump($ex->getMessage());
+      } catch (HttpException $e) {
+        Debugger::log($e);
       }
 
     }

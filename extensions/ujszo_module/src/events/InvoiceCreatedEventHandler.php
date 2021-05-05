@@ -11,6 +11,7 @@ use Crm\UsersModule\Repository\UsersRepository;
 use GuzzleHttp\Client as HttpClient;
 use League\Event\AbstractListener;
 use League\Event\EventInterface;
+use Tracy\Debugger;
 
 class InvoiceCreatedEventHandler extends AbstractListener {
 

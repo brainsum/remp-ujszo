@@ -5,8 +5,9 @@ namespace Crm\UjszoBlogModule\Presenters;
 use Crm\ApplicationModule\Presenters\FrontendPresenter;
 use Crm\UjszoUsersModule\Repository\DrupalUserRepository;
 use GuzzleHttp\Client as HttpClient;
-use Nette\Utils\Json;
 use GuzzleHttp\Exception\RequestException;
+use Nette\Utils\Json;
+use Tracy\Debugger;
 
 class BlogPresenter extends FrontendPresenter {
 
@@ -56,7 +57,7 @@ class BlogPresenter extends FrontendPresenter {
 
       return JSON::decode($result->getBody());
     } catch(RequestException $e) {
-      dump($e);
+      Debugger::log($e);
     }
   }
 
