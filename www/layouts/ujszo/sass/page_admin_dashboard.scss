@@ -120,7 +120,7 @@
           text-align: right;
 
           .dropdown-menu {
-            width: 220px;
+            width: 290px;
             border: none;
             margin-top: 0;
             justify-content: center;
@@ -132,7 +132,7 @@
               background-color: #00007e;
               border: 1px solid #00007e;
               color: white;
-              width: 87px;
+              width: fit-content;
 
               img {
                 margin-right: 5px;
@@ -149,7 +149,7 @@
               background-color: #fd014b;
               border: 1px solid #fd014b;
               color: white;
-              width: 85px;
+              width: fit-content;
 
               img {
                 margin-right: 5px;
@@ -203,6 +203,7 @@
 
     .table {
       padding: 6px;
+      padding-bottom: 50px;
       thead {
         .table-header {
           padding-left: 10px;
