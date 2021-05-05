@@ -48,10 +48,8 @@ class UserKarmaPoints extends BaseWidget
     $crmUser = $this->usersRepository->find($params['user']->getIdentity()->id);
     $drupalUser = $this->drupalUserRepository->loadDrupalUser($crmUser);
 
-    // TODO: Fetch karma points.
-
-    $this->template->points = 0;
-    $this->template->header = isset($params['header']) ?? false;
+    $this->template->points = $drupalUser->karma;
+    $this->template->header = $params['header'] ?? false;
     $this->template->setFile(__DIR__ . DIRECTORY_SEPARATOR . $this->templateName);
     $this->template->render();
   }

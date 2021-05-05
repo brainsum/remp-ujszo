@@ -42,7 +42,7 @@ class ArticleCount extends BaseWidget
     }
     $articles = $this->fetchArticles($this->drupalUserRepository->findByUser($params['user']->getIdentity()));
     $this->template->articleCount = $articles->meta->count ?? 0;
-    $this->template->header = isset($params['header']) ?? false;
+    $this->template->header = $params['header'] ?? false;
     $this->template->setFile(__DIR__ . DIRECTORY_SEPARATOR . $this->templateName);
     $this->template->render();
   }
