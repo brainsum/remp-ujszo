@@ -59,7 +59,7 @@ class ArticleCount extends BaseWidget
 
       return JSON::decode($result->getBody());
     } catch(RequestException $e) {
-      Debugger::log($e);
+      Debugger::log($e, Debugger::ERROR);
     }
   }
 }

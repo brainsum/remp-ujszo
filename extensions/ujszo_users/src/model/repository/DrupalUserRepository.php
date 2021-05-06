@@ -85,11 +85,13 @@ class DrupalUserRepository {
       $result_data = JSON::decode($result->getBody());
       return $result_data;
     } catch(RequestException $e) {
-      Debugger::log($e);
+      Debugger::log($e, Debugger::ERROR);
     }
   }
 
   public function updateDrupalUser($drupalUser) {
+    // Drupal cannot process karma
+    unset($drupalUser->karma);
     try {
       $result = $this->httpClient->patch('/user/' . $drupalUser->uid[0]->value . '?_format=json', [
         'headers' => [
@@ -101,7 +103,7 @@ class DrupalUserRepository {
       ]);
       $result_data = JSON::decode($result->getBody());
     } catch(RequestException $e) {
-      Debugger::log($e);
+      Debugger::log($e, Debugger::ERROR);
     }
   }
 
@@ -128,7 +130,7 @@ class DrupalUserRepository {
 
       $this->userMetaRepository->add($user, 'drupal_user_id', $result_data->uid[0]->value);
     } catch(RequestException $e) {
-      Debugger::log($e);
+      Debugger::log($e, Debugger::ERROR);
     }
 
   }
@@ -148,7 +150,7 @@ class DrupalUserRepository {
 
       return $result_data;
     } catch(RequestException $e) {
-      Debugger::log($e);
+      Debugger::log($e, Debugger::ERROR);
     }
   }
 

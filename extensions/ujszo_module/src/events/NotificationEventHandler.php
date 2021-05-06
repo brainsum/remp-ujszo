@@ -45,7 +45,7 @@ class NotificationEventHandler extends AbstractListener
             'body' => json_encode($body)
           ]);
         } catch (Exception $e) {
-          Debugger::log($e);
+          Debugger::log($e, Debugger::ERROR);
         }
       }
     }

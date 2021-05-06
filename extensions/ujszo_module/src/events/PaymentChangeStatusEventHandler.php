@@ -83,7 +83,7 @@ class PaymentChangeStatusEventHandler extends AbstractListener {
             'body' => json_encode($conversion_body)
           ]);
         } catch (Exception $e) {
-          Debugger::log($e->getMessage());
+          Debugger::log($e->getMessage(), Debugger::ERROR);
         }
       }
 
@@ -96,7 +96,7 @@ class PaymentChangeStatusEventHandler extends AbstractListener {
           'body' => json_encode($body)
         ]);
       } catch (Exception $e) {
-        Debugger::log($e->getMessage());
+        Debugger::log($e->getMessage(), Debugger::ERROR);
       }
     }
   }

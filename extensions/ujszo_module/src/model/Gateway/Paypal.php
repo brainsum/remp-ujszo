@@ -87,7 +87,7 @@ class Paypal extends GatewayAbstract
         $this->httpResponse->redirect($url);
         exit();
       } catch (HttpException $e) {
-        Debugger::log($e);
+        Debugger::log($e, Debugger::ERROR);
       }
 
     }

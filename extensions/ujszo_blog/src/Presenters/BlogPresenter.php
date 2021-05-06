@@ -57,7 +57,7 @@ class BlogPresenter extends FrontendPresenter {
 
       return JSON::decode($result->getBody());
     } catch(RequestException $e) {
-      Debugger::log($e);
+      Debugger::log($e, Debugger::ERROR);
     }
   }
 
