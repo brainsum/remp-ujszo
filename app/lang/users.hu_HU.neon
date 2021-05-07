@@ -127,7 +127,9 @@ frontend:
 			placeholder: "Az e-mail címed, amellyel regisztráltál"
 		submit: Küldés
 		invalid_email: Hibás e-mail cím
-		success: "Az általad megadott e-mail címre elküldtünk egy jelszó módosító e-mailt. Kérjük nézd meg a postafiókod, a reklám, esetleg SPAM fiókot is beleértve!"
+		success:
+			email: "A jelszóváltoztatási linket elküldtük erre a címre:"
+			spam: "Kérjük, ellenőrizd az e-mail postafiókod, valamint a spam mappát is."
 	set_password:
 		title: Jelszó beállítás
 		info: Ezen az oldalon állíthatod be jelszavad.
