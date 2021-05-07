@@ -17,11 +17,11 @@ frontend:
 		title: Bejelentkezés
 		username:
 			label: 'E-mail cím:'
-			required: Kérjük adja meg az e-mail címét
+			required: Kérjük add meg az e-mail címed
 			placeholder: E-mail cím
 		password:
 			label: 'Jelszó:'
-			required: Kérjük adja meg a jelszavát.
+			required: Kérjük add meg a jelszavad.
 			placeholder: Jelszó
 		remember: Maradjon bejelentkezve
 		submit: Bejelentkezés
@@ -30,15 +30,15 @@ frontend:
 		title: Regisztráció
 		username:
 			label: 'E-mail cím:'
-			required: Kérjük adja meg az e-mail címét
+			required: Kérjük add meg az e-mail címed
 			placeholder: Pl. kiss.jozsef@email.sk
 		password:
 			label: 'Jelszó:'
-			required: Kérjük adja meg a jelszavát.
-			placeholder: Saját jelszó
+			required: Kérjük add meg a jelszavad.
+			placeholder: Jelszó
 		password_confirm:
 			label: 'Jelszó újra:'
-			required: Kérjük ismételje meg a jelszavát.
+			required: Kérjük ismételd meg a jelszavad.
 			placeholder: Jelszó újra
 		toc:
 		    required: El kell fogadnia a felhasználói feltételeket
@@ -48,24 +48,24 @@ frontend:
 		    invalid_email: Hibás e-mail cím. Kérjük ellenőrizze a megadott e-mail címét.
 	change_password:
 		title: Jelszó módosítás
-		info: "A jelenlegi jelszava segítségével új jelszót állíthat be."
+		info: "A jelenlegi jelszavad segítségével új jelszót állíthatsz be."
 		submit: Jelszó módosítás
 		submit_with_devices_logout: Jelszó módosítás és más eszközökről való kijelentkezés
 		actual_password:
 			label: 'Jelenlegi jelszó:'
-			required: Kérjük adja meg jelenlegi jelszavát
+			required: Kérjük add meg a jelenlegi jelszavad
 			placeholder: Jelenlegi jelszó
-			description: "Amennyiben eflelejtette régi jelszavát, <a href=\"%url%\" class=\"link\">kattintson ide</a> és elküldünk egy új jelszót az email címére."
+			description: "Amennyiben eflelejtetted régi jelszavad, <a href=\"%url%\" class=\"link\">kattints ide</a> és elküldünk egy új jelszót az email címedre."
 		new_password:
 			label: 'Új jelszó:'
-			required: Kérjük adja meg az új jelszavát
+			required: Kérjük add meg az új jelszavad
 			placeholder: Új jelszó
-			minlength: Jelszavának legalább %d karakterből kell állnia.
+			minlength: Jelszavadak legalább %d karakterből kell állnia.
 		new_password_confirm:
 			label: 'Új jelszó ismét:'
-			required: Kérjük adja meg az új jelszavát még egyszer
+			required: Kérjük add meg az új jelszavad még egyszer
 			placeholder: Új jelszó ismét
-			description: Kérjük adja meg az új jelszavát még egyszer megerősités céljából
+			description: Kérjük add meg az új jelszavad még egyszer megerősités céljából
 			not_matching: Jelszavak nem egyeznek
 		errors:
 			could_not_authenticate: Sikertelen próbálkozás.
@@ -116,52 +116,52 @@ frontend:
 			required: "Áfa azonosító kötelező (amennyiben nincs, adjon meg 0-t)"
 		submit: Mentés
 	request_password:
-		title: Elfelejtetted a jelszavát?
+		title: Elfelejtetted a jelszavad?
 		info: "Kérjük írja be a regisztrációnál használt e-mail címét, majd küldünk egy jelszó módosító e-mailt! Ha nem emlékszik a regisztrációnál használt e-mail címére sem, akkor sajnos újra kell regisztrálnia."
 		login:
-			text: "Ha tudja a jelszavát, "
-			link: "jelentkezzen be itt"
+			text: "Ha tudod a jelszavad, "
+			link: "jelentkezz be itt"
 		email:
 			label: 'E-mail cím:'
-			required: Kérjük adja meg az e-mail címét
-			placeholder: "Az e-mail címét, amellyel regisztrált"
+			required: Kérjük add meg az e-mail címed
+			placeholder: "Az e-mail címed, amellyel regisztráltál"
 		submit: Küldés
 		invalid_email: Hibás e-mail cím
-		success: "Az Ön által megadott e-mail címre elküldtünk egy jelszó módosító e-mailt. Kérjük nézze meg a postafiókját, a reklám, esetleg SPAM fiókot is beleértve!"
+		success: "Az általad megadott e-mail címre elküldtünk egy jelszó módosító e-mailt. Kérjük nézd meg a postafiókod, a reklám, esetleg SPAM fiókot is beleértve!"
 	set_password:
 		title: Jelszó beállítás
-		info: Ezen az oldalon állíthatja be jelszavát.
-		success: Sikeresen beállította jelszavát!
+		info: Ezen az oldalon állíthatod be jelszavad.
+		success: Sikeresen beállítottad a jelszavad!
 	reset_password:
 		title: Jelszó módosítás
-		info: Ezen az oldalon módosíthatja jelszavát.
+		info: Ezen az oldalon módosíthatod a jelszavad.
 		errors:
-			invalid_password_reset_token: Jelszó módosításhoz használt link érvényessége lejárt. Igényeljen új linket.
+			invalid_password_reset_token: Jelszó módosításhoz használt link érvényessége lejárt. Igényelj új linket.
 		new_password:
 			label: 'Új jelszó:'
-			required: Adja meg az új jelszavát
+			required: Add meg az új jelszavad
 			placeholder: Új jelszó
-			min_length: Jelszavának legalább %count% karakterből kell állnia.
+			min_length: Jelszavadnak legalább %count% karakterből kell állnia.
 		new_password_confirm:
 			label: 'Új jelszó még egyszer:'
-			required: Kérjük adja meg az új jelszavát még egyszer
+			required: Kérjük add meg az új jelszavad még egyszer
 			not_matching: Jelszavak nem egyeznek
 			placeholder: Új jelszó még egyszer
-			description: Kérjük adja meg az új jelszavát még egyszer megerősités céljából
+			description: Kérjük add meg az új jelszavad még egyszer megerősités céljából
 		submit: Beállítás
 		could_not_set: Jelszó módosítás sikertelen
-		success: Sikeresen módosította jelszavát!
+		success: Sikeresen módosítottad a jelszavad!
 	settings:
 		title: Rendszer beállítások
 		personal_data:
 			title: Személyes adatok letöltése
-			info: "Itt tudja letölteni a tárolt személyes adatait"
+			info: "Itt tudod letölteni a tárolt személyes adataid"
 			download: Letöltés
 		devices_logout:
 			title: Eszközkezelés
 			logout: Kijelentkeztetés minden más eszközről
-			confirm: "Ki szeretne jelentkezni minden más eszközről?"
-			success: "Ki lett jelentkeztetve minden más eszközről"
+			confirm: "Ki szeretnél jelentkezni minden más eszközről?"
+			success: "Kijelentkeztél minden más eszközről"
 		account_delete:
 			title: Felhasználó törlése
 			info: 'Ha szeretnéd végleg törölni a felhasználói profilodat, kérjük írjd be a jelszad, és kattints a felhasználó törlése gombra. A publikált bejegyzéseid élesek maradnak a weboldalon.  <strong>Ez a múvelet visszafordíthatatlam.</strong>'
@@ -170,8 +170,8 @@ frontend:
 				required: Jelszó kötelező
 			submit: Felhasználó törlése
 			invalid_password: Hibás jelszó
-			cannot_delete: Felhasználó nem törölhető automatikusan. Kérjük vegye fel a kapcsolatot az ügyfélszolgálattal.
-			confirm: Felhasználó törlése visszafordíthatatlan. Biztos folytatja?
+			cannot_delete: Felhasználó nem törölhető automatikusan. Kérjük vedd fel a kapcsolatot az ügyfélszolgálattal.
+			confirm: Felhasználó törlése visszafordíthatatlan. Biztos folytatod?
 			success: Felhasználó sikeresen törölve.
 
 admin:

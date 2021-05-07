@@ -182,7 +182,7 @@ class SignPresenter extends FrontendPresenter
         }
 
         $form
-            ->addCheckbox('toc', Html::el()->setHtml('Elfogadom az <a href="https://ujszo.com/gdpr" target="_blank">adatvédelmi szabályzatot</a> és hozzájárulok a személyes adataim feldolgozásához.'))
+            ->addCheckbox('toc', Html::el()->setHtml('Elfogadom az <a href="https://ujszo.com/gdpr" target="_blank">adatvédelmi szabályzatot</a> és az <a href="/files/BlogASZF.pdf" target="_blank">általános szerződési feltételeket</a>.'))
             ->setRequired('El kell fogadni a feltételeket');
 
         $form->addSubmit('send', 'users.frontend.sign_up.submit')->setAttribute('class', 'btn btn-primary btn-block');;
@@ -219,7 +219,7 @@ class SignPresenter extends FrontendPresenter
                     ->setPassword($values->password)
                     ->setActive(true)
                     ->setReferer($referer)
-                    ->setSource('signup-form')
+                    ->setSource('blog-form')
                     ->setAddTokenOption(true)
                     ->sendEmail(true)
                     ->save();

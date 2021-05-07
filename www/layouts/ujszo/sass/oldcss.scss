@@ -88,6 +88,7 @@ a:focus {
   color: white;
   padding: 50px 0;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .page-header-text-holder .back-to-profile {
@@ -163,7 +164,7 @@ p.text-border-top::before {
   content: "";
   height: 1px;
   width: 50px;
-  background-color: #3f3f447a;
+  background-color: #FFFFFF;
   display: block;
   margin: 15px auto 15px;
 }
