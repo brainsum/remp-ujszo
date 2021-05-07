@@ -1,5 +1,5 @@
 menu:
-	dashboard: Blog bejegyzéseim
+	dashboard: Blogbejegyzéseim
 
 states:
 	draft: Piszkozat
@@ -8,15 +8,15 @@ states:
 	archived: Arhivált
 
 list:
-	title: Blog bejegyzéseim
+	title: Blogbejegyzéseim
 	articleTitle: Blog címe
 	status: Státusz
 	created: Létrehozás dátuma
 	edit:	Szerkesztés
 	delete: Törlés
-	empty: Még nem hoztál létre blog bejegyzést
+	empty: Még nem hoztál létre blogbejegyzést.
 
 articlecount:
-	articles: bejegyzés
+	articles: blogbejegyzés
 	karma_points: pont
 	total_karma_points: Összes karma

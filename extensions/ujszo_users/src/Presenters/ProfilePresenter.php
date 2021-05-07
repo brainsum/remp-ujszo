@@ -110,7 +110,7 @@ class ProfilePresenter extends FrontendPresenter {
 
     $this->drupalUserRepository->updateDrupalUser($drupalUser);
 
-    $this->flashMessage('Profile Saved');
+    $this->flashMessage($this->translator->translate('ujszo_users.form.success'));
     $this->redirect('default');
   }
 

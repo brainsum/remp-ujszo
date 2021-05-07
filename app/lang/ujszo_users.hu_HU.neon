@@ -2,18 +2,19 @@ menu:
   profile: Profilom
 form:
   name_or_nickname:
-    label: Teljes név vagy Becenév
-    required: Teljes név vagy Becenév is required
+    label: Teljes név vagy álnév
+    required: Teljes név vagy álnév kötelező
   email:
-    label: Email cím
-    required: Email cím kötelező
+    label: E-mail cím
+    required: E-mail cím kötelező
   short_description:
-    label: Rövid leírás
+    label: "Két mondat magadról (rövid bio)"
   bio:
-    label: Biográfia
+    label: "Több mondat magadról (hosszú bio)"
   profile_image:
     change: Profil kép módosítás
     upload: Profil kép feltöltés
     file_extension: Fájl kiterjesztés nem engedélyezett
     file_size:  Fájl mérete túl nagy
+  success: Sikeresen elmentetted a profilod
   submit: Mentés

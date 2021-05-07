@@ -55,7 +55,7 @@ frontend:
 			label: 'Jelenlegi jelszó:'
 			required: Kérjük add meg a jelenlegi jelszavad
 			placeholder: Jelenlegi jelszó
-			description: "Amennyiben eflelejtetted régi jelszavad, <a href=\"%url%\" class=\"link\">kattints ide</a> és elküldünk egy új jelszót az email címedre."
+			description: "Elfelejtetted a jelszavad? Semmi gond, <a href=\"%url%\" class=\"link\"><strong>kattints ide</strong></a> és küldünk egy újat az e-mail címedre."
 		new_password:
 			label: 'Új jelszó:'
 			required: Kérjük add meg az új jelszavad
@@ -65,12 +65,12 @@ frontend:
 			label: 'Új jelszó ismét:'
 			required: Kérjük add meg az új jelszavad még egyszer
 			placeholder: Új jelszó ismét
-			description: Kérjük add meg az új jelszavad még egyszer megerősités céljából
+			description: Kérjük megerősítés céljából add meg az új jelszavad még egyszer.
 			not_matching: Jelszavak nem egyeznek
 		errors:
 			could_not_authenticate: Sikertelen próbálkozás.
 			invalid_credentials: Hibás jelszó.
-		success: Jelszó sikeresen módosítva.
+		success: Jelszavad sikeresen módosítottad.
 		success_with_logout: "Jelszó sikeresen módosítva, kijelentkeztettünk a többi eszközről."
 		reset_success: 'Jelszó sikeresen módosítva és elküldve emailben a %email% címre.'
 	address:
@@ -117,7 +117,7 @@ frontend:
 		submit: Mentés
 	request_password:
 		title: Elfelejtetted a jelszavad?
-		info: "Kérjük írja be a regisztrációnál használt e-mail címét, majd küldünk egy jelszó módosító e-mailt! Ha nem emlékszik a regisztrációnál használt e-mail címére sem, akkor sajnos újra kell regisztrálnia."
+		info: "Az új jelszó igényléséhez kérjük add meg a jelenleg használt jelszavad, majd az újat, amit a továbbiakban használni szeretnél:"
 		login:
 			text: "Ha tudod a jelszavad, "
 			link: "jelentkezz be itt"
@@ -164,7 +164,7 @@ frontend:
 			success: "Kijelentkeztél minden más eszközről"
 		account_delete:
 			title: Felhasználó törlése
-			info: 'Ha szeretnéd végleg törölni a felhasználói profilodat, kérjük írjd be a jelszad, és kattints a felhasználó törlése gombra. A publikált bejegyzéseid élesek maradnak a weboldalon.  <strong>Ez a múvelet visszafordíthatatlam.</strong>'
+			info: 'Ha szeretnéd végleg törölni a felhasználói profilodat, kérjük írjd be a jelszad, és kattints a felhasználó törlése gombra. A publikált bejegyzéseid nyilvánosak maradnak a weboldalon.  <strong>Ez a múvelet visszafordíthatatlam.</strong>'
 			password:
 				label: 'Jelszó:'
 				required: Jelszó kötelező
