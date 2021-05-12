@@ -72,7 +72,7 @@ class ProfilePresenter extends FrontendPresenter {
     $form->addUpload('profile_image', $image_label)
       ->setRequired(false)
       ->addRule(Form::IMAGE, $this->translator->translate('ujszo_users.form.profile_image.file_extension'))
-      ->addRule(Form::MAX_FILE_SIZE, $this->translator->translate('ujszo_users.form.profile_image.file_size'), 2048 * 1024);
+      ->addRule(Form::MAX_FILE_SIZE, $this->translator->translate('ujszo_users.form.profile_image.file_size'), 10 * 1024 * 1024);
 
     $form->addSubmit('submit', $this->translator->translate('ujszo_users.form.submit'));
 

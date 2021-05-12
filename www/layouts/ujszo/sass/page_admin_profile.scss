@@ -102,7 +102,8 @@
     color: #3f3f44;
 
     .form-group {
-      width: 408px;
+      max-width: 408px;
+      width: 100%;
       text-align: left;
 
       label {
