@@ -104,7 +104,16 @@ class SignPresenter extends FrontendPresenter
     public function renderIn()
     {
         if ($this->getUser()->isLoggedIn()) {
-            $this->redirect($this->homeRoute);
+            $user = $this->getUser()->getIdentity();
+            $token = $this->encrypt($user->email, 'aes-256-cbc', $this->cmsSecret, false);
+
+            $url = $this->cmsUrl . '/remp/login/' . $token;
+
+            if ($this->getReferer() == $this->cmsUrl) {
+                $url .= '?destination=' . $this->getReferer();
+            }
+
+            $this->redirectUrl($url);
         }
     }
 
@@ -150,7 +159,16 @@ class SignPresenter extends FrontendPresenter
     public function renderUp()
     {
         if ($this->getUser()->isLoggedIn()) {
-            $this->redirect($this->homeRoute);
+            $user = $this->getUser()->getIdentity();
+            $token = $this->encrypt($user->email, 'aes-256-cbc', $this->cmsSecret, false);
+
+            $url = $this->cmsUrl . '/remp/login/' . $token;
+
+            if ($this->getReferer() == $this->cmsUrl) {
+                $url .= '?destination=' . $this->getReferer();
+            }
+
+            $this->redirectUrl($url);
         }
     }
 
